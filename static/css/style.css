@@ -1,3 +1,6 @@
+html, body{
+    height: 100%; 
+}
 body {
     background-color: #e5e7ea;
     font-family: 'Poppins', sans-serif;
@@ -20,7 +23,16 @@ nav{
     color: #5a6570;
 }
 
+/*_________________  Recipe content _________________ */
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+main{
+    flex: 1;
+}
 /*________________  Footer __________________ */
 .dark-bg {
     background-color: #5a6570;
@@ -36,6 +48,7 @@ nav{
 .social-link:hover{
     color:#364049 ;
 }
+
 footer{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
