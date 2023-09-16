@@ -2,10 +2,11 @@ from django.contrib import admin
 from .models import Recipe, Country
 from django_summernote.admin import SummernoteModelAdmin
 
+
 @admin.register(Recipe)
 class RecipeAdmin(SummernoteModelAdmin):
     """
-    Specifies how the admin panel is displayed
+    Specifies how the recipe admin panel section is displayed
     Allows the use of summernote editor for selected field
     """
     list_display = ('id', 'title', 'post_approved', 'date_created')
@@ -16,4 +17,7 @@ class RecipeAdmin(SummernoteModelAdmin):
 
 @admin.register(Country)
 class CountryAdmin(admin.ModelAdmin):
+    """
+    Specifies how the country list view admin panel is displayed
+    """
     list_display = ('id', 'name',)
