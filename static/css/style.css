@@ -26,7 +26,7 @@ nav{
 }
 
 /*_________________  Recipe content _________________ */
-.wrapper{
+/* .wrapper{
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ nav{
 
 main{
     flex: 1;
-}
+} */
 
 /*____________ Post Card _____________*/
 .recipe-link{
@@ -69,6 +69,15 @@ a:hover{
     margin-right: 10px;
 }
 
+/*________________ Details Page ____________*/
+.details_section{
+    display: flex;
+    
+}
+.image_case{
+    margin-right: 5px;
+}
+
 /*________________  Footer __________________ */
 .dark-bg {
     background-color: #5a6570;
@@ -88,5 +97,5 @@ a:hover{
 footer{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    clear: both;
+    /* clear: both; */
 }
