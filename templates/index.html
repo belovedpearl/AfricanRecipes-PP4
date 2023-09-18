@@ -13,7 +13,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <a href="#" class="recipe-link" aria-label="Link to the Recipe detail page">
+                                <a href="{% url 'recipe-detail' recipe.pk %}" class="recipe-link" aria-label="Link to the Recipe detail page">
                                     <h2 class="card-title">{{ recipe.title }}</h2>                                 
                                 </a>
                                 {% if "placeholder" in recipe.recipe_image.url %}

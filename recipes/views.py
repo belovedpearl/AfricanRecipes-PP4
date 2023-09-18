@@ -3,6 +3,13 @@ from django.views import generic
 from .models import Recipe
 
 
+class RecipeDetails(generic.DetailView,):
+    """
+    Displays more details of a specific recipe
+    """
+    model = Recipe
+    template_name = "details.html"
+
 
 class RecipeView(generic.ListView):
     model = Recipe
@@ -16,3 +23,5 @@ class RecipeView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['url_name'] = self.request.resolver_match.url_name
         return context
+
+
