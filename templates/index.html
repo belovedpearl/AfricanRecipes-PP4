@@ -25,7 +25,10 @@
                                 {% endif %}
                                 <div class="image-flash">    
                                     <p>
-                                        <span class="author">Posted By: {{ recipe.author }}</span>                             
+                                        <span class="author">Posted By: {{ recipe.author }}</span>
+                                        <a href="{% url 'updaterecipe' recipe.pk %}">
+                                            <i class="fas fa-edit me-2"></i>
+                                        </a>                              
                                     </p>
                                                                 
                                     <p class="text-center">{{ recipe.country }}</p>

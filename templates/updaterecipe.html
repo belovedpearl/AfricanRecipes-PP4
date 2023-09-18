@@ -8,8 +8,9 @@
 <div class="changerecipe">
     <div class="form-group changerecipeform">
         
-            {% csrf_token %}
-            {% crispy form %}
+        {% csrf_token %}
+        <!-- {% crispy form %} -->
+        {{ form|crispy }}
        
     </div>
 </div>
