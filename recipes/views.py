@@ -3,6 +3,16 @@ from django.views import generic
 from .models import Recipe
 
 
+class UpdateRecipe(generic.UpdateView):
+    """
+    Retrieves the recipe instance to be updated
+    Uses the model recipe and RecipeForm
+    """
+    model = Recipe
+    template_name = "updaterecipe.html"
+    form_class = RecipeForm
+
+
 class RecipeDetails(generic.DetailView,):
     """
     Displays more details of a specific recipe

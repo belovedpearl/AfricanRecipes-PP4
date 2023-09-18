@@ -78,6 +78,23 @@ a:hover{
     margin-right: 5px;
 }
 
+/*__________ form ____________*/
+form{
+    width: 100%;
+}
+
+.changerecipe{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.changerecipeform{
+    width: 60%;
+}
+
+
+
 /*________________  Footer __________________ */
 .dark-bg {
     background-color: #5a6570;
