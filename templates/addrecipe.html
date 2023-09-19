@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Add new recipe {% endblock%}
+{% block content %}
+
+{% load crispy_forms_tags %}
+<div class="changerecipe">
+    <div class="form-group changerecipeform">
+        <!-- Insert form data   -->
+        {% csrf_token %}
+        {% crispy form %}
+    </div>
+</div>
+
+
+
+{% endblock %}
