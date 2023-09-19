@@ -7,7 +7,15 @@ from crispy_forms.layout import Layout, Submit, Field
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ('title', 'author', 'country', 'ingredients', 'instructions', 'cook_time', 'recipe_image')
+        fields = ('title', 'author', 'country', 'ingredients', 'instructions', 'cook_time','recipe_image',)
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Recipe Local Name'}),
+            'author': forms.Select(attrs={'class': 'form-control'}),
+            'country': forms.Select(attrs={'class': 'form-control'}),
+            'ingredients': forms.Textarea(attrs={'class': 'form-control'}),
+            'instructions': forms.Textarea(attrs={'class': 'form-control'}),
+            'cook_time': forms.NumberInput(attrs={'class': 'form-control', 'style': 'margin-bottom: 10px;', 'placeholder':'in minutes'}),
+        }
 
     def __init__(self, *args, **kwargs):
         """
@@ -16,12 +24,12 @@ class RecipeForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.layout = Layout(
-            Field('title', css_class='form-control', placeholder='Recipe Local Name'),
-            Field('author', css_class='form-control'),
-            Field('country', css_class='form-control'),
-            Field('ingredients', css_class='form-control'),
-            Field('instructions', css_class='form-control'),
+            Field('title'),
+            Field('author'),
+            Field('country'),
+            Field('ingredients'),
+            Field('instructions'),
             Field('recipe_image'),
-            Field('cook_time', css_class='form-control', style='margin-bottom: 10px;', placeholder='in minutes'),
+            Field('cook_time'),
             Submit('submit', 'Submit', css_class='btn btn-secondary btn-lg', style='margin-bottom: 10px;')
         )

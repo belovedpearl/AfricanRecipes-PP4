@@ -14,6 +14,8 @@ class UpdateRecipe(generic.UpdateView):
     form_class = RecipeForm
 
 
+
+
 class RecipeDetails(generic.DetailView,):
     """
     Displays more details of a specific recipe
