@@ -14,6 +14,15 @@ class UpdateRecipe(generic.UpdateView):
     form_class = RecipeForm
 
 
+class AddRecipe(generic.CreateView):
+    """
+    Renders page to add recipe
+    Allows user submit a new recipe
+    """
+    model = Recipe
+    form_class = RecipeForm
+    template_name = "addrecipe.html"
+    
 
 
 class RecipeDetails(generic.DetailView,):
