@@ -2,6 +2,17 @@ from django.shortcuts import render
 from django.views import generic
 from .models import Recipe
 from .forms import RecipeForm
+from django.urls import reverse_lazy
+
+
+class DeleteRecipe(generic.DeleteView):
+    """
+    Allows users to delete recipe post
+    Renders the deleterecipe form
+    """
+    model = Recipe
+    template_name = "deleterecipe.html"
+    success_url = reverse_lazy('home')
 
 
 class UpdateRecipe(generic.UpdateView):
