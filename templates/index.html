@@ -26,12 +26,14 @@
                                 <div class="image-flash">    
                                     <p>
                                         <span class="author">Posted By: {{ recipe.author }}</span>
-                                        <a href="{% url 'updaterecipe' recipe.pk %}">
-                                            <i class="fas fa-edit me-2"></i>
-                                        </a>  
-                                        <a href="{% url 'deleterecipe' recipe.pk %}">
-                                            <i class="fas fa-trash me-2"></i>
-                                        </a>                            
+                                        <span class="user_spec">
+                                            <a href="{% url 'updaterecipe' recipe.pk %}">
+                                                <i class="fas fa-edit me-2"></i>
+                                            </a>  
+                                            <a href="{% url 'deleterecipe' recipe.pk %}">
+                                                <i class="fas fa-trash me-2"></i>
+                                            </a> 
+                                        </span>                           
                                     </p>
                                                                 
                                     <p class="text-center">{{ recipe.country }}</p>
