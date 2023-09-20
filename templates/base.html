@@ -31,7 +31,7 @@
     </head>
 
 <body class="d-flex flex-column h-100 main-bg">
-    <div>
+    
     <!-- Logo and Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
@@ -46,12 +46,14 @@
                     <li class="nav-item">
                         <a class="nav-link {% if url_name == 'home' %} active {% endif %}" aria-label="Homepage" href="{% url 'home' %}">Home</a>        
                     </li>
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Sign out Page">Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if url_name == 'add_recipe' %} active {% endif %}" href="{% url 'add_recipe' %}" aria-label="Add new recipe page">Add Recipe</a>
                     </li>
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}" aria-label="Login Page">Login</a>
                     </li>
@@ -59,10 +61,7 @@
                     <li class="nav-item">
                         <a class="nav-link"  href="{% url 'account_signup' %}" aria-label="Registration page">Register</a>
                     </li>
-
-                    
-
-                    
+                    {% endif %}  
                     
                 </ul>
                 <span class="navbar-text text-muted">
@@ -75,13 +74,13 @@
    
 
 
-
+    <!-- Contents inserted here -->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
             Content Goes here 
         {% endblock content %}
     </main>
-</div>
+
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">Code Institute Project</p>
