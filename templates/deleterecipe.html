@@ -6,7 +6,7 @@
 {% load crispy_forms_tags %}
 <h1>Delete: {{recipe.title }} </h1>
 <div class="text-center">
-    
+    {% if user.is_authenticated %}
     <div class="form-group">
         <form method="POST" action="{% url 'deleterecipe' pk=recipe.pk %}">
             {% csrf_token %}
@@ -15,6 +15,15 @@
             <a href="{% url 'home' %}" class="btn btn-secondary">No</a>
         </form>
     </div>
+    {% else %}
+
+    <div class="text-center">
+        You cannot delete a post here. 
+        <br>
+        Sign Up to become a member of the community.
+    </div>
+
+    {% endif %}
 </div>
 
 
