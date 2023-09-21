@@ -2,6 +2,8 @@
 {% load static %}
 {% block title %} Add new recipe {% endblock%}
 {% block content %}
+<!-- Prevent external access from someone familiar with the link -->
+{% if user.is_authenticated %}
 
 {% load crispy_forms_tags %}
 <div class="changerecipe">
@@ -11,6 +13,16 @@
         {% crispy form %}
     </div>
 </div>
+
+{% else %}
+<div class="text-center ">
+    You do not have access to this page.
+    <br> 
+    <strong><a href="{% url 'account_signup' %}" aria-label="Click to Register">Sign Up</a></strong> to add African Recipes
+</div>
+
+
+{% endif %}
 
 
 
