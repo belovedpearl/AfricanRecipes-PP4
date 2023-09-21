@@ -20,7 +20,7 @@
             {% endif %}
             <p class="lead text-center">{{ recipe.description }}</p>
             <div class="text-center">
-                {% if user.is_authenticated %}
+                {% if user.is_authenticated and request.user == recipe.author %}
                 <a class="btn" href="{% url 'updaterecipe' recipe.pk %}" aria-label="Click to update {{ recipe.title }}">
                     <i class="fas fa-edit me-2"></i> 
                 </a>

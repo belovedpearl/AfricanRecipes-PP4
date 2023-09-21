@@ -35,7 +35,6 @@ class AddRecipe(generic.CreateView):
     template_name = "addrecipe.html"
     
 
-
 class RecipeDetails(generic.DetailView,):
     """
     Displays more details of a specific recipe

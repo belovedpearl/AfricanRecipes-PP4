@@ -11,6 +11,9 @@ body {
 p{
     margin-bottom: 0;
 }
+input{
+    margin: 10px;
+}
 /*_______________ Logo _________________ */
 #life{
     font-family:'Great Vibes', cursive;
