@@ -4,6 +4,7 @@
 
 <h1>Food Recipe for {{ choice }} </h1>
 
+{% if recipe_posts %}
 
 <div class="container-fluid post">
     <div class="row">
@@ -40,7 +41,7 @@
                                         </span>                           
                                     </p>
                                                                 
-                                    <p class="text-center"><a href="#">{{ recipe.country }}</a></p>
+            
                                 </div>
                                
                             </div>
@@ -65,9 +66,15 @@
     
 </div>
  
- 
+ {% else %}
+  
+ {% endif %}
 
+   <p class="text-center">There are no related posts.
+    <br>
+    Sign Up or Login to Add recipe post for {{ choice }}
 
+   </p>
 
 
 {% endblock%}
