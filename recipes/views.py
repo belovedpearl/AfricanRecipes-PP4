@@ -1,9 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from .models import Recipe
+from .models import Recipe, Country
 from .forms import RecipeForm
 from django.urls import reverse_lazy
 
+
+def CountryView(request, choice):
+    # country_posts = Recipe.objects.filter(country=choice)
+    # return render(request, 'countries.html', {'choice': choice, 'country_posts': country_posts})
+    country = Country.objects.get(name=choice.capitalize())
+    recipe_posts = Recipe.objects.filter(country=country)
+    return render(request, 'countries.html', {'choice': country, 'recipe_posts': recipe_posts})
 
 class DeleteRecipe(generic.DeleteView):
     """
@@ -33,7 +40,7 @@ class AddRecipe(generic.CreateView):
     model = Recipe
     form_class = RecipeForm
     template_name = "addrecipe.html"
-    
+
 
 class RecipeDetails(generic.DetailView,):
     """

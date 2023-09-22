@@ -2,13 +2,15 @@
 {% load static %}
 {% block content %}
 
+<h1>Food Recipe for {{ choice }} </h1>
+
 
 <div class="container-fluid post">
     <div class="row">
         <!-- Recipe Entries Column -->
         <div class="col-12 mt-3">
             <div class="row">
-                {% for recipe in recipe_list %}
+                {% for recipe in recipe_posts %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -63,6 +65,8 @@
     
 </div>
  
+ 
+
 
 
 
