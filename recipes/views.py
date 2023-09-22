@@ -6,11 +6,15 @@ from django.urls import reverse_lazy
 
 
 def CountryView(request, choice):
-    # country_posts = Recipe.objects.filter(country=choice)
-    # return render(request, 'countries.html', {'choice': choice, 'country_posts': country_posts})
+    """
+    Retrieve the country object form the country model
+    Retrieve the matching recipe post from the recipe model
+    Render countries template with the requested recipes
+    """
     country = Country.objects.get(name=choice.capitalize())
     recipe_posts = Recipe.objects.filter(country=country)
     return render(request, 'countries.html', {'choice': country, 'recipe_posts': recipe_posts})
+
 
 class DeleteRecipe(generic.DeleteView):
     """
