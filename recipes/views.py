@@ -11,7 +11,7 @@ def CountryView(request, choice):
     Retrieve the matching recipe post from the recipe model
     Render countries template with the requested recipes
     """
-    country = Country.objects.get(name=choice.capitalize())
+    country = get_object_or_404(Country, name=choice.capitalize())
     recipe_posts = Recipe.objects.filter(country=country)
     return render(request, 'countries.html', {'choice': country, 'recipe_posts': recipe_posts})
 

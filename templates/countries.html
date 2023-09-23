@@ -72,8 +72,10 @@
 
    <p class="text-center">There are no related posts.
     <br>
-    Sign Up or Login to Add recipe post for {{ choice }}
-
+    <a class="nav-link"  href="{% url 'account_signup' %}" aria-label="Registration page">Sign Up</a>
+    or 
+    <a class="nav-link" href="{% url 'account_login' %}" aria-label="Login Page">Login</a>    
+    to Add recipe post for {{ choice }}
    </p>
 
 
