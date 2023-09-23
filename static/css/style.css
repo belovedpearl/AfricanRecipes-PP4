@@ -29,6 +29,7 @@ button{
     font-size: 48px;
     font-weight: 400;
     color: black;
+    margin-right: 30px;
     
 }
 
@@ -56,6 +57,10 @@ nav{
 
 
 /*____________ Post Card _____________*/
+.post{
+    border: 2px solid #5c875c;
+    height: 28rem;
+}
 .recipe_title{
     font-size: 1.7rem;
 }
