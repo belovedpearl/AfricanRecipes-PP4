@@ -1,35 +1,53 @@
 html, body{
     height: 100%; 
 }
+
 body {
     background-color: #e5e7ea;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    color: #5a6570;
+    color: black;
 }
 
 p{
     margin-bottom: 0;
 }
+
 a{
     text-decoration: none;
+    color: black;
 }
 
- button{
+button{
     margin: 10px;
  }
+
+.active{
+    border-bottom: 1px solid #184E20;
+    background-color: #FF6B6B;
+    color: white;
+    font-weight: 900; 
+}
+
 /*_______________ Logo _________________ */
 #life{
     font-family:'Great Vibes', cursive;
     font-size: 48px;
     font-weight: 400;
-    color: #5a6570;
+    color: black;
     
 }
 
 /*_______________  Nav Element ____________ */
 nav{
-    color: #5a6570;
+    background-color: #aaf3aa;
+    color: black;
+}
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: #FF4500;
 }
 
 
@@ -104,18 +122,20 @@ form{
 }
 
 .social-link{
-    color: #e5e7ea;
+    color: black;
     text-decoration: none;
     font-size: 1.2rem;
    
 }   
 
 .social-link:hover{
-    color:#364049 ;
+   color: #FF4500; 
 }
 
 footer{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    /* clear: both; */
+    color: black;
+    background-color: #aaf3aa;
+    
 }
