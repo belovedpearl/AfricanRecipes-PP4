@@ -22,12 +22,6 @@ button{
     margin: 10px;
  }
 
-.active{
-    border-bottom: 1px solid #184E20;
-    background-color: #FF6B6B;
-    color: white;
-    font-weight: 900; 
-}
 
 /*_______________ Logo _________________ */
 #life{
@@ -48,6 +42,16 @@ nav{
 }
 .nav-link:hover{
     color: #FF4500;
+}
+.active{
+    background-color: #FF4500;;
+    color: white;
+    font-weight: 900;
+    border-radius: 10px;
+}
+.active:hover{
+    background-color: #FF4500;;
+    color: black;
 }
 
 
