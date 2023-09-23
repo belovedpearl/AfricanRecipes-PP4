@@ -65,12 +65,15 @@ nav{
     font-size: 1.7rem;
 }
 .recipe-link{
-    font-size: 52px;
-    color: #FF6B6B;
+    font-size: 52px; 
+    color: #FF4500;
     text-decoration: none;
 }
+.recipe-link:hover{
+    color: black;
+}
 .date_created{
-    margin-right: 50px;
+    margin-right: 45px;
 }
 
 .post-image{

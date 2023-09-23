@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404
-from django.views import generic
+from django.views import generic, View
 from .models import Recipe, Country
 from .forms import RecipeForm
 from django.urls import reverse_lazy
-
+    
 
 def CountryView(request, choice):
     """
@@ -61,6 +61,7 @@ class RecipeDetails(generic.DetailView,):
     """
     model = Recipe
     template_name = "details.html"
+    pk_url_kwarg = 'pk'
 
 
 class RecipeView(generic.ListView):
