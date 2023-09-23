@@ -33,29 +33,30 @@
             </div>
         </div>
 
-        <div class="col-md-6">
-            <h3>Ingredients </h3>
-            <p>{{ recipe.ingredients |safe }}</p>
+        <div class="col-md-6 ">
+            <div class="detail_info">
+                <h3>Ingredients </h3>
+                <p>{{ recipe.ingredients |safe }}</p>
 
-            <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="d-inline">Preparation Time:</h3>
-                    <span class="d-inline ml-2">{{ recipe.cook_time }} minutes</span>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="d-inline">Preparation Time:</h3>
+                        <span class="d-inline ml-2">{{ recipe.cook_time }} minutes</span>
+                    </div>
                 </div>
+            
+
+                <hr>
+
+                    
+                <h3>How to make {{recipe.title}} </h3>
+                <p>{{ recipe.instructions | safe }}</p>
             </div>
-           
-
-            <hr>
-
-                
-            <h3>How to make {{recipe.title}} </h3>
-            <p>{{ recipe.instructions | safe }}</p>
-            <hr >
         </div>
     </div>
 <div class="text-center">
-    <a class="btn btn-secondary btn-lg" href="{% url 'home' %}" role="button" aria-label="Back home">
+    <a class="btn btn-secondary btn-lg mb-4" href="{% url 'home' %}" role="button" aria-label="Back home">
         <i class="fas fa-arrow-left"></i> 
         Home
     </a>

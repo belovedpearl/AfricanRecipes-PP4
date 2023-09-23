@@ -107,6 +107,9 @@ a:hover{
     display: flex;
     
 }
+.detail_info{
+    margin-left: 20px;
+}
 .image_case{
     margin-right: 5px;
 }
