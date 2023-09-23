@@ -45,30 +45,6 @@ class AddRecipe(generic.CreateView):
     model = Recipe
     form_class = RecipeForm
     template_name = "addrecipe.html"
-
-
-class RecipeDetails(generic.DetailView,):
-    """
-    Displays more details of a specific recipe
-    """
-    model = Recipe
-    template_name = "details.html"
-
-    def get_context_data(self, *args, **kwargs):
-        """
-        Retrieve all country list from the data base
-        Add country list to the context data for access on detail page
-        """
-        country_list = Country.objects.all()
-        context = super(RecipeDetails, self).get_context_data(*args, **kwargs)
-        context['country_list'] = country_list
-        return context
-
-
-class RecipeView(generic.ListView):
-    model = Recipe
-    queryset = Recipe.objects.filter(post_approved=True).order_by('-date_created')
-    template_name = "index.html"
     
     def get_context_data(self, **kwargs):
         """
@@ -78,13 +54,27 @@ class RecipeView(generic.ListView):
         context['url_name'] = self.request.resolver_match.url_name
         return context
 
-    def get_context_data(self, *args, **kwargs):
+
+class RecipeDetails(generic.DetailView,):
+    """
+    Displays more details of a specific recipe
+    """
+    model = Recipe
+    template_name = "details.html"
+
+
+class RecipeView(generic.ListView):
+    model = Recipe
+    queryset = Recipe.objects.filter(post_approved=True).order_by('-date_created')
+    template_name = "index.html"
+
+    def get_context_data(self, **kwargs):
         """
-        Retrieve all country list from the data base
-        Add country list to the context data for access
+        Add url data and country list to the context data
         """
-        country_list = Country.objects.all()
-        context = super(RecipeView, self).get_context_data(*args, **kwargs)
-        context['country_list'] = country_list
+        context = super().get_context_data(**kwargs)
+        context['url_name'] = self.request.resolver_match.url_name
+        context['country_list'] = Country.objects.all()
         return context
+
 
