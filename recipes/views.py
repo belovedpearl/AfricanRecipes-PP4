@@ -54,6 +54,16 @@ class RecipeDetails(generic.DetailView,):
     model = Recipe
     template_name = "details.html"
 
+    def get_context_data(self, *args, **kwargs):
+        """
+        Retrieve all country list from the data base
+        Add country list to the context data for access on detail page
+        """
+        country_list = Country.objects.all()
+        context = super(RecipeDetails, self).get_context_data(*args, **kwargs)
+        context['country_list'] = country_list
+        return context
+
 
 class RecipeView(generic.ListView):
     model = Recipe

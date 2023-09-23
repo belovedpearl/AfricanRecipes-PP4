@@ -46,6 +46,7 @@
                     </li>
                     <li>
                           <!-- Country List Dropdown -->
+                          {% if country_list %}
                           <div class="dropdown">
                             <a class="nav nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                               Countries
@@ -61,6 +62,7 @@
                                 {% endfor %}
                             </ul>
                           </div>
+                          {% endif %}
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
