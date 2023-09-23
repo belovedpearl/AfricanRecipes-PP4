@@ -45,16 +45,20 @@
                         <a class="nav-link {% if url_name == 'home' %} active {% endif %}" aria-label="Homepage" href="{% url 'home' %}">Home</a>        
                     </li>
                     <li>
+                          <!-- Country List Dropdown -->
                           <div class="dropdown">
                             <a class="nav nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                               Countries
                             </a>
                           
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                {% for country in country_list %}
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'countries' country %}" aria-label="Link to access a countrty recipe">{{ country }}</a>
+                                </li>
+                                     
+
+                                {% endfor %}
                             </ul>
                           </div>
                     </li>
