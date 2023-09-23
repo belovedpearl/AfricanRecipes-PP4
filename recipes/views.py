@@ -12,6 +12,7 @@ def CountryView(request, choice):
     Render countries template with the requested recipes
     """
     country = get_object_or_404(Country, name=choice.capitalize())
+    
     recipe_posts = Recipe.objects.filter(country=country)
     return render(request, 'countries.html', {'choice': country, 'recipe_posts': recipe_posts})
 
@@ -67,4 +68,5 @@ class RecipeView(generic.ListView):
         context['url_name'] = self.request.resolver_match.url_name
         return context
 
+  
 

@@ -37,8 +37,10 @@
                                             {% endif %}
                                         </span>                           
                                     </p>
-                                                                
-                                    <p class="text-center"><a href="#">{{ recipe.country }}</a></p>
+                                    <a href="{% url 'countries' recipe.country %}" aria-label="Link to the Recipe detail page">
+                                        <p class="text-center">{{ recipe.country }}</p>                                 
+                                    </a>                          
+                                    
                                 </div>
                                
                             </div>
