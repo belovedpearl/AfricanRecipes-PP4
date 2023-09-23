@@ -68,5 +68,13 @@ class RecipeView(generic.ListView):
         context['url_name'] = self.request.resolver_match.url_name
         return context
 
-  
+    def get_context_data(self, *args, **kwargs):
+        """
+        Retrieve all country list from the data base
+        Add country list to the context data for access
+        """
+        country_list = Country.objects.all()
+        context = super(RecipeView, self).get_context_data(*args, **kwargs)
+        context['country_list'] = country_list
+        return context
 
