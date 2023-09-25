@@ -114,6 +114,8 @@ a:hover{
     margin-right: 5px;
 }
 
+
+
 /*__________ form ____________*/
 form{
     width: 100%;
@@ -153,4 +155,18 @@ footer{
     color: black;
     background-color: #aaf3aa;
     
+}
+/* like Buttn */
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
 }

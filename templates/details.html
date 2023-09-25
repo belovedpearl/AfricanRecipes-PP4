@@ -19,7 +19,7 @@
             <img src="{{ recipe.recipe_image.url }}" class="details-img" alt="Placeholder Image">
             {% endif %}
             <p class="lead text-center">{{ recipe.description }}</p>
-            <div class="text-center">
+            <div class="text-center mt-3">
                 {% if user.is_authenticated and request.user == recipe.author %}
                 <a class="btn" href="{% url 'updaterecipe' recipe.pk %}" aria-label="Click to update {{ recipe.title }}">
                     <i class="fas fa-edit me-2"></i> 
@@ -31,26 +31,28 @@
                 {% endif %}
 
                 
-                
-                
-            <strong>
-                {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'recipe_like' recipe.pk %}" method="POST">
-                    {% csrf_token %}
-                    {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{recipe.pk}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                <!-- Adapted from 'I think therefore I blog'    -->
+                <strong>
+                    {% if user.is_authenticated %}
+                    <form class="d-inline" action="{% url 'recipe_like' recipe.pk %}" method="POST">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="blogpost_id" value="{{recipe.pk}}" class="btn-like"><i class="fas fa-thumbs-up"></i></button>
+                        {% else %}
+                        <button type="submit" name="blogpost_id" value="{{recipe.pk}}" class="btn-like"><i class="far fa-thumbs-up"></i></button>
+                        {% endif %}
+                    </form>
                     {% else %}
-                    <button type="submit" name="blogpost_id" value="{{recipe.pk}}" class="btn-like"><i class="far fa-heart"></i></button>
+                    <span class="text-secondary"><i class="far fa-thumbs-up"></i></span>
                     {% endif %}
-                </form>
-                {% else %}
-                <span class="text-secondary"><i class="far fa-heart"></i></span>
-                {% endif %}
-            <!-- The number of likes goes before the closing strong tag -->
-            <span class="text-secondary">{{ post.number_of_likes }} </span>
-            </strong>
+                    <!-- The number of likes goes before the closing strong tag -->
+                    <span class="text-secondary">{{ recipe.number_of_likes }} </span>
                 
-           
+                
+                </strong>
+                
+            
+            
 
 
             <!-- Ends here -->
