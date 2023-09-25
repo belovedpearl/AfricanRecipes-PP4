@@ -9,4 +9,5 @@ urlpatterns = [
     path('updaterecipe/edit/<int:pk>', views.UpdateRecipe.as_view(), name='updaterecipe'),
     path('details/<int:pk>/delete', views.DeleteRecipe.as_view(), name='deleterecipe'),
     path('countries/<str:choice>/', views.CountryView, name='countries'),
+    path('like/<int:pk>', views.PostLike.as_view(), name='recipe_like')
 ]

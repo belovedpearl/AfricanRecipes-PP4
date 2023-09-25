@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Recipe, Country
 from .forms import RecipeForm
 from django.urls import reverse_lazy
@@ -53,6 +54,17 @@ class AddRecipe(generic.CreateView):
         context = super().get_context_data(**kwargs)
         context['url_name'] = self.request.resolver_match.url_name
         return context
+
+
+# Adapted from 'I think therefore i blog'
+class PostLike(View):
+    def post(self, request, pk):
+        post = get_object_or_404(Recipe, pk=pk)
+        if post.likes.filter(id=request.user.pk).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+        return HttpResponseRedirect(reverse('recipe-detail', args=[pk]))
 
 
 class RecipeDetails(generic.DetailView,):
