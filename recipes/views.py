@@ -67,13 +67,23 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('recipe-detail', args=[pk]))
 
 
-class RecipeDetails(generic.DetailView,):
-    """
+class RecipeDetails(View):
+    """ 
     Displays more details of a specific recipe
+    Render the boolean True if recipe is liked
     """
-    model = Recipe
-    template_name = "details.html"
-    pk_url_kwarg = 'pk'
+    def get(self, request, pk, *args, **kwargs):
+        queryset = Recipe.objects
+        recipe = get_object_or_404(queryset, pk=pk)
+        liked = False
+        if recipe.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        return render(
+            request, 'details.html', {
+                'recipe': recipe,
+                'liked': liked,
+            },
+        )
 
 
 class RecipeView(generic.ListView):
