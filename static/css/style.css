@@ -170,3 +170,8 @@ footer{
     background: transparent;
     border: none;
 }
+/* Slide */
+
+.slide{
+    height: 200px;
+}
