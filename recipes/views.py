@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Recipe, Country
 from .forms import RecipeForm
 from django.urls import reverse_lazy
+from django.db.models import Q
     
 
 def CountryView(request, choice):
@@ -12,8 +13,12 @@ def CountryView(request, choice):
     Retrieve the matching recipe post from the recipe model
     Render countries template with the requested recipes
     """
-    country = get_object_or_404(Country, name=choice.capitalize())
+
+    # Get the query using q for case insensitive search
+    query = Q(name__iexact=choice.capitalize()) | Q(name__iexact=choice.replace("-", " "))
     
+    country = get_object_or_404(Country, query)
+
     recipe_posts = Recipe.objects.filter(country=country)
     return render(request, 'countries.html', {'choice': country, 'recipe_posts': recipe_posts})
 
