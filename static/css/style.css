@@ -56,7 +56,7 @@ nav{
 }
 .active:hover{
     background-color: #FF4500;;
-    color: black;
+    color: black !important;
 }
 .dropdown-menu{
     background-color: #aaf3aa;
