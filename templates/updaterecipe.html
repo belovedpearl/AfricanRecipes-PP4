@@ -10,7 +10,7 @@
 <!-- Allow only authenticated users access to the page -->
 {% if user.is_authenticated %}  
     <!-- Restrict recipe edit to authors only -->
-    {% if user.pk == recipe.author %}
+    {% if user == recipe.author %}
         <div class="changerecipe">
             
             <div class="form-group changerecipeform">
@@ -21,6 +21,14 @@
             </div>
             
         </div> 
+    {% else %}
+
+        <div class="text-center">
+        
+            <p>You can only <strong>Update</strong> the posts you created.</p>
+            <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+        </div>
+        
     {% endif %}
 
 {% else %}
@@ -30,7 +38,7 @@
         <br>
         <strong><a href="{% url 'account_signup' %}" aria-label="Click to Register">Sign Up</a></strong> to become a member of the community.
     </div>
-    
+
 {% endif %}
 
 
