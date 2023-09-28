@@ -17,6 +17,9 @@ a{
     text-decoration: none;
     color: black;
 }
+a:hover{
+    color: #FF4500 !important;
+}
 
 button{
     margin: 10px;
@@ -54,7 +57,10 @@ nav{
     background-color: #FF4500;;
     color: black;
 }
-
+.dropdown-menu{
+    background-color: #aaf3aa;
+    border: 1px solid black;
+}
 
 /*____________ Post Card _____________*/
 .post{

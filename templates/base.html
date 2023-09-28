@@ -46,22 +46,22 @@
                         <a class="nav-link {% if url_name == 'home' %} active {% endif %}" aria-label="Homepage" href="{% url 'home' %}">Home</a>        
                     </li>
                     <li>
-                          <!-- Country List Dropdown -->
-                          {% if country_list %}
-                          <div class="dropdown">
-                            <a class="nav nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                              Countries
-                            </a>
-                          
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                {% for country in country_list %}
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'countries' country %}" aria-label="Link to access a country recipe">{{ country }}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                          </div>
-                          {% endif %}
+                    <!-- Country List Dropdown -->
+                    {% if country_list %}
+                    <div class="dropdown">
+                        <a class="nav nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        Countries
+                        </a>
+                    
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            {% for country in country_list %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'countries' country %}" aria-label="Link to access a country recipe">{{ country }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
