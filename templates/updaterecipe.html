@@ -7,18 +7,31 @@
 
 {% load crispy_forms_tags %}
 <h1>Update Recipe</h1>
-<div class="changerecipe">
-    
-    <div class="form-group changerecipeform">
+<!-- Allow only authenticated users access to the page -->
+{% if user.is_authenticated %}  
+    <!-- Restrict recipe edit to authors only -->
+    {% if user.pk == recipe.author %}
+        <div class="changerecipe">
+            
+            <div class="form-group changerecipeform">
+                
+                {% csrf_token %}
+                {% crispy form %}
         
-        {% csrf_token %}
-        {% crispy form %}
-   
+            </div>
+            
+        </div> 
+    {% endif %}
+
+{% else %}
+
+    <div class="text-center">
+        You cannot update a post here!. 
+        <br>
+        <strong><a href="{% url 'account_signup' %}" aria-label="Click to Register">Sign Up</a></strong> to become a member of the community.
     </div>
-     
-</div> 
-
-
+    
+{% endif %}
 
 
 {% endblock %}
