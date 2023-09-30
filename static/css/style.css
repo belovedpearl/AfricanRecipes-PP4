@@ -72,7 +72,8 @@ nav{
 /*____________ Post Card _____________*/
 .post{
     border: 2px solid #5c875c;
-    height: 28rem;
+    height: 29rem;
+   
 }
 .recipe_title{
     font-size: 1.7rem;
@@ -86,7 +87,7 @@ nav{
     color: black;
 }
 .date_created{
-    margin-right: 45px;
+    margin-right: 50px;
 }
 
 .post-image{
@@ -189,3 +190,14 @@ footer{
 .slide{
     height: 200px;
 }
+
+
+@media (max-width: 768px) {
+    .active{
+        border-radius: 0px;
+    }
+     
+.navbar-nav .nav-link {
+    padding-left: 20px;
+}
+} 

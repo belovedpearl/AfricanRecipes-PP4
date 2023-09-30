@@ -32,7 +32,7 @@
 
                 
                 <!-- Adapted from 'I think therefore I blog'    -->
-                <strong>
+                <strong class="likeanddislike">
                     {% if user.is_authenticated %}
                     <form class="d-inline" action="{% url 'recipe_like' recipe.pk %}" method="POST">
                         {% csrf_token %}
