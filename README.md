@@ -8,6 +8,8 @@
     * [Wireframe 1](#wireframe-1-the-landing-page)
     * [Wireframe 2](#wireframe-2-the-recipe-detail-page)
 * [User Stories](#user-stories)
+    * [Admin User Story](#admin-user-story)
+    * [General User User Story](#general-user-user-story)
 
 ---
 # SCOPE
@@ -111,3 +113,20 @@ Make posts with rich text and images, so that I can improve the quality of posts
 Add a recipe post, so that I do not have to use the add post page on the front-end
 
 Filter and sort all comments easily, so that I can see all recipes posts that fulfil certain criteria
+
+---
+
+
+## General User User Story
+
+Generally, as a user I can ..
+
+Immediately determine the purpose of the application on first visit, so that I can quickly decide whether its of interest or not.
+
+Have a positive user experience irrespective of the means of access, so that I can access the application from enjoy the platform from any device
+
+View all recipe posts so that I can choose one to read in detail.
+
+Sort recipe posts by country name so that I can see only the recipe post of intrested countries.
+
+If my search  by country returned no results, have a message displayed informing me of no posts related to my country search.
