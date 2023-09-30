@@ -5,6 +5,8 @@
  * [Background](#background)
  * [Target Audience](#target-audience)
  * [Wireframes](#wireframes)
+    * [Wireframe 1](#wireframe-1-the-landing-page)
+    * [Wireframe 2](#wireframe-2-the-recipe-detail-page)
 
 
 ---
@@ -52,5 +54,34 @@ This project is tailored for a vibrant community of Africans, both at home and a
 # Wireframes
 ---
 
+While conceiving the project the following were the wireframes were used to represent the home and details page.
+
+All wireframes are made with Balsamiq
+
+Link for the wireframe pictures can be found ![here](static/images/wireframes/)
+
+---
+
+## Wireframe 1: The Landing page
+
+### Desktop and Laptop
+
+![Desktop and Laptop](static/images/wireframes/mama's%20kitchenhomepagedesktop&Laptop.webp)
+
+### Mobile
+
+![Mobile](static/images/wireframes/mama'skitchenhomepagemobile.webp)
+
+---
+
+## Wireframe 2: The Recipe Detail page
+
+### Desktop and Laptop
+![Desktop and Laptop](static/images/wireframes/mama'skitchendetailsdesktop&laptop.webp)
+
+
+### Mobile
+
+![Mobile](static/images/wireframes/mama'skitchendetailmobile.webp)
 
 
