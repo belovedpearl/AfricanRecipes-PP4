@@ -7,7 +7,7 @@
  * [Wireframes](#wireframes)
     * [Wireframe 1](#wireframe-1-the-landing-page)
     * [Wireframe 2](#wireframe-2-the-recipe-detail-page)
-
+* [User Stories](#user-stories)
 
 ---
 # SCOPE
@@ -84,4 +84,30 @@ Link for the wireframe pictures can be found ![here](static/images/wireframes/)
 
 ![Mobile](static/images/wireframes/mama'skitchendetailmobile.webp)
 
+---
 
+# User Stories
+
+Below are the User Stories used to guide the development of Mama's Kitchen.
+
+## Admin User Story
+
+The Admin user User Stories were used as a guide to determine what Admin Superusers that have access to the Admin panel should be able to do.
+
+As an Admin user I can..
+
+Navigate to the admin sign-in page, so that I can sign in to the admin panel.
+
+View all recipe posts submitted by users, so that I can view and edit posts if needed.
+
+Filter and sort recipe posts easily, so that I can see all of the posts that needs to be approved.
+
+Approve any number of selected recipes post so that they can be be visible on the site.
+
+Delete any number of selected recipe, so that they no longer take up memory in the database especially the ones that are not on line with the platform ideas.
+
+Make posts with rich text and images, so that I can improve the quality of posts.
+
+Add a recipe post, so that I do not have to use the add post page on the front-end
+
+Filter and sort all comments easily, so that I can see all recipes posts that fulfil certain criteria
