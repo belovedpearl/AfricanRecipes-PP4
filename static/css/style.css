@@ -10,8 +10,8 @@ body {
     color: black;
 }
 label {
-    display: block; /* Labels appear on a new line */
-    margin-bottom: 5px; /* Margin between label and input */
+    display: block;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
@@ -30,7 +30,7 @@ a:hover{
 
 button{
     margin: 10px;
- }
+ } 
 
 
 /*_______________ Logo _________________ */
@@ -114,7 +114,7 @@ a:hover{
 
 .react{
     margin-right: 10px;
-}
+} */
 
 /*________________ Details Page ____________*/
 .details_section{
@@ -185,11 +185,7 @@ footer{
     background: transparent;
     border: none;
 }
-/* Slide */
 
-.slide{
-    height: 200px;
-}
 
 
 @media (max-width: 768px) {
