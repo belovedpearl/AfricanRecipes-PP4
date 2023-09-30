@@ -11,8 +11,15 @@
         <!-- Insert form data   -->
         {% csrf_token %}
         {% crispy form %}
+      
     </div>
 </div>
+ 
+ <!-- Generate hidden value post author (Idea from John Elder) -->
+<script>
+    let author = "{{ user.username }}"
+    document.getElementById('post_author').value = author
+</script>
 
 {% else %}
 <div class="text-center ">

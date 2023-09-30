@@ -10,7 +10,7 @@ class RecipeForm(forms.ModelForm):
         fields = ('title', 'author', 'country', 'ingredients', 'instructions', 'cook_time','recipe_image',)
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Recipe Local Name'}),
-            'author': forms.Select(attrs={'class': 'form-control'}),
+            'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id':'post_author','type':'hidden'}),
             'country': forms.Select(attrs={'class': 'form-control'}),
             'ingredients': forms.Textarea(attrs={'class': 'form-control'}),
             'instructions': forms.Textarea(attrs={'class': 'form-control'}),
