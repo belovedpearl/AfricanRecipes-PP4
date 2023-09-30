@@ -71,6 +71,16 @@ class PostLike(View):
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('recipe-detail', args=[pk]))
 
+# Adapted from 'I think therefore i blog'
+class PostDislike(View):
+    def post(self, request, pk):
+        post = get_object_or_404(Recipe, pk=pk)
+        if post.dislikes.filter(id=request.user.pk).exists():
+            post.dislikes.remove(request.user)
+        else:
+            post.dislikes.add(request.user)
+        return HttpResponseRedirect(reverse('recipe-detail', args=[pk]))
+
 
 class RecipeDetails(View):
     """ 
@@ -81,12 +91,16 @@ class RecipeDetails(View):
         queryset = Recipe.objects
         recipe = get_object_or_404(queryset, pk=pk)
         liked = False
+        disliked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
+        if recipe.dislikes.filter(id=self.request.user.id).exists():
+            disliked = True
         return render(
             request, 'details.html', {
                 'recipe': recipe,
                 'liked': liked,
+                'disliked': disliked,
             },
         )
 
