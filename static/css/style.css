@@ -9,6 +9,12 @@ body {
     font-size: 18px;
     color: black;
 }
+label {
+    display: block; /* Labels appear on a new line */
+    margin-bottom: 5px; /* Margin between label and input */
+    font-weight: bold;
+}
+
 
 p{
     margin-bottom: 0;

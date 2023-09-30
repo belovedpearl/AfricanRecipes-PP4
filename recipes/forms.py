@@ -28,8 +28,8 @@ class RecipeForm(forms.ModelForm):
             Field('title'),
             Field('author'),
             Field('country'),
-            Field('ingredients'),
-            Field('instructions'),
+            Field('ingredients', css_class='editor'),
+            Field('instructions', css_class='editor'),
             Field('recipe_image'),
             Field('cook_time'),
             Submit('submit', 'Submit', css_class='btn btn-secondary btn-lg', style='margin-bottom: 10px;')
