@@ -82,7 +82,11 @@
                     
                 </ul>
                 <span class="navbar-text">
-                    Tasty African Recipes
+                    {% if user.is_authenticated %}
+                        Signed in as {{ user.username }}
+                    {% else %}
+                        Tasty African Recipes
+                    {%  endif %}
                 </span>
             </div>
         </div>
