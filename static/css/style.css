@@ -193,7 +193,7 @@ footer{
         border-radius: 0px;
     }
      
-.navbar-nav .nav-link {
-    padding-left: 20px;
-}
+    .navbar-nav .nav-link {
+        padding-left: 20px;
+    }
 } 

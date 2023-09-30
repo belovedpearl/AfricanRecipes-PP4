@@ -1,3 +1,13 @@
+**Table of Contents:**
+---
+---
+ * [Scope](#scope)  
+ * [Background](#background)
+ * [Target Audience](#target-audience)
+ * [Wireframes](#wireframes)
+
+
+---
 # SCOPE
 ---
 
@@ -19,7 +29,7 @@ Key features will include:
 
 By implementing these features, 'Mama's Kitchen' aims to foster an engaging community for African food enthusiasts, where users can share, discover, and appreciate the rich heritage of African kitchen.
 
-
+---
 # Background
 ---
 
@@ -32,6 +42,15 @@ As it is well known that one of the factors for decline in active transfer ia th
 This project seeks to be a store house for African Trditional meals where individuals can access different foods thereby promoting and preserving the heritage to generations.
 
 
+---
+# Target Audience
+---
+
+This project is tailored for a vibrant community of Africans, both at home and abroad, eager to delve deeper into the richness of African cuisine. The platform offers a delightful exploration of diverse African recipes. Whether an aspiring home chef or simply curious about the flavors of the continent.
+
+---
+# Wireframes
+---
 
 
 
