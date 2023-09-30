@@ -2,6 +2,7 @@ from .models import Recipe
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Field
+from django_summernote.widgets import SummernoteWidget
 
 
 class RecipeForm(forms.ModelForm):
@@ -12,8 +13,8 @@ class RecipeForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Recipe Local Name'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
             'country': forms.Select(attrs={'class': 'form-control'}),
-            'ingredients': forms.Textarea(attrs={'class': 'form-control'}),
-            'instructions': forms.Textarea(attrs={'class': 'form-control'}),
+            'ingredients': SummernoteWidget(attrs={'class': 'form-control'}),
+            'instructions': SummernoteWidget(attrs={'class': 'form-control'}), 
             'cook_time': forms.NumberInput(attrs={'class': 'form-control', 'style': 'margin-bottom: 10px;', 'placeholder':'in minutes'}),
         }
 

@@ -14,8 +14,10 @@
                 <form method="POST" action="{% url 'deleterecipe' pk=recipe.pk %}">
                     {% csrf_token %}
                     <strong>Are you sure you want to delete this recipe?</strong><br><br>
-                    <button>Yes</button>
-                    <a href="{% url 'home' %}" class="btn btn-secondary mt-4">No</a>
+                    <div>
+                        <button>Yes</button>
+                        <a href="{% url 'home' %}" class="btn btn-secondary">No</a>
+                    </div>
                 </form>
             </div>
 
