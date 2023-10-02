@@ -2,14 +2,14 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe, Country
-from .forms import RecipeForm
+from .forms import RecipeForm, EditProfileForm
 from django.urls import reverse_lazy
 from django.db.models import Q
 from django.contrib.auth.forms import UserChangeForm
 
 
 class EditUserView(generic.UpdateView):
-    form_class = UserChangeForm
+    form_class = EditProfileForm
     template_name = 'edit_profile.html'
     success_url = reverse_lazy('home')
     
