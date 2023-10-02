@@ -9,6 +9,10 @@ from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.views import PasswordChangeView
 
 
+def password_changed(request):
+    return render(request, 'password_changed.html')
+
+
 class ChangePasswordView(PasswordChangeView):
     form_class = ChangePasswordForm
     success_url = reverse_lazy('password_changed')
