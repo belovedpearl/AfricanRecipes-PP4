@@ -5,7 +5,10 @@ from .models import Recipe, Country
 from .forms import RecipeForm
 from django.urls import reverse_lazy
 from django.db.models import Q
-    
+
+
+
+  
 
 def CountryView(request, choice):
     """
