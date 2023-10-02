@@ -2,10 +2,16 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe, Country
-from .forms import RecipeForm, EditProfileForm
+from .forms import RecipeForm, EditProfileForm, ChangePasswordForm
 from django.urls import reverse_lazy
 from django.db.models import Q
 from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth.views import PasswordChangeView
+
+
+class ChangePasswordView(PasswordChangeView):
+    form_class = ChangePasswordForm
+    success_url = reverse_lazy('password_changed')
 
 
 class EditUserView(generic.UpdateView):
