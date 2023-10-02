@@ -10,10 +10,17 @@ from django.contrib.auth.views import PasswordChangeView
 
 
 def password_changed(request):
+    """
+    Return password change confirmation page
+    """
     return render(request, 'password_changed.html')
 
 
 class ChangePasswordView(PasswordChangeView):
+    """
+    Chooses custom form to use
+    Redirect to password_changed page
+    """
     form_class = ChangePasswordForm
     success_url = reverse_lazy('password_changed')
 
@@ -91,6 +98,12 @@ class AddRecipe(generic.CreateView):
 
 # Adapted from 'I think therefore i blog'
 class PostLike(View):
+    """
+    Handles post request
+    Fetch the recipe object
+    Toggles like
+    Redirect to recipe-detail page
+    """
     def post(self, request, pk):
         post = get_object_or_404(Recipe, pk=pk)
         if post.likes.filter(id=request.user.pk).exists():
@@ -101,6 +114,12 @@ class PostLike(View):
 
 # Adapted from 'I think therefore i blog'
 class PostDislike(View):
+    """
+    Handles post request
+    Fetch the recipe object
+    Toggles dislike
+    Redirect to recipe-detail page
+    """
     def post(self, request, pk):
         post = get_object_or_404(Recipe, pk=pk)
         if post.dislikes.filter(id=request.user.pk).exists():
@@ -134,6 +153,11 @@ class RecipeDetails(View):
 
 
 class RecipeView(generic.ListView):
+    """
+    Uses the Recipe model
+    Defines the queryset
+    Recder the index page
+    """
     model = Recipe
     queryset = Recipe.objects.filter(post_approved=True).order_by('-date_created')
     template_name = "index.html"
