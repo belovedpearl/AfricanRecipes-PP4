@@ -83,7 +83,8 @@
                 </ul>
                 <span class="navbar-text">
                     {% if user.is_authenticated %}
-                        Signed in as {{ user.username }}
+                        Signed in as                
+                            <a href="{% url 'edit_profile' %}" aria-label="Edit {{ user.username }}'s profile">{{ user.username }}</a>
                     {% else %}
                         Tasty African Recipes
                     {%  endif %}
