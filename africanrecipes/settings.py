@@ -35,7 +35,8 @@ SITE_ID = 1
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-belovedpear-africanreci-fnq32729nx7.ws-eu104.gitpod.io',
-'8000-belovedpear-africanreci-fnq32729nx7.ws-eu105.gitpod.io'
+'8000-belovedpear-africanreci-fnq32729nx7.ws-eu105.gitpod.io',
+'1f00-90-217-179-23.ngrok.io/'
 
 ]
 

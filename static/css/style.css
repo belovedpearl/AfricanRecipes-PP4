@@ -100,7 +100,13 @@ nav{
 }
 .user_spec{
     font-size: 12px;
-    margin-right: 20px;
+    margin-right: 20px;  
+}
+.share{
+    font-size: 12px;
+    height: 18px;
+    padding: 2px;
+    margin: 2px;
 }
 .details-img{
     width:100%;

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load social_share %}
 {% block title %} African Food Recipes {% endblock%}
 {% block content %}
 
@@ -29,7 +30,7 @@
                                 {% endif %}
 
                                 <div>    
-                                    <p>
+                                    <p class="d-inline">
                                         <span class="author">Posted By: {{ recipe.author }}</span>
                                         
                                         <span class="user_spec">
@@ -41,11 +42,22 @@
                                                 <i class="fas fa-trash me-2"></i>
                                             </a> 
                                             {% endif %}
-                                        </span>  
+                                        </span>
                                         
-                                        <i class="fas fa-share"></i>
+                                        <div class="dropdown d-inline">
+                                            <button class="btn btn-secondary dropdown-toggle share" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fas fa-share"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li class="dropdown-item">{% post_to_twitter "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url "Post to Twitter" %}</li>
+                                            <li class="dropdown-item">{% post_to_telegram "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url %}</li>
+                                            <li class="dropdown-item">{% post_to_whatsapp "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url "Post to WhatsApp" %}</li>
+                                            
+                                            </ul>
+                                        </div>
                                         
                                     </p>
+
                                     <a href="{% url 'countries' recipe.country %}" aria-label="Link to the Recipe detail page">
                                         <p class="text-center">{{ recipe.country }}</p>                                 
                                     </a>                          
