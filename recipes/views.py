@@ -8,10 +8,13 @@ from django.db.models import Q
 from django.contrib.auth.forms import UserChangeForm
 
 
-class EditUserView(generic.CreateView):
+class EditUserView(generic.UpdateView):
     form_class = UserChangeForm
     template_name = 'edit_profile.html'
     success_url = reverse_lazy('home')
+    
+    def get_object(self):
+        return self.request.user
 
 
 def CountryView(request, choice):
