@@ -43,10 +43,10 @@ class EditProfileForm(UserChangeForm):
     Edit choice fields in the user detail
     Style form with bootstrap
     """
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    email = forms.EmailField(widget=forms.EmailInput())
+    first_name = forms.CharField(max_length=100, widget=forms.TextInput())
+    last_name = forms.CharField(max_length=100, widget=forms.TextInput())
+    username = forms.CharField(max_length=100, widget=forms.TextInput())
     
     class Meta:
         model = User
