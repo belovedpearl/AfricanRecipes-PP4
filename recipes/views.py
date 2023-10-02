@@ -9,11 +9,19 @@ from django.contrib.auth.forms import UserChangeForm
 
 
 class EditUserView(generic.UpdateView):
+    """
+    Allow user edit profile using the editprofile form
+    Render form using edit_profile page
+    redirect back home
+    """
     form_class = EditProfileForm
     template_name = 'edit_profile.html'
     success_url = reverse_lazy('home')
     
     def get_object(self):
+        """
+        Return current loggin in user
+        """
         return self.request.user
 
 
