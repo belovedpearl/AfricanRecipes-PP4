@@ -10,6 +10,8 @@
 * [User Stories](#user-stories)
     * [Admin User Story](#admin-user-story)
     * [General User User Story](#general-user-user-story)
+    * [Unregistered users User Story](#unregistered-user-user-story)
+    * [Registered users User Story](#registered-user-user-story)
 
 ---
 # SCOPE
@@ -130,3 +132,53 @@ View all recipe posts so that I can choose one to read in detail.
 Sort recipe posts by country name so that I can see only the recipe post of intrested countries.
 
 If my search  by country returned no results, have a message displayed informing me of no posts related to my country search.
+
+---
+## Unregistered-user-User-Story
+
+These user stories were outlined to determine specifically, what unregistered user should be able to do.
+
+Sign-up and create an account, so that I can access the detailed functionality of the application.
+Sign-in to that created account, so that I can access the detailed functionality of the application.
+
+---
+
+## Registered user User Story
+
+These user stories helped to determine what registered users specifically should be able to do.
+
+As a registered user I can ...
+
+* Sign in to an already existing account, so that I can access the full functionality of the application.
+
+* Edit recipe posts I created so that I can improve or modify the content.
+
+* Delete recipe posts I created so that I know that I have the control of the content I created.
+
+* Change the password for that account, so that it becomes more memorable.
+
+* Sign-out easily, when already signed-in, so that I can be sure that my session was closed securely.
+
+* Have my sign-in status reflected back to me, so that I can be sure that I have signed-in.
+
+* Add a recipe post easily so that I can share food recipe on the website.
+
+* Apply rich text formatting to the content of my recipe, so that I can better express myself and provide additional structure to my recipe.
+
+* Upload an image to my recipe, so that I can show other users what the recipe looks like.
+
+* If there is no recipe when searching by countrry, have that reflected back to me so that I know that there is no recipe for the selected country.
+
+* Allow for confirmation of delete recipe befor deletion, so that I cannot accidentally delete any recipe post.
+
+* Be alerted when I have posted a recipe, so that I can be assured that I have submitted the recipe.
+
+* Be informed when I have successfully signed in, so that I can be assured that I have submitted the right details.
+
+* Be informed when I have updated a recipe, so that I can be assured that I have updated the recipe.
+
+* Be informed when I have deleted a recipe, so that I can be assured that I have deleted the recipe.
+
+* When viewing a recipe detail, like the page , so that I can express my thoughts of the recipe.
+
+* When viewing a recipe detail, dislike the page , so that I can express my thoughts of the recipe.
