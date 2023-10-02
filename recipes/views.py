@@ -5,10 +5,14 @@ from .models import Recipe, Country
 from .forms import RecipeForm
 from django.urls import reverse_lazy
 from django.db.models import Q
+from django.contrib.auth.forms import UserChangeForm
 
 
+class EditUserView(generic.CreateView):
+    form_class = UserChangeForm
+    template_name = 'edit_profile.html'
+    success_url = reverse_lazy('home')
 
-  
 
 def CountryView(request, choice):
     """

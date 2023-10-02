@@ -10,5 +10,7 @@ urlpatterns = [
     path('details/<int:pk>/delete', views.DeleteRecipe.as_view(), name='deleterecipe'),
     path('countries/<str:choice>/', views.CountryView, name='countries'),
     path('like/<int:pk>', views.PostLike.as_view(), name='recipe_like'),
-    path('dislike/<int:pk>', views.PostDislike.as_view(), name='recipe_dislike')
+    path('dislike/<int:pk>', views.PostDislike.as_view(), name='recipe_dislike'),
+    path('edit_profile/', views.EditUserView.as_view(), name='edit_profile'),
+
 ]
