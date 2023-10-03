@@ -27,7 +27,7 @@ class ChangePasswordView(PasswordChangeView):
     success_url = reverse_lazy('password_changed')
 
 
-class EditUserView(generic.UpdateView):
+class EditUserView(SuccessMessageMixin, generic.UpdateView):
     """
     Allow user edit profile using the editprofile form
     Render form using edit_profile page
@@ -36,10 +36,11 @@ class EditUserView(generic.UpdateView):
     form_class = EditProfileForm
     template_name = 'edit_profile.html'
     success_url = reverse_lazy('home')
+    success_message = "Your Profile was successfully updated"
     
     def get_object(self):
         """
-        Return current loggin in user
+        Return current log in in user
         """
         return self.request.user
 
