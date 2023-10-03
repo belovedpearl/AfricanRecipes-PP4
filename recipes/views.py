@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from django.db.models import Q
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.views import PasswordChangeView
+from django.contrib import messages
 
 
 def password_changed(request):
@@ -86,7 +87,15 @@ class AddRecipe(generic.CreateView):
     model = Recipe
     form_class = RecipeForm
     template_name = "addrecipe.html"
-    
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        """
+        Display message confirming recipe submission to users
+        """
+        messages.success(self.request, 'Recipe added successfully! Awaiting Approval.')
+        return super().form_valid(form)
+
     def get_context_data(self, **kwargs):
         """
         Add url data to the context data
