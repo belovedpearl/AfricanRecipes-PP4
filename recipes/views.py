@@ -8,6 +8,7 @@ from django.db.models import Q
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 def password_changed(request):
@@ -69,14 +70,16 @@ class DeleteRecipe(generic.DeleteView):
     success_url = reverse_lazy('home')
 
 
-class UpdateRecipe(generic.UpdateView):
+class UpdateRecipe(SuccessMessageMixin, generic.UpdateView):
     """
     Retrieves the recipe instance to be updated
     Uses the model recipe and RecipeForm
+    Alert the user if successfully updated
     """
     model = Recipe
     template_name = "updaterecipe.html"
     form_class = RecipeForm
+    success_message = "%(title)s was updated successfully"
 
 
 class AddRecipe(generic.CreateView):
@@ -88,7 +91,8 @@ class AddRecipe(generic.CreateView):
     form_class = RecipeForm
     template_name = "addrecipe.html"
     success_url = reverse_lazy('home')
-
+    
+    # Source: https://stackoverflow.com/questions/28723266/django-display-message-after-post-form-submit
     def form_valid(self, form):
         """
         Display message confirming recipe submission to users
