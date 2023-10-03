@@ -185,6 +185,7 @@ class RecipeView(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(post_approved=True).order_by('-date_created')
     template_name = "index.html"
+    paginate_by = 6
 
     def get_context_data(self, **kwargs):
         """
