@@ -52,7 +52,8 @@ def CountryView(request, choice):
     Render countries template with the requested recipes
     """
 
-    # Get the query using q for case insensitive search
+    # Get the query using q for case insensitive search 
+    # (source: https://docs.djangoproject.com/en/dev/ref/models/querysets/#iexact)
     query = Q(name__iexact=choice.capitalize()) | Q(name__iexact=choice.replace("-", " "))
     
     country = get_object_or_404(Country, query)
