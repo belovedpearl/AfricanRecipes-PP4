@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from django.contrib.messages import constants as messages
 
 if os.path.isfile('env.py'):
     import env
@@ -36,7 +37,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-belovedpear-africanreci-fnq32729nx7.ws-eu104.gitpod.io',
 '8000-belovedpear-africanreci-fnq32729nx7.ws-eu105.gitpod.io',
-'1f00-90-217-179-23.ngrok.io/'
 
 ]
 
@@ -64,6 +64,14 @@ INSTALLED_APPS = [
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
