@@ -60,7 +60,7 @@ def CountryView(request, choice):
     return render(request, 'countries.html', {'choice': country, 'recipe_posts': recipe_posts})
 
 
-class DeleteRecipe(generic.DeleteView):
+class DeleteRecipe(SuccessMessageMixin, generic.DeleteView):
     """
     Allows users to delete recipe post
     Renders the deleterecipe form
@@ -68,6 +68,15 @@ class DeleteRecipe(generic.DeleteView):
     model = Recipe
     template_name = "deleterecipe.html"
     success_url = reverse_lazy('home')
+    success_message = "Recipe successfully deleted"
+
+    # Source: https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item
+    def delete(self, request, *args, **kwargs):
+        """
+        Confirms to user the deletion of a recipe
+        """
+        messages.warning(self.request, self.success_message)
+        return super(DeleteRecipe, self).delete(request, *args, **kwargs)
 
 
 class UpdateRecipe(SuccessMessageMixin, generic.UpdateView):
