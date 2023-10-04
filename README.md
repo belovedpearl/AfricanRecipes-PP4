@@ -14,6 +14,7 @@
     * [Registered users User Story](#registered-user-user-story)
 * [Features](#features)
     * [Base Template](#base-template)
+        * [Header and Navbar](#header-and-navbar)
 ---
 # SCOPE
 ---
@@ -196,6 +197,22 @@ This section discusses the features and pages of the project 'Mama's Kitchen', t
 
 Mama's Kitchen uses a single base template file extended to every other page, this is to provide a consistent user experience and promote uniformity across the website. The HTML code from the other templates is injected into a central main element relaying the spacificity of each page.
 The base template contains;
+
+### Header and Navbar
+
+The navbar provides navigation to other pages of Mama's Kitchen. The navbar was created using a standard Bootstrap navbar and its responsive on different screen sizes. Each list item in the navbar is a link that changes color when hovered notifying user of mouse movement over the link.
+Active pages are styled with custom CSS by a background color, border radius of 10px with black text. This was included to inform user about the page they are currently on.
+
+All users have access to the default landing page (index page) by clicking either the bolded Mama'sKitchen icon or the Home Link. 
+All users can search recipes by countries using the dropdown on the country link or clicking on their preferred country name on each recipe. A click on the country name filters the database by the recipe of the country, if there is no recipe for the country, the user is informed, more details will be discussed in the 'countries page' section.
+
+If the user is signed out or has not yet created an account, navigation options after the above are either Log-in to an existing account or Register a new account. A user may create an account by clicking on the Sign Up link, or Sign in to an existing account by clicking on the Sign In link.
+
+If the user is signed-in, navigation options are to either Sign-out or Add a new Recipe. The user may click on the Add Recipe link to be directed to a page where they may create and upload a recipe of choice.
+
+On the right end of the navbar, unregistered users are presented with the statement 'Tasty African Recipe' while registered signed in users are presented with the caption 'Signed in as <username>'. This section  has two functions; first, it identifies the specific logged in user by displaying their name. The username also acts as a link where users can edit their profile information.
+
+
 
 ### Bootstrap navbar
 The navbar is made up of the following;
