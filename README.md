@@ -12,7 +12,8 @@
     * [General User User Story](#general-user-user-story)
     * [Unregistered users User Story](#unregistered-user-user-story)
     * [Registered users User Story](#registered-user-user-story)
-
+* [Features](#features)
+    * [Base Template](#base-template)
 ---
 # SCOPE
 ---
@@ -182,3 +183,35 @@ As a registered user I can ...
 * When viewing a recipe detail, like the page , so that I can express my thoughts of the recipe.
 
 * When viewing a recipe detail, dislike the page , so that I can express my thoughts of the recipe.
+
+---
+# Features
+
+---
+This section discusses the features and pages of the project 'Mama's Kitchen', the design choices made, discussion of the HTML and CSS codes. Where appropriate, the views and forms used to render those pages are also discussed.
+
+---
+
+## Base Template
+
+Mama's Kitchen uses a single base template file extended to every other page, this is to provide a consistent user experience and promote uniformity across the website. The HTML code from the other templates is injected into a central main element relaying the spacificity of each page.
+The base template contains;
+
+### Bootstrap navbar
+The navbar is made up of the following;
+* Toggler: This shows up on screen size 768px and below. A click on the button reveal the link on small screens.
+* The logo to represent the brand, it can be clicked to load the homepage. 
+* Home link returns back home once clicked. 
+* Country link: Used to access the list of African countries. Recipes can be searched by country using the dropdown. 
+* Login/Register Link: When the blog is opened, users are able to choose weather to login (for already registered users) or to register (for new users).
+* Logout link: Registered users are able to end their sessions on the page by clicking on the logout link to signout of the site.
+* Add recipe link: Registered users are able to add recipe to the platform by clicking on this link which in turn bring up the add recipe page for user to fill and submit.
+
+### A section for the messages
+Messages if available are relayed to the users here. This message can be as a result of actions like login, logout, updating a profile, submitting a recipe. They all assure the user of the completion of their actions.
+
+### Footer 
+Links to various social media platforms are featured here with a copyright caption.
+
+
+---
