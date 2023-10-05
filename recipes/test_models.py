@@ -21,7 +21,7 @@ class TestModel(TestCase):
             cook_time=120,
             country=self.country,
         )
-        # Check for successful recipe creation
+        # Check successful recipe creation
         self.assertEqual(recipe.title, 'Test Recipe')
         self.assertEqual(recipe.author, self.user)
         self.assertEqual(recipe.ingredients, 'Test ingredients')
@@ -32,12 +32,12 @@ class TestModel(TestCase):
 
     def test_recipe_primary_key(self):
         Recipe.objects.create( 
-            title='Test Recipe', 
-            author=self.user, 
-            ingredients='Test ingredients', 
-            instructions='Test instructions', 
-            recipe_image='test_image.png', 
-            cook_time=120, 
+            title='Test Recipe',
+            author=self.user,
+            ingredients='Test ingredients',
+            instructions='Test instructions',
+            recipe_image='test_image.png',
+            cook_time=120,
             country=self.country,)
         recipe = Recipe.objects.get(title='Test Recipe')
         self.assertIsNotNone(recipe.pk)
@@ -71,6 +71,7 @@ class TestModel(TestCase):
             cook_time=30,
             country=self.country,
         )
+        # Check for like snd dislike addition
         recipe.likes.add(user1)
         self.assertTrue(recipe.likes.filter(pk=user1.pk).exists())
         self.assertFalse(recipe.likes.filter(pk=user2.pk).exists())
@@ -78,6 +79,16 @@ class TestModel(TestCase):
         recipe.dislikes.add(user2)
         self.assertTrue(recipe.dislikes.filter(pk=user2.pk).exists())
         self.assertFalse(recipe.dislikes.filter(pk=user1.pk).exists())
+    
+
+class CountryModelTest(TestCase):
+    def setUp(self):
+        self.country = Country.objects.create(name='Test Country')
+
+    def test_country_name(self):
+        country = Country.objects.get(pk=1)
+        expected_name = f'{country}'
+        self.assertEqual(expected_name, str(country))
 
 
             
