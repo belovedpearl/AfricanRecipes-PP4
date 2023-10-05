@@ -57,3 +57,27 @@ class TestModel(TestCase):
         recipe = Recipe.objects.get(pk=1)
         max_length = recipe._meta.get_field('title').max_length
         self.assertEqual(max_length, 150)
+
+    def test_recipe_like_and_dislike(self):
+        # Create users to test for likes and dislikes
+        user1 = User.objects.create_user(username='user1', password='password1')
+        user2 = User.objects.create_user(username='user2', password='password2')
+        recipe = Recipe.objects.create(
+            title='Test Recipe',
+            author=self.user,
+            ingredients='Test ingredients',
+            instructions='Test instructions',
+            recipe_image='test_image.jpg',
+            cook_time=30,
+            country=self.country,
+        )
+        recipe.likes.add(user1)
+        self.assertTrue(recipe.likes.filter(pk=user1.pk).exists())
+        self.assertFalse(recipe.likes.filter(pk=user2.pk).exists())
+
+        recipe.dislikes.add(user2)
+        self.assertTrue(recipe.dislikes.filter(pk=user2.pk).exists())
+        self.assertFalse(recipe.dislikes.filter(pk=user1.pk).exists())
+
+
+            
