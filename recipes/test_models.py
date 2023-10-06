@@ -79,8 +79,8 @@ class TestModel(TestCase):
         recipe.dislikes.add(user2)
         self.assertTrue(recipe.dislikes.filter(pk=user2.pk).exists())
         self.assertFalse(recipe.dislikes.filter(pk=user1.pk).exists())
-    
 
+        
 class CountryModelTest(TestCase):
     def setUp(self):
         self.country = Country.objects.create(name='Test Country')

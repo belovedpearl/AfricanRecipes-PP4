@@ -15,6 +15,12 @@
 * [Features](#features)
     * [Base Template](#base-template)
         * [Header and Navbar](#header-and-navbar)
+        * [A Section for the Messages](#a-section-for-the-messages)
+        * [Footer](#footer)
+    * [Landing Page](#landing-page)
+        * [Recipes](#recipes)
+        * [Pagination](#pagination)
+        * [Recipe by Country](#recipe-by-country)
 ---
 # SCOPE
 ---
@@ -195,8 +201,8 @@ This section discusses the features and pages of the project 'Mama's Kitchen', t
 
 ## Base Template
 
-Mama's Kitchen uses a single base template file extended to every other page, this is to provide a consistent user experience and promote uniformity across the website. The HTML code from the other templates is injected into a central main element relaying the spacificity of each page.
-The base template contains;
+Mama's Kitchen uses a single base template file extended to every other page, this is to provide a consistent user experience and promote uniformity across the website. Codes from the other templates are injected in=between the center element ({insert block content} & {end block content}) to relay the specificity of each page.
+The base template is made up of the following;
 
 ### Header and Navbar
 
@@ -213,17 +219,6 @@ If the user is signed-in, navigation options are to either Sign-out or Add a new
 On the right end of the navbar, unregistered users are presented with the statement 'Tasty African Recipe' while registered signed in users are presented with the caption 'Signed in as <username>'. This section  has two functions; first, it identifies the specific logged in user by displaying their name. The username also acts as a link where users can edit their profile information.
 
 
-
-### Bootstrap navbar
-The navbar is made up of the following;
-* Toggler: This shows up on screen size 768px and below. A click on the button reveal the link on small screens.
-* The logo to represent the brand, it can be clicked to load the homepage. 
-* Home link returns back home once clicked. 
-* Country link: Used to access the list of African countries. Recipes can be searched by country using the dropdown. 
-* Login/Register Link: When the blog is opened, users are able to choose weather to login (for already registered users) or to register (for new users).
-* Logout link: Registered users are able to end their sessions on the page by clicking on the logout link to signout of the site.
-* Add recipe link: Registered users are able to add recipe to the platform by clicking on this link which in turn bring up the add recipe page for user to fill and submit.
-
 ### A section for the messages
 Messages if available are relayed to the users here. This message can be as a result of actions like login, logout, updating a profile, submitting a recipe. They all assure the user of the completion of their actions.
 
@@ -232,3 +227,48 @@ Links to various social media platforms are featured here with a copyright capti
 
 
 ---
+
+## Landing Page
+---
+
+This is the template rendered to the users when visiting the deployed site (Mama'sKitchen). The landing page is rendered from templates/index.html using the RecipeView view.
+This view inherits from the Django [ListView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/) class. It uses the model Recipe and queries the database for approved posts. It paginates by 6 recipes per page allowing users navugatre to other page to view more recipes.
+In order to provide additional context-data a function was defined to return the url_name and the country list as part of the rendered template. 
+
+Landing page screenshot:
+
+
+
+### Recipes
+
+Each recipe card presents a brief overview of a particular recipe. Allowing thw user to view the image, local name, post author, country, likes and dislikes, date posted. A user click on the local name directs the user to a page containing more details (cook-time, instructions, ingredients) about the recipe.
+
+The details page with its view is discussed below.
+
+Recipe Screenshot:
+
+
+### Pagination
+
+The landing page is set to display recipes in batches of 6. Other recipes are paginated. The pagination allows users  to move in a variety of ways that intrest the user. Users can choose to move to the first page to view the first 6 recipes, move to the previous page from where they are currently on, move to the next page from where they are currently on, move to the last page of available recipes. By clicking on the button **First**, **Previous**, **Next**, **Last** respectively.
+
+Users can access any particular pagination page by clicking on the appropriate numbered square. If any of the first, last, previous or last options are not available, then the button still displays, but is greyed-out and has no active href attribute. This was implemented to provide a consistent style as the user navigates the recipes paginated pages.
+
+Including the pagination will help users to have a smooth scroll through to different pages of the site.
+
+Pagination bar:
+
+
+### Recipe by Country
+
+Due to the nature of the project and its targets, I initially considered allowing users to filter the recipes available by country name. Users can access this function by either clicking on their desired country name on each post or by using the country dropdown in the navbar to select their choiced country.
+
+If there are no recipe posted for such country, users are given a feedback informing them of no recipe posted for their country of choice. Users are then ebcouraged to add recipe for such country.
+
+Dropdown picture of Afrcican Countries:
+
+
+
+
+
+
