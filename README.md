@@ -21,6 +21,8 @@
         * [Recipes](#recipes)
         * [Pagination](#pagination)
         * [Recipe by Country](#recipe-by-country)
+    * [Details Page](#details-page)
+
 ---
 # SCOPE
 ---
@@ -268,7 +270,13 @@ If there are no recipe posted for such country, users are given a feedback infor
 Dropdown picture of Afrcican Countries:
 
 
+## Details Page
 
+To promote the use of the site among users, all users are allowed access to the details page.The details page is used to display all about a single recipe that is clicked. It is rendered using the details template and the **RecipeDetails** view. The details page is styled mostly with bootstrap and some vanilla css. It features the recipe picture, title(recipe localname), number of likes and dislikes, instructions, ingredients, cook time.
+The details page restricts some of its features, it displays the edit and delete button for recipe author and prevent non-authors access to it, it also allows authenticated users access to like and dislike function for each recipe.
+A signed-in user and author of a recipe can edit or delete his recipe post from here.
+The page also contains a placeholder image for posts made without an image this is to allow recipe in which its author maight not have the picture as at when posting.
 
+Additionally, at the end of the recipe description is the back button that directs the user back to the default landing page providing an alternative to the user's browser back button.
 
-
+Screenshot of recipe details page:
