@@ -50,7 +50,31 @@ class TestViews(TestCase):
         self.assertFalse(response.context['liked'])
         self.assertFalse(response.context['disliked'])
 
-   
+    def test_get_add_recipe_page(self):
+        """
+        Test if add_recipe page renders correctly
+        """
+        response = self.client.get('/addrecipe/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'addrecipe.html')
+
+    def test_get_update_recipe_page(self):
+        """
+        Test if update recipe page renders correctly
+        """
+        url = reverse('updaterecipe', kwargs={'pk': self.recipe.pk})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'updaterecipe.html')
+
+    def test_get_delete_recipe_page(self):
+        """
+        Test if delete recipe page renders correctly
+        """
+        url = reverse('deleterecipe', kwargs={'pk': self.recipe.pk})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'deleterecipe.html')
 
 
 
