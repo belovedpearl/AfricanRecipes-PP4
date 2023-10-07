@@ -76,10 +76,26 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'deleterecipe.html')
 
+    def test_get_country_page(self):
+        """
+        Test country page renders succesfully
+        """
+        url = reverse('countries', kwargs={'choice': 'Test Country'})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'countries.html')
+    
+    def test_get_edit_user_page(self):
+        """
+        Test if edit user page renders correctly
+        """
+        self.client.login(username='Test User', password='Test Password')
+        url = reverse('edit_profile')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'edit_profile.html')
 
-
-
-
+    
 
 
 
