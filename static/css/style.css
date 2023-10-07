@@ -1,3 +1,6 @@
+/* font-family: 'Great Vibes', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; */
 
 html, body{
     height: 100%; 
@@ -5,7 +8,7 @@ html, body{
 
 body {
     background-color: #e5e7ea;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: black;
 }
@@ -20,7 +23,9 @@ p{
     margin-bottom: 0;
 }
 
-a{
+a{  
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
     text-decoration: none;
     color: black;
 }
@@ -36,7 +41,7 @@ button{
 /*_______________ Logo _________________ */
 #life{
     font-family:'Great Vibes', cursive;
-    font-size: 48px;
+    font-size: 50px;
     font-weight: 400;
     color: black;
     margin-right: 30px;
