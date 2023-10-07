@@ -53,8 +53,15 @@ nav{
     background-color: #aaf3aa;
     color: black;
 }
-.nav-link{
+.navbar-light .navbar-nav .nav-link{
     color: black;
+}
+.navbar-light .navbar-text{
+    color: black;
+}
+.navbar-light .navbar-toggler {
+    color: black;
+    border-color: black;
 }
 .nav-link:hover{
     color: #FF4500;
@@ -65,7 +72,8 @@ nav{
     font-weight: 900;
     border-radius: 10px;
 }
-.active:hover{
+.active:hover,
+.dropdown-item:focus{
     background-color: #FF4500;;
     color: black !important;
 }
