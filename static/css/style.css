@@ -24,14 +24,25 @@ a{
     font-size: 16px;
     text-decoration: none;
     color: black;
+    
 }
 a:hover{
-    color: #FF4500 !important;
+    color: #F54E4E !important;
+   
 }
 
 button{
     margin: 10px;
- } 
+}
+.home{
+    margin-top: 5px;
+    background-color: #F54E4E;
+    color: black;
+    /* background-color: #4fde4f; */
+} 
+.home:hover{
+    background-color: #FFD700;
+}
 
 
 /*_______________ Logo _________________ */
@@ -60,17 +71,17 @@ nav{
     border-color: black;
 }
 .nav-link:hover{
-    color: #FF4500;
+    color: #F54E4E;
 }
 .active{
-    background-color: #FF4500;;
+    background-color: #E7AAAA;
     color: white;
     font-weight: 900;
     border-radius: 10px;
 }
 .active:hover,
 .dropdown-item:focus{
-    background-color: #FF4500;;
+    background-color: #F54E4E;;
     color: black !important;
 }
 .dropdown-menu{
@@ -89,7 +100,7 @@ nav{
 }
 .recipe-link{
     font-size: 52px; 
-    color: #FF4500;
+    color: #F54E4E;
     text-decoration: none;
 }
 .recipe-link:hover{
@@ -178,7 +189,7 @@ form{
 }   
 
 .social-link:hover{
-   color: #FF4500; 
+   color: #F54E4E; 
 }
 
 footer{
@@ -194,6 +205,7 @@ footer{
     color: #E84610;
     border: none;
     background: transparent;
+    
 }
 
 .btn-like:hover,
@@ -209,8 +221,9 @@ footer{
     color: black;
 }
 .page-item.active .page-link {
-    background-color: #E84610;
-    border-color: #E84610;
+    background-color: #F54E4E;
+    border-color:#F54E4E;
+/*  color: #F54E4E;*/
 }
 
 @media (max-width: 768px) {
@@ -220,5 +233,11 @@ footer{
      
     .navbar-nav .nav-link {
         padding-left: 20px;
+    }
+    .card-body{
+        padding: 0.5rem 0.5rem;
+    }
+    .date_created {
+        margin-right: 10px;
     }
 } 
