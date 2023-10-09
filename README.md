@@ -22,6 +22,7 @@
         * [Pagination](#pagination)
         * [Recipe by Country](#recipe-by-country)
     * [Details Page](#details-page)
+    * [Add Recipe Page](#add-recipe-page)
 
 ---
 # SCOPE
@@ -280,3 +281,17 @@ The page also contains a placeholder image for posts made without an image this 
 Additionally, at the end of the recipe description is the back button that directs the user back to the default landing page providing an alternative to the user's browser back button.
 
 Screenshot of recipe details page:
+
+
+## Add Recipe Page
+
+The add recipe page is rendered using the addrecipe template and the AddRecipe view. The AddRecipe class inherits from the class CreateView. It allows users to submit new recipe to be posted to the platform. 
+
+The addrecipe page allows a user to write and submit a recipe of choice specifying the country it belongs. Submitting the recipe is done with a form and submitted. The user must enter all of the necessary information about the recipe like the title, ingredients required, instructions,  cook time. The user has to choose from the dropdown provided the country, a placeholder image is used if the user fails to provide a recipe image as I considered some users might not have the recipe picture but have the recipe description.
+Recipe posts submitted needs to be approved by an administrator before it can be updated on the page. On successfull submission of recipe, the user is assured of the successful submission of the recipe and an assurance that its awaiting approval from an administrator.
+Success message is relayed to the users using the imported class based view[SuccessMessageMixin](https://tech.serhatteker.com/post/2020-11/show-success-message-in-cbv-django/). 
+Recipe posts needs to be approved to prevent unwanted posts from the platform.
+
+Screenshot of add recipe page:
+
+

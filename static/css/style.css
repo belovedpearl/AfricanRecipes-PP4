@@ -74,15 +74,15 @@ nav{
     color: #F54E4E;
 }
 .active{
-    background-color: #E7AAAA;
-    color: white;
+    background-color: #F54E4E;
+    color: black;
     font-weight: 900;
     border-radius: 10px;
 }
 .active:hover,
 .dropdown-item:focus{
     background-color: #F54E4E;;
-    color: black !important;
+    color: white !important;
 }
 .dropdown-menu{
     background-color: #aaf3aa;
