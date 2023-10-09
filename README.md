@@ -23,6 +23,9 @@
         * [Recipe by Country](#recipe-by-country)
     * [Details Page](#details-page)
     * [Add Recipe Page](#add-recipe-page)
+    * [Update Recipe](#update-recipe)
+    * [Delete Recipe](#delete-recipe)
+
 
 ---
 # SCOPE
@@ -295,3 +298,26 @@ Recipe posts needs to be approved to prevent unwanted posts from the platform.
 Screenshot of add recipe page:
 
 
+## Update Recipe Post
+
+The update recipe page is rendered using the updaterecipe template and the UpdateRecipe view. 
+Only authenticated users have access to the update recipe page, I added a link to direct unauthenticated users to the signup page in case they try to access this page.
+To render the page, it inherits from the class based view [UpdateView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/). It uses the model Recipe and the form RecipeForm class. Users get a feedback of successful recipe post edit using the SuccessMessageMixin to generate the message contained in the success_message variable as contained in the class definition.
+To update a recipe post, the form field are pre-filled once the user click the specific recipe to update, this is done via the specific primary key of each post. The users can then update the needed field.
+Only recipe post authors can update their recipe to prevent abuse of the update function since updating does not require permission from the administrator.
+
+Screenshots of update recipe page:
+
+
+
+## Delete Recipe
+
+The delete recipe page is rendered using the deleterecipe template and the DeleteReview view. The view inherits from the class based view [Deleteview](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/). It uses the model Recipe. Upon successful deletion, it reverts back to the home page.
+
+A simple template page that allows a user to delete a particular recipe. Rather than allowing the recipe posts deleted immediately after the user clicks on the delete, I allowed the user to choose weather to continue with the deletion or stop the process. Once deleted, the user is redirected back to the homepage and a message is relayed confirming successful deletion from the database.
+
+To delete a recipe post, only the author is allowed to access the delete function of a particuler recipe post, non-authors of the posts are informed that they cannot delete any post with a link to go back to the home page. Also unauthorized users are informed that they are not allowed to delete any posts and can signup using the link to register.
+
+
+
+Screenshot of de
