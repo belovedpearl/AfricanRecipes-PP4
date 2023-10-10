@@ -65,10 +65,10 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Sign out Page">Logout</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Sign out Page">LOG OUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'add_recipe' %} active {% endif %}" href="{% url 'add_recipe' %}" aria-label="Add new recipe page">Add Recipe</a>
+                        <a class="nav-link {% if url_name == 'add_recipe' %} active {% endif %}" href="{% url 'add_recipe' %}" aria-label="Add new recipe page">ADD RECIPE</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
