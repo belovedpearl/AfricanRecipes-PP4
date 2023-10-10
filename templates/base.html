@@ -43,14 +43,14 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'home' %} active {% endif %}" aria-label="Homepage" href="{% url 'home' %}">Home</a>        
+                        <a class="nav-link {% if url_name == 'home' %} active {% endif %}" aria-label="Homepage" href="{% url 'home' %}">HOME</a>        
                     </li>
                     <li>
                     <!-- Country List Dropdown -->
                     {% if country_list %}
                     <div class="dropdown">
                         <a class="nav nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        Countries
+                        COUNTRIES
                         </a>
                     
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -72,11 +72,11 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}" aria-label="Login Page">Login</a>
+                        <a class="nav-link" href="{% url 'account_login' %}" aria-label="Login Page">SIGN IN</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link"  href="{% url 'account_signup' %}" aria-label="Registration page">Register</a>
+                        <a class="nav-link"  href="{% url 'account_signup' %}" aria-label="Registration page">SIGN UP</a>
                     </li>
                     {% endif %}  
                     
