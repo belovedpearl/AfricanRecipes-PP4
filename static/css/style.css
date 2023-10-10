@@ -44,6 +44,9 @@ button{
     background-color: #FFD700;
 }
 
+hr{
+    border: 1px solid #5c875c;
+}
 
 /*_______________ Logo _________________ */
 #life{
