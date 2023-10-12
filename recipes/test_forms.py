@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import RecipeForm, EditProfileForm
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 class TestItemForm(TestCase):
@@ -61,6 +62,30 @@ class TestEditProfileForm(TestCase):
         self.assertFalse(form.is_valid())
 
 
+class EditUserViewTest(TestCase):
+    def setUp(self):
+        # A representative test user
+        self.user = User.objects.create_user(
+            username='testuser',
+            password='testpassword',
+        )
 
+    def test_successful_form_submission(self):
+        """
+        Test for successful form submission
+        Test page redirect after form submission
+        """
+        self.client.login(username='testuser', password='testpassword')
+
+        # Redine user's details to submit
+        form_data = {
+            'username': 'test_user_name',
+            'first_name': 'NewFirst Name',
+            'last_name': 'NewLast Name',
+            'email': 'newemail@yes.com',
+        }
+        response = self.client.post(reverse('edit_profile'), form_data)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('home'))
 
 
