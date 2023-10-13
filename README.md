@@ -26,6 +26,7 @@
     * [Add Recipe Page](#add-recipe-page)
     * [Update Recipe](#update-recipe)
     * [Delete Recipe](#delete-recipe)
+    * [Share Post](#share-post)
     * [Countries Page](#countries-page)
     * [Edit User Page](#edit-user-page)
     * [Sign-In, Sign-Out, Sign-Up Pages](#sign-in-sign-out-sign-up-pages)
@@ -350,6 +351,13 @@ To delete a recipe post, only the author is allowed to access the delete functio
 
 
 **Screenshot of delete page**
+
+---
+## Share Post 
+
+While building this project, I thought about adding a feature to allow users share recipe post. This can further promote the awareness for this site and also help to reach more audience with the african recipes. Using the [social share](https://pypi.org/project/django-social-share/) documentation on django and a bootstrap dropdown, I was able to include a share post feature on twitter telegram and whatsapp. I would have loved to include facebook but it was said in the documentation that facebook no longer supports this feature.
+
+**Share post feature**
 
 ---
 
