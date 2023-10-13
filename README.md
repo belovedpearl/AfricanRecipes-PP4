@@ -28,6 +28,8 @@
     * [Delete Recipe](#delete-recipe)
     * [Countries Page](#countries-page)
     * [Edit User Page](#edit-user-page)
+    * [Sign-In, Sign-Out, Sign-Up Pages](#sign-in-sign-out-sign-up-pages)
+    * [Messages](#messages)
 
 
 ---
@@ -237,6 +239,22 @@ Links to various social media platforms are featured here with a copyright capti
 
 ---
 
+## Admin Section 
+
+The project Mama'sKitchen has an admin section accessible only to its superusers. The admin section is displayed in a list for easy view by the admin, in the search field, recipes can be searches by recipe title, cook time and country. Also, the list can be filtered by date created, post approved and country, all this were included to ease the admin duties. There is also a section where the admin is set to manage the country list. The admin can view the list of countries from here.
+Once the section is accessed, superusers may:
+
+
++ Create recipes to add to the page.
++ View the list of all submitted recipes.
++ Update and delete any submitted recipes.
++ Approve a recipe post so that it will be displayed on the main application.
++ View the list of all country names.
++ Update and delete countries when needed.
++ View a list of all authenticated users.
++ Delete any user.
++ Update any user information.
++ Change status of users to staff or superusers.
 
 ---
 
@@ -271,14 +289,17 @@ Including the pagination will help users to have a smooth scroll through to diff
 Pagination bar:
 
 
+
 ### Recipe by Country
 
 Due to the nature of the project and its targets, I initially considered allowing users to filter the recipes available by country name. Users can access this function by either clicking on their desired country name on each post or by using the country dropdown in the navbar to select their choiced country.
 
 If there are no recipe posted for such country, users are given a feedback informing them of no recipe posted for their country of choice. Users are then ebcouraged to add recipe for such country.
 
-Dropdown picture of Afrcican Countries:
+**Dropdown picture of Afrcican Countries:**
 
+
+---
 
 ## Details Page
 
@@ -289,8 +310,9 @@ The page also contains a placeholder image for posts made without an image this 
 
 Additionally, at the end of the recipe description is the back button that directs the user back to the default landing page providing an alternative to the user's browser back button.
 
-Screenshot of recipe details page:
+**Screenshot of recipe details page:**
 
+---
 
 ## Add Recipe Page
 
@@ -301,8 +323,9 @@ Recipe posts submitted needs to be approved by an administrator before it can be
 Success message is relayed to the users using the imported class based view[SuccessMessageMixin](https://tech.serhatteker.com/post/2020-11/show-success-message-in-cbv-django/). 
 Recipe posts needs to be approved to prevent unwanted posts from the platform.
 
-Screenshot of add recipe page:
+**Screenshot of add recipe page:**
 
+---
 
 ## Update Recipe Post
 
@@ -314,7 +337,7 @@ Only recipe post authors can update their recipe to prevent abuse of the update 
 
 Screenshots of update recipe page:
 
-
+---
 
 ## Delete Recipe
 
@@ -328,6 +351,7 @@ To delete a recipe post, only the author is allowed to access the delete functio
 
 **Screenshot of delete page**
 
+---
 
 ## Countries Page
 This page presents to users a list of recipes available for their country of choice. Users can choose countries either by using the country dropdown as shown in the **"recipes by countries"** section or by clicking on the country name in each post.
@@ -338,6 +362,8 @@ Each post is quite similar in display to the landing page but it does not have t
 
 **Screenshot of the Country Page**
 
+---
+
 ## Edit User Page
 
 The page is rendered using the edit_profile template and the EditUserView. Once signed in, users can click on their name on the right corner of the navbar to be taken to the edit_profile page. Users can then update whatever user detail they want to change. 
@@ -347,5 +373,26 @@ Once updated, users are redirected back home and a message is popped onto the sc
 
 **Screenshot of Profile Update Page**
 
+---
 
-   
+## Sign In, Sign Out, Sign Up Pages
+
+These are modified versions of the standard AllAuth templates that can be copied over from the site-packages directory with the cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates command. Its modification include extending mama's kitchen base template and adding some bootstrap classes.
+
+**Screenshot of Sign In Page**
+
+**Screenshot of Sign Out Page**
+
+**Screenshot of Sign Up Page**
+
+---
+
+## Messages
+
+This was included to give the user a form of feedback for their actions. Users get a message when they successfully sign-in, sign-out, add a recipe post, delete a recipe post, change password, update their profile information.
+
+
+**Samples of Messages to Users**
+
+
+---
