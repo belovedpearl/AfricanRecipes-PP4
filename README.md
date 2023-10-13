@@ -17,6 +17,7 @@
         * [Header and Navbar](#header-and-navbar)
         * [A Section for the Messages](#a-section-for-the-messages)
         * [Footer](#footer)
+    * [Admin Section](#admin-section)
     * [Landing Page](#landing-page)
         * [Recipes](#recipes)
         * [Pagination](#pagination)
@@ -25,6 +26,8 @@
     * [Add Recipe Page](#add-recipe-page)
     * [Update Recipe](#update-recipe)
     * [Delete Recipe](#delete-recipe)
+    * [Countries Page](#countries-page)
+    * [Edit User Page](#edit-user-page)
 
 
 ---
@@ -234,6 +237,9 @@ Links to various social media platforms are featured here with a copyright capti
 
 ---
 
+
+---
+
 ## Landing Page
 ---
 
@@ -320,4 +326,26 @@ To delete a recipe post, only the author is allowed to access the delete functio
 
 
 
-Screenshot of de
+**Screenshot of delete page**
+
+
+## Countries Page
+This page presents to users a list of recipes available for their country of choice. Users can choose countries either by using the country dropdown as shown in the **"recipes by countries"** section or by clicking on the country name in each post.
+The page is rendered using the countries template and the CountryView view. The view retrieves country object from the country model and gets all recipe that matches the query from the the recipe model. It renders the countries template with the requested recipes.
+
+Each post is quite similar in display to the landing page but it does not have the country names specified on each post anymore as the recipe displayed belong to the same country referred to in the subject header.
+
+
+**Screenshot of the Country Page**
+
+## Edit User Page
+
+The page is rendered using the edit_profile template and the EditUserView. Once signed in, users can click on their name on the right corner of the navbar to be taken to the edit_profile page. Users can then update whatever user detail they want to change. 
+
+Once updated, users are redirected back home and a message is popped onto the screen confirming successful update of the user's profile.
+
+
+**Screenshot of Profile Update Page**
+
+
+   
