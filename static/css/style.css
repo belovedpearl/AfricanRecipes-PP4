@@ -244,3 +244,22 @@ footer{
         margin-right: 10px;
     }
 } 
+
+
+.summernote-div iframe {
+    width: 100% !important;
+    max-width: 720px;
+    min-width: 57%;
+}
+
+.changerecipeform, .changerecipe form {
+    max-width: 720px;
+    min-width: 57%;
+}
+
+@media screen and (max-width: 1000px) {
+    .summernote-div iframe,.changerecipeform, .changerecipe form {
+        min-width: 75%;
+    }
+}
+
