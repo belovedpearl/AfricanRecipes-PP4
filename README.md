@@ -31,6 +31,14 @@
     * [Edit User Page](#edit-user-page)
     * [Sign-In, Sign-Out, Sign-Up Pages](#sign-in-sign-out-sign-up-pages)
     * [Messages](#messages)
+* [Database Model](#database-model)
+     * [Recipe Class](#recipe-class)
+         * [Recipe Class Method](#recipe-class-methods)
+     * [Country Class](#country-class)
+          * [Country Class Methods](#country-class-methods)
+* [Recipes Views](#recipe-views)
+     * [Landing Page View](#landing-page-view)
+     * [Details Page View](#details-page-view)
 
 
 ---
@@ -404,3 +412,79 @@ This was included to give the user a form of feedback for their actions. Users g
 
 
 ---
+# Database Model
+
+![Representation of the user structure and the model used.](static/images/site_description/recipe_db_model.png)
+
+This section shows a representation of user structure and the database used in the buildup of Mama'sKitchen project. Two models were made representing the Recipe and Country.
+
+## Recipe Class
+
+The is used as a template to add in different recipes, users and admin can add post using this model.
+
+|Field | Details|
+|---   | --------
+|Title | CharField with maximum length set to 150 Each title is set be be unique|
+| Author| This takes the creators name, It is a foreign key linked to Users model. Deleting the author will cause all posts in the author's name to be deleted as well (on_delete=models.CASCADE)|
+|Instructions| This field takes text(TextField()) describing the cooking process.|
+|Ingredients| This field takes text(TextField()) describing the cooking materials.|
+|Recipe Image| A cloudinary image field. If users fail to provide an image it is set to the default placeholder.|
+|Cook Time| Represents the time required. It is set to PositiveIntegerField()|
+|Country| A foreign key which represents recipe country. If not provided, the default is applied.|
+|Likes| ManyToManyField, since many users can like many posts.|
+|Dislikes|ManyToManyField, since many users can dislike many posts.|
+|Date Created | Sets the date the post is made. It is set to auto_now_add=True so that exact time of creating the post can be recorded.|
+| Date Updated | Sets the date any update is made on the post.|
+|Post Approved |A BooleanField that default to 'False'. Can be changed by admin to make post appear on the site.|
+
+### Recipe Class Methods
+Recipe class contains some methods; 
+
+* The first been the Meta class which returns the ordering of the recipes.
+* A string method returning the recipe title for easy identification of the recipe.
+* The number_of_likes() method returns the likes coount.
+* The number_of_dislikes() method returns the dislike count.
+* The get_absolute_url() method directs the url back home.
+* The save() method overide function to date of post update.
+
+
+## Country Class
+This is majorly added by the superuser used to populate the dropdown choice on the navbar, it is also used as a reference for users to access recipes of different countries.
+
+|Field|Details
+|---|---|
+|Name|A CharField set to maximum length of 150, each country name is unique.|
+
+Primary key is used in referencing posts and countries throughout the project. It is unique and is added automatically by django to each post created.
+
+Images used are cloudinary images linked to my cloudinary account.
+
+Included with the instruction and ingredients field is the django_summernote which adds rich text editor to the fields.
+
+The likes and dislikes field allow user a form of expression on different recipes thereby communicating their views to others.
+
+### Country Class Methods
+Country class contains the following methods;
+
+* A Meta class which returns the ordering by name of the countries.
+* A string method which returns the name of the country.
+ 
+---
+
+# Recipe Views
+This section explains different view used to render pages to users.
+
+## Landing Page View
+
+RecipeView class renders the index.html page. It inherits from the django class ListView. It defines a set of query to filter objects by their approval status and orders them by descending date created. It paginates post by 6  and adds url data and country list to the returned context allowing me access to the url name and list of countries.
+
+## Details Page View
+RecipeDetails is used to display more details on a specific post to the users. Defined using a function based class. It gets the specific object query from the model and returns the content containing the full recipe and the liked and also filters if like or dislike value exists. It renders the page using the 'details.html'.
+
+## Likes and Dislike Views
+This views handles the like and dislike feature of the app. Very similar but a little different. They both handle post request from the user and toggles the buttons to either add or remove the user. It uses an HttpResponseRedirect to redirect the user back to the details page.
+
+## 
+
+
+
