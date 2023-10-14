@@ -39,6 +39,17 @@
 * [Recipes Views](#recipe-views)
      * [Landing Page View](#landing-page-view)
      * [Details Page View](#details-page-view)
+     * [Likes and Dislike View](#likes-and-dislike-views)
+     * [Add Recipe View](#add-recipe-view)
+     * [Update Recipe View](#update-recipe-view)
+     * [Delete Recipe View](#delete-recipe-view)
+     * [Country View](#country-view)
+     * [Edit User View](#edit-user-view)
+     * [Change Password View](#change-password-view)
+* [Recipe Forms](#recipe-forms)
+     * [Recipe Form](#recipe-forms)
+     * [Edit Profile Form](#edit-profile-form)
+
 
 
 ---
@@ -484,7 +495,57 @@ RecipeDetails is used to display more details on a specific post to the users. D
 ## Likes and Dislike Views
 This views handles the like and dislike feature of the app. Very similar but a little different. They both handle post request from the user and toggles the buttons to either add or remove the user. It uses an HttpResponseRedirect to redirect the user back to the details page.
 
-## 
+## Add Recipe View
+This view handles adding recipe post to the site. It uses the Recipe model and inherits from the django [CreateView class](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/). It displays a form using the form class RecipeForm for creating a new recipe and allows users to submit a new recipe for approval by the admin. It renders the template 'addrecipe.html' and returns the url back home once successfully submitted.
+
+It contains a method that displays message to user confirming successful submission of recipe to users.Also, it returns the url data as part of the context for access to the url name.
+
+## Update Recipe View
+This view handles recipe recipe post update, it inherits from django [class UpdateView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/) and displays a form using the Recipe model and the RecipeForm to update a selected recipe post. It uses [SuccessMessageMixin](https://stackoverflow.com/questions/29521871/why-success-message-messagemixin-is-called-after-form-valid-shouldnt-it-be) to alert users successful recipe post update.
+
+## Delete Recipe View
+
+This view allows authors of a recipe post to delete the recipe if neccessary. It inherits from django class [DeleteView ](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/). It renders a deleterecipe form (deleterecipe.html) allowing user to confirm delete action and returnd the user back home.
+
+It uses [SuccessMessageMixin](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item) overwritten to return a successful deletion message to users.
+
+## Country View
+
+A function based view that accepts user's request and choice. It retrieves the request object from the country model and renders the countries template with the requested countries.
+Due to issues of case and space, I have used Q search for the country's name because to allows for a broader search in country's name in cases of case or space in country name.
+The view is set to return a 404 page if the query is not available.
+
+## Edit User View
+
+This view allows users to edit their profile details, it inherits from the django class UpdateView.It uses the EditProfile form to render the edit_profile page. It redirects the users back home.
+Once successful, users are informed of the successful edit of their profile using the SuccessMessageMixins.
+
+It has a method that returns the current logged in user's details.
+
+## Change Password View
+
+This view allows users to change password details inheriting from django PasswordChangeView, it uses the ChangePasswordForm to change the user's details.
+
+    
+# Recipe Forms
+The recipe forms file contains three form classes - RecipeForm, EditProfileForm and ChangePasswordForm. The forms are defined to specifically control which fields to be displayed. Also to apply the Bootstrap form-control class to makes the forms nicer to use. Widgets variable was used to apply the form-control class, widgets was also used to get the django-summernote Rich Text Editor working by way of the SummernoteWidget for some of the fields. 
+
+
+## RecipeForm
+RecipeForm class uses the model Recipe inherits from django forms.ModelForm and states the fields to be displayed. It uses widgets to customise the appearance and behavior of form fields defined.
+
+SummernoteWidget is applied to two of the fields; instruction and ingredients to allow users access to different stylings of fonts.
+
+It has an _init_ method that defines the form layout and styles using FormHelper and Layout, this form will be rendered in the template with the specified fields and styles, making it easier to create consistent and visually appealing form.
+
+## Edit Profile Form
+This form uses the model User and inherits from django class [UserChangeForm](https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/forms/). It allows users to edit choice fields in the user's detail. Styled with bootstrap for a more appealing view. It defines fields to be displayed to users.
+
+## Change Password Form
+This form uses the model User and inherits django's class [PasswordChangeForm](https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/forms/). It allows users change their password by entering their old password and confirming a new one. For each field, it uses a Charfield and sets the maximum length of password to 100 including widget to add attributes for styling.
 
 
 
+       
+
+    
