@@ -16,7 +16,11 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="m-3">
-                    You can change your password using <a href="/password/">this form</a>.
+                    You can change your password using 
+                    <a href="/password/">
+                        this form
+                        <i class="fas fa-envelope"></i>
+                    </a>.
                 </div>
                 <button type="submit" class="btn btn-secondary m-3"> Update Profile </button>
             </form>

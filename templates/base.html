@@ -91,7 +91,11 @@
                 <span class="navbar-text">
                     {% if user.is_authenticated %}
                         Signed in as                
-                            <a href="{% url 'edit_profile' %}" aria-label="Edit {{ user.username }}'s profile">{{ user.username }}</a>
+                            <a href="{% url 'edit_profile' %}" aria-label="Edit {{ user.username }}'s profile">
+                                {{ user.username }}
+                                <i class="fas fa-user-circle"></i>
+                            </a>
+                            
                     {% else %}
                         Tasty African Recipes
                     {%  endif %}
