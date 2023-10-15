@@ -11,20 +11,14 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-def password_changed(request):
-    """
-    Return password change confirmation page
-    """
-    return render(request, 'password_changed.html')
-
-
-class ChangePasswordView(PasswordChangeView):
+class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
     """
     Chooses custom form to use
     Redirect to password_changed page
     """
     form_class = ChangePasswordForm
-    success_url = reverse_lazy('password_changed')
+    success_url = reverse_lazy('edit_profile')
+    success_message = "Your Password was changed successfully"
 
 
 class EditUserView(SuccessMessageMixin, generic.UpdateView):
