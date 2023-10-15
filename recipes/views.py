@@ -14,11 +14,19 @@ from django.contrib.messages.views import SuccessMessageMixin
 class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
     """
     Chooses custom form to use
-    Redirect to password_changed page
+    Redirect to edit_profile page
     """
     form_class = ChangePasswordForm
     success_url = reverse_lazy('edit_profile')
     success_message = "Your Password was changed successfully"
+
+    def get_context_data(self, **kwargs):
+        """
+        Add country list to the context data
+        """
+        context = super().get_context_data(**kwargs)
+        context['country_list'] = Country.objects.all()
+        return context
 
 
 class EditUserView(SuccessMessageMixin, generic.UpdateView):
@@ -38,6 +46,14 @@ class EditUserView(SuccessMessageMixin, generic.UpdateView):
         """
         return self.request.user
 
+    def get_context_data(self, **kwargs):
+        """
+        Add country list to the context data
+        """
+        context = super().get_context_data(**kwargs)
+        context['country_list'] = Country.objects.all()
+        return context
+
 
 def CountryView(request, choice):
     """
@@ -52,8 +68,10 @@ def CountryView(request, choice):
     
     country = get_object_or_404(Country, query)
 
+    country_list = Country.objects.all()
+
     recipe_posts = Recipe.objects.filter(country=country)
-    return render(request, 'countries.html', {'choice': country, 'recipe_posts': recipe_posts})
+    return render(request, 'countries.html', {'choice': country, 'recipe_posts': recipe_posts, 'country_list': country_list})
 
 
 class DeleteRecipe(SuccessMessageMixin, generic.DeleteView):
@@ -86,6 +104,14 @@ class UpdateRecipe(SuccessMessageMixin, generic.UpdateView):
     form_class = RecipeForm
     success_message = "%(title)s was updated successfully"
 
+    def get_context_data(self, **kwargs):
+        """
+        Add country list to the context data
+        """
+        context = super().get_context_data(**kwargs)
+        context['country_list'] = Country.objects.all()
+        return context
+
 
 class AddRecipe(generic.CreateView):
     """
@@ -111,6 +137,7 @@ class AddRecipe(generic.CreateView):
         """
         context = super().get_context_data(**kwargs)
         context['url_name'] = self.request.resolver_match.url_name
+        context['country_list'] = Country.objects.all()
         return context
 
 
@@ -166,11 +193,16 @@ class RecipeDetails(View):
             liked = True
         if recipe.dislikes.filter(id=self.request.user.id).exists():
             disliked = True
+
+        # Get the country list
+        country_list = Country.objects.all()
+
         return render(
             request, 'details.html', {
                 'recipe': recipe,
                 'liked': liked,
                 'disliked': disliked,
+                'country_list': country_list,
             },
         )
 
