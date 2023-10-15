@@ -5,15 +5,7 @@ from django.contrib.auth.models import User
 
 
 class TestViews(TestCase):
-    def test_correct_landing_page_used(self):
-        """
-        Test home page renders correctly
-        Test that right template is used
-        """
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'index.html')
-
+    
     def setUp(self):
         # Create a setup test user and country
         self.user = User.objects.create_user(username='Test User', password='Test Password')
@@ -29,6 +21,15 @@ class TestViews(TestCase):
            cook_time=120,
            country=self.country,
         )
+
+    def test_correct_landing_page_used(self):
+        """
+        Test home page renders correctly
+        Test that right template is used
+        """
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
 
     def test_get_view_details_page(self):
         """

@@ -38,19 +38,13 @@ class RecipeForm(forms.ModelForm):
         )
 
 
-class EditProfileForm(UserChangeForm):
+class EditProfileForm(forms.ModelForm):
     """
     Edit choice fields in the user detail
-    Style form with bootstrap
     """
-    email = forms.EmailField(widget=forms.EmailInput())
-    first_name = forms.CharField(max_length=100, widget=forms.TextInput())
-    last_name = forms.CharField(max_length=100, widget=forms.TextInput())
-    username = forms.CharField(max_length=100, widget=forms.TextInput())
-    
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'password', 'email')
+        fields = ('first_name', 'last_name', 'email')
 
 
 class ChangePasswordForm(PasswordChangeForm):

@@ -134,7 +134,10 @@ class PostLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
+            if post.dislikes.filter(id=request.user.pk).exists():
+                post.dislikes.remove(request.user)
         return HttpResponseRedirect(reverse('recipe-detail', args=[pk]))
+
 
 # Adapted from 'I think therefore i blog'
 class PostDislike(View):
@@ -150,6 +153,8 @@ class PostDislike(View):
             post.dislikes.remove(request.user)
         else:
             post.dislikes.add(request.user)
+            if post.likes.filter(id=request.user.pk).exists():
+                post.likes.remove(request.user)
         return HttpResponseRedirect(reverse('recipe-detail', args=[pk]))
 
 
