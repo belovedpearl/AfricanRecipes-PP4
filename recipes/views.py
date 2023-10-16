@@ -97,6 +97,14 @@ class DeleteRecipe(SuccessMessageMixin, generic.DeleteView):
     success_url = reverse_lazy("home")
     success_message = "Recipe successfully deleted"
 
+    def get_context_data(self, **kwargs):
+        """
+        Add country list to the context data
+        """
+        context = super().get_context_data(**kwargs)
+        context['country_list'] = Country.objects.all()
+        return context
+
     # Source: https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item
     def delete(self, request, *args, **kwargs):
         """
