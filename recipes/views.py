@@ -78,7 +78,11 @@ def CountryView(request, choice):
     return render(
         request,
         "countries.html",
-        {"choice": country, "recipe_posts": recipe_posts, "country_list": country_list},
+        {
+            "choice": country,
+            "recipe_posts": recipe_posts,
+            "country_list": country_list,
+        },
     )
 
 
@@ -139,7 +143,9 @@ class AddRecipe(generic.CreateView):
         """
         Display message confirming recipe submission to users
         """
-        messages.success(self.request, "Recipe added successfully! Awaiting Approval.")
+        messages.success(
+            self.request, "Recipe added successfully! Awaiting Approval."
+        )
         return super().form_valid(form)
 
     def get_context_data(self, **kwargs):
@@ -230,7 +236,9 @@ class RecipeView(generic.ListView):
     """
 
     model = Recipe
-    queryset = Recipe.objects.filter(post_approved=True).order_by("-date_created")
+    queryset = Recipe.objects.filter(post_approved=True).order_by(
+        "-date_created"
+    )
     template_name = "index.html"
     paginate_by = 6
 
