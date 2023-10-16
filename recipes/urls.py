@@ -13,5 +13,5 @@ urlpatterns = [
     path('dislike/<int:pk>', views.PostDislike.as_view(), name='recipe_dislike'),
     path('edit_profile/', views.EditUserView.as_view(), name='edit_profile'),
     path('password/', views.ChangePasswordView.as_view(template_name='change_password.html')),
-    path('check', views.check, name="check")
+
 ]
