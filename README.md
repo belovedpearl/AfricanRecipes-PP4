@@ -51,7 +51,11 @@
      * [Edit Profile Form](#edit-profile-form)
      * [Change Password Form](#change-password-form)
 * [Mama'sKitchen Url](#mamaskitchen-url)
-
+* [Mama'sKitchen Admin](#mamaskitchen-admin)
+* [Bugs](#bugs)
+     * [Requirements File Bug](#requirements-file-bug)
+     * [Add Recipe Page Bug](#add-recipe-page-bug)
+     * [Country Page Bug](#country-page-bug)
 
 
 ---
@@ -552,6 +556,51 @@ This form uses the model User and inherits django's class [PasswordChangeForm](h
 The urls file holds the urlpatterns for Mama'skitchen app. The paths renders different pages discussed above. The first been the landing page, recipe details page, add recipe page, update recipe page, delete recipe page, countries page, editprofile, change password. Also the likes and dislike view . 
 
 As previously mentioned, recipes are listed by their primary key, hence for paths that deal with a specific item; <int:pk> is used instead of <slug:slug> as in the walkthrough project.
+
+
+# Mama'sKitchen Admin
+
+The admin file controls the layout of, and actions available in, the Django admin panel. There are two classes - RecipeAdmin and CountryAdmin. RecipeAdmin classe extend the SummernoteModelAdmin class in its ingredients and instructions field.
+
+RecipeAdmin class has list_filter, search_fields, list_display, and summernote_fields. 
+
+The list_display control variable within the class allow an administrator to quickly see some important meta-data about a recipe - id, title, post approval status and date of post creation.
+
+The search_field allow access to recipe using the quick search feature within it - post title, cook time, country.
+
+The list_filter allow easy filtering of recipes by date created, post approval state, and country 
+   
+
+CountryAdmin class specifies how the country view panel is displayed. It has list_display which allows the administrator to have a view of the country list with its id.
+
+---
+
+# Bugs
+
+## Requirements file bug
+
+* When trying to deploy the first Mama'skitchen blank site, the deployment fail but after lots of investigation I noticed that I omitted the 's' after the requirement hence the reason for a failed deployment.
+    * Adding 's' to the file name and trying redeploying fixed this.
+
+
+## Add Recipe Page Bug
+
+
+* When adding a new recipe from the user's side, I always try to make some adjustment on the admin section before approving. The homepage display always display html and css code.
+    * Gemma of tutor support enlightened me on this and encouraged me to add summernote editor to the user's section.
+
+
+
+
+## Country Page Bug
+
+* While trying tomake each country a link to access different recipes, I got error with countries with space and casing.
+    * Importing Q to use for advance search fixed this.
+
+* Border around country page stoped on the first column.
+    * Replacing the border with 'hr' below the country header fixed this.
+
+
 
 
 
