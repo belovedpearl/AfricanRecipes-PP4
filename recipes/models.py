@@ -11,10 +11,11 @@ class Country(models.Model):
     Orders the countries according to their name
     returns the country's name
     """
+
     name = models.CharField(max_length=150, unique=True)
 
     class Meta:
-        ordering = ['name']
+        ordering = ["name"]
 
     def __str__(self):
         return self.name
@@ -26,28 +27,37 @@ class Recipe(models.Model):
     Meta put latest post first
     Generate count for the like button
     """
+
     title = models.CharField(max_length=150, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipe_posts') 
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="recipe_posts"
+    )
     ingredients = models.TextField()
     instructions = models.TextField()
-    recipe_image = CloudinaryField('recipeimage', default='placeholder')
+    recipe_image = CloudinaryField("recipeimage", default="placeholder")
     cook_time = models.PositiveIntegerField()
-    country = models.ForeignKey(Country, on_delete=models.CASCADE, default='Africa')
-    likes = models.ManyToManyField(User, related_name='recipe_like', blank=True)
-    dislikes = models.ManyToManyField(User, related_name='recipe_dislike', blank=True)
+    country = models.ForeignKey(
+        Country, on_delete=models.CASCADE, default="Africa"
+    )
+    likes = models.ManyToManyField(
+        User, related_name="recipe_like", blank=True
+    )
+    dislikes = models.ManyToManyField(
+        User, related_name="recipe_dislike", blank=True
+    )
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(null=True, blank=True)
     post_approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-date_created']
+        ordering = ["-date_created"]
 
     def __str__(self):
         return self.title
-    
+
     def number_of_likes(self):
         return self.likes.count()
-    
+
     def number_of_dislikes(self):
         return self.dislikes.count()
 
@@ -55,7 +65,7 @@ class Recipe(models.Model):
         """
         Returns the URL back home
         """
-        return reverse('home')
+        return reverse("home")
 
     def save(self, *args, **kwargs):
         """
