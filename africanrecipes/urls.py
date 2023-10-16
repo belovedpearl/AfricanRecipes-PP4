@@ -24,3 +24,4 @@ urlpatterns = [
 ]
 
 handler404 = 'recipes.views.error_404'
+handler500 = 'recipes.views.error_500'

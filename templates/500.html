@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}500 - server error{% endblock %}
+{% block content %}
+
+<div class="text-center mt-5">
+    <div class="card">
+        <div class="card-inner">
+            <h3>
+                Opps!
+            </h3>
+            <h4>
+                Mama'sKitchen can't grant your request!!!
+            </h4>
+            <h5>
+                Click <a href="{% url 'home' %}">here</a> to go back home.
+            </h5>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

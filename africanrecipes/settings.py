@@ -35,10 +35,7 @@ SITE_ID = 1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-belovedpear-africanreci-fnq32729nx7.ws-eu104.gitpod.io',
-'8000-belovedpear-africanreci-fnq32729nx7.ws-eu105.gitpod.io',
-
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

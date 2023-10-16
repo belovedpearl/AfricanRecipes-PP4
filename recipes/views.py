@@ -234,3 +234,14 @@ def error_404(request, exception):
     """
     template_name = 'error_404.html'
     return render(request, template_name)
+
+def check():
+    pass
+
+
+def error_500(request):
+    """
+    Handles HTTP 500 Server Error errors
+    """
+    template_name = '500.html'
+    return render(request, template_name)
