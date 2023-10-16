@@ -4,10 +4,15 @@ from django.urls import path
 
 urlpatterns = [
     path("", views.RecipeView.as_view(), name="home"),
+    path("addrecipe/", views.AddRecipe.as_view(), name="add_recipe"),
+    path("edit_profile/", views.EditUserView.as_view(), name="edit_profile"),
+    path(
+        "password/",
+        views.ChangePasswordView.as_view(template_name="change_password.html"),
+    ),
     path(
         "details/<int:pk>", views.RecipeDetails.as_view(), name="recipe-detail"
     ),
-    path("addrecipe/", views.AddRecipe.as_view(), name="add_recipe"),
     path(
         "updaterecipe/edit/<int:pk>",
         views.UpdateRecipe.as_view(),
@@ -23,9 +28,5 @@ urlpatterns = [
     path(
         "dislike/<int:pk>", views.PostDislike.as_view(), name="recipe_dislike"
     ),
-    path("edit_profile/", views.EditUserView.as_view(), name="edit_profile"),
-    path(
-        "password/",
-        views.ChangePasswordView.as_view(template_name="change_password.html"),
-    ),
+   
 ]
