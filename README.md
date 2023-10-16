@@ -49,6 +49,8 @@
 * [Recipe Forms](#recipe-forms)
      * [Recipe Form](#recipe-forms)
      * [Edit Profile Form](#edit-profile-form)
+     * [Change Password Form](#change-password-form)
+* [Mama'sKitchen Url](#mamaskitchen-url)
 
 
 
@@ -543,6 +545,14 @@ This form uses the model User and inherits from django class [UserChangeForm](ht
 
 ## Change Password Form
 This form uses the model User and inherits django's class [PasswordChangeForm](https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/forms/). It allows users change their password by entering their old password and confirming a new one. For each field, it uses a Charfield and sets the maximum length of password to 100 including widget to add attributes for styling.
+
+
+# Mama'sKitchen Url
+
+The urls file holds the urlpatterns for Mama'skitchen app. The paths renders different pages discussed above. The first been the landing page, recipe details page, add recipe page, update recipe page, delete recipe page, countries page, editprofile, change password. Also the likes and dislike view . 
+
+As previously mentioned, recipes are listed by their primary key, hence for paths that deal with a specific item; <int:pk> is used instead of <slug:slug> as in the walkthrough project.
+
 
 
 
