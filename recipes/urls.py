@@ -15,4 +15,3 @@ urlpatterns = [
     path('password/', views.ChangePasswordView.as_view(template_name='change_password.html')),
 
 ]
-

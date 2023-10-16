@@ -22,3 +22,5 @@ urlpatterns = [
     path('', include('recipes.urls'), name='recipes-urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+handler404 = 'recipes.views.error_404'

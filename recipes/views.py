@@ -228,3 +228,9 @@ class RecipeView(generic.ListView):
         return context
 
 
+def error_404(request, exception):
+    """
+    Handles HTTP 404 Page Not Found errors
+    """
+    template_name = 'error_404.html'
+    return render(request, template_name)
