@@ -56,6 +56,9 @@
      * [Requirements File Bug](#requirements-file-bug)
      * [Add Recipe Page Bug](#add-recipe-page-bug)
      * [Country Page Bug](#country-page-bug)
+     * [Update Recipe Image Input](#update-recipe-image-input)
+     * [Likes and Dislike Message Bug](#likes-and-dislike-message-bug)
+     * [Flash Messages](#flash-messages)
 
 
 ---
@@ -590,8 +593,6 @@ CountryAdmin class specifies how the country view panel is displayed. It has lis
     * Gemma of tutor support enlightened me on this and encouraged me to add summernote editor to the user's section.
 
 
-
-
 ## Country Page Bug
 
 * While trying tomake each country a link to access different recipes, I got error with countries with space and casing.
@@ -601,10 +602,21 @@ CountryAdmin class specifies how the country view panel is displayed. It has lis
     * Replacing the border with 'hr' below the country header fixed this.
 
 
+## Update Recipe Image Input
+
+* When testing, I realised that the default word next to 'No file chosen' on the image field was overflowing its box.
+    * Inspecting with devtool and adding font size 10px to it fix this. I also decided to make the lettering bold for clear visibility.
 
 
+## Flash Messages
+
+* My mentor noted that the initial time of 2000ms delay on the flash message before disapppearance seem too small.
+   * Adding 500ms more delay fixed this. 
 
 
-       
+## Likes and Dislike Message Bug
+
+* I noticed that after setting up the like and dislike feature, a user can add like to a recipe and at the same time add dislike to it.
+    * Adding an if statement to check and remove one if the other is already present fixed this.
 
     
