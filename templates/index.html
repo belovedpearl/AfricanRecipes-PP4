@@ -30,7 +30,7 @@
                                         {% endif %}
 
                                         <div>
-                                            <p class="d-inline">
+                                            <div class="d-inline">
                                                 <span class="author">Posted By: {{ recipe.author }}</span>
 
                                                 <span class="user_spec">
@@ -45,10 +45,10 @@
                                                 </span>
 
                                                 <div class="dropdown d-inline">
-                                                    <button class="btn btn-secondary dropdown-toggle share" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <button class="btn btn-secondary dropdown-toggle share" type="button" id="dropdownMenuButton{{ recipe.pk }}" data-bs-toggle="dropdown" aria-expanded="false">
                                                         <i class="fas fa-share"></i>
                                                     </button>
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ recipe.pk }}">
                                                         <li class="dropdown-item">{% post_to_twitter "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url "Post to Twitter" %}</li>
                                                         <li class="dropdown-item">{% post_to_telegram "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url %}</li>
                                                         <li class="dropdown-item">{% post_to_whatsapp "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url "Post to WhatsApp" %}</li>
@@ -56,7 +56,7 @@
                                                     </ul>
                                                 </div>
 
-                                            </p>
+                                            </div>
 
                                             <a href="{% url 'countries' recipe.country %}" aria-label="Link to the Recipe detail page">
                                                 <p class="text-center">{{ recipe.country }}</p>
@@ -132,6 +132,6 @@
 
         {% endif %}
     </ul>
-    </div>
+    
 
 {% endblock%}

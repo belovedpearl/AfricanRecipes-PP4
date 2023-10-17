@@ -242,8 +242,14 @@ footer{
     .navbar-nav .nav-link {
         padding-left: 20px;
     }
+    .author {
+        margin-right: 20px;
+    }
     .card-body{
         padding: 0.5rem 0.5rem;
+    }
+    .user_spec{
+        margin-right: 5px;  
     }
     .date_created {
         margin-right: 10px;

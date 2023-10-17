@@ -624,3 +624,9 @@ CountryAdmin class specifies how the country view panel is displayed. It has lis
 ## Country Dropdown List
 * I noticed the country list was too long (as I have many afrrican countries to add), which to me reduces good user experience and it will be covering too much of the page content.
    * Adding max-height and overflow property to the dropdown menu style fixed this, so I am ablt to add in more countries without fear of covering up the landing page.
+
+
+## Home Page Validation Bug
+
+* While validating the homepage, I got the error of "Multiple use of id values" on the template.
+    * The thought of adding a unique number at the end of the id values with the recipe primary keys fixed this. 
