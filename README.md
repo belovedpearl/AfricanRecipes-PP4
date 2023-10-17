@@ -59,6 +59,7 @@
      * [Update Recipe Image Input](#update-recipe-image-input)
      * [Likes and Dislike Message Bug](#likes-and-dislike-message-bug)
      * [Flash Messages](#flash-messages)
+     * [Country Dropdown List](#country-dropdown-list)
 
 
 ---
@@ -620,3 +621,6 @@ CountryAdmin class specifies how the country view panel is displayed. It has lis
     * Adding an if statement to check and remove one if the other is already present fixed this.
 
     
+## Country Dropdown List
+* I noticed the country list was too long (as I have many afrrican countries to add), which to me reduces good user experience and it will be covering too much of the page content.
+   * Adding max-height and overflow property to the dropdown menu style fixed this, so I am ablt to add in more countries without fear of covering up the landing page.
