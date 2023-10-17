@@ -225,8 +225,9 @@ footer{
 .page-item.active .page-link {
     background-color: #F54E4E;
     border-color:#F54E4E;
-/*  color: #F54E4E;*/
 }
+
+
 
 @media (max-width: 768px) {
     .active{
@@ -241,6 +242,11 @@ footer{
     }
     .date_created {
         margin-right: 10px;
+    }
+    /* Update Page */
+    #id_recipe_image{
+        font-size: 10px;
+        font-weight: bold;
     }
 } 
 
