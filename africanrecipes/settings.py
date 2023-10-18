@@ -33,7 +33,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 SITE_ID = 1
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['*']
 
