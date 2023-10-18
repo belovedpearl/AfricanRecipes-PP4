@@ -52,6 +52,7 @@
      * [Change Password Form](#change-password-form)
 * [Mama'sKitchen Url](#mamaskitchen-url)
 * [Mama'sKitchen Admin](#mamaskitchen-admin)
+* [Future Features](#future-features)
 * [Bugs](#bugs)
      * [Requirements File Bug](#requirements-file-bug)
      * [Add Recipe Page Bug](#add-recipe-page-bug)
@@ -60,6 +61,7 @@
      * [Likes and Dislike Message Bug](#likes-and-dislike-message-bug)
      * [Flash Messages](#flash-messages)
      * [Country Dropdown List](#country-dropdown-list)
+     * [Heroku Deployment Bug](#heroku-deployment-bug)
 
 
 ---
@@ -579,6 +581,30 @@ CountryAdmin class specifies how the country view panel is displayed. It has lis
 
 ---
 
+# Future Features
+
+This section lists all features I will like implement to improve the project and futher increase my knowledge of the process. Some were not due to time constraints and others to a lack of skill.
+
+Add an homepage banner display for non-authenticated user.
+
+Add comments section to promote communication on the platform.
+
+Display number of approved comments attached to each review on the index and details pages.
+
+Extend user model to include profile picture and more information about the user.
+
+Allow accessibility to user's profile but not edit if not the real profile user.
+
+Add higher-level AllAuth functionality - social media sign in, password complexity, confirmation emails, etc
+
+Modify UserSignUpForm in user/forms.py to include additional first_name and last_name fields
+
+Allow users access to a list of his unapproved posts.
+
+
+
+---
+
 # Bugs
 
 ## Requirements file bug
@@ -630,3 +656,10 @@ CountryAdmin class specifies how the country view panel is displayed. It has lis
 
 * While validating the homepage, I got the error of "Multiple use of id values" on the template.
     * The thought of adding a unique number at the end of the id values with the recipe primary keys fixed this. 
+
+
+## Heroku Deployment Bug
+
+* while deploying with contents as I did not deploy the empty project as advised by a senior colleague, I got this deployment error ***"KeyError: 'etag'
+ !     Error while running '$ python manage.py collectstatic --noinput'."***. 
+     *
