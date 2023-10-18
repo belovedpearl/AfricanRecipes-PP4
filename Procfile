@@ -1,1 +1,1 @@
-web.gunicorn.africanrecipes.wsgi
+web: gunicorn africanrecipes.wsgi
