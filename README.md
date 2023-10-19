@@ -121,23 +121,23 @@ Link for the wireframe pictures can be found ![here](static/images/wireframes/)
 
 ### Desktop and Laptop
 
-![Desktop and Laptop](static/images/wireframes/mama's%20kitchenhomepagedesktop&Laptop.webp)
+![Desktop and Laptop](static/images/wireframes/mama's_kitchen_homepage_desktop&Laptop.webp)
 
 ### Mobile
 
-![Mobile](static/images/wireframes/mama'skitchenhomepagemobile.webp)
+![Mobile](static/images/wireframes/mama's_kitchen_homepage_mobile.webp)
 
 ---
 
 ## Wireframe 2: The Recipe Detail page
 
 ### Desktop and Laptop
-![Desktop and Laptop](static/images/wireframes/mama'skitchendetailsdesktop&laptop.webp)
+![Desktop and Laptop](static/images/wireframes/mama's_kitchen_details_desktop&laptop.webp)
 
 
 ### Mobile
 
-![Mobile](static/images/wireframes/mama'skitchendetailmobile.webp)
+![Mobile](static/images/wireframes/mama's_kitchen_detail_mobile.webp)
 
 ---
 
