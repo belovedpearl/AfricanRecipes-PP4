@@ -55,13 +55,20 @@
 * [Future Features](#future-features)
 * [Bugs](#bugs)
      * [Requirements File Bug](#requirements-file-bug)
+     * [Active Link Bug](#active-link-bug)
      * [Add Recipe Page Bug](#add-recipe-page-bug)
      * [Country Page Bug](#country-page-bug)
      * [Update Recipe Image Input](#update-recipe-image-input)
+     * [Missing Navbar Toggler](#missing-navbar-toggler)
+     * [Image Size Bug](#image-size-bug)
      * [Likes and Dislike Message Bug](#likes-and-dislike-message-bug)
      * [Flash Messages](#flash-messages)
      * [Country Dropdown List](#country-dropdown-list)
+     * [Home Page Validation Bug](#home-page-validation-bug)
+     * [First Project Error and Restart](#first-project-error-and-restart)
+     * [Tab Duplication Bug](#tab-duplication-bug)
      * [Heroku Deployment Bug](#heroku-deployment-bug)
+* [Development Choices](#development-choices)
 
 
 ---
@@ -609,8 +616,12 @@ Allow users access to a list of his unapproved posts.
 
 ## Requirements file bug
 
-* When trying to deploy the first Mama'skitchen blank site, the deployment fail but after lots of investigation I noticed that I omitted the 's' after the requirement hence the reason for a failed deployment.
+* When trying to deploy the first Mama'skitchen blank site, the deployment failed as heroku could not complete the buildup, but after lots of investigation I noticed that I omitted the 's' after the requirement hence the reason for a failed deployment.
     * Adding 's' to the file name and trying redeploying fixed this.
+
+## Active Link Bug
+* When I was trying to feature the active link on the homepage, even after writing the link in the django way, there was no feature of the active link on the live site.
+    * Adding **url name** to the context passed fixed this.
 
 
 ## Add Recipe Page Bug
@@ -629,10 +640,34 @@ Allow users access to a list of his unapproved posts.
     * Replacing the border with 'hr' below the country header fixed this.
 
 
+## Tab Duplication Bug
+
+After adding some pages especially the add recipe and delete recipe, I researched into ways to limit only the user of a post to edit or delete it, from the walkthrough video guide, I decided to add **{% if user.is_authenticated %}** and the corresponding else statement statement to control who has access to the post, with this, I was able to restrict it to only registered users. 
+
+I found out that a user that already knows the link of a particular can still perform these actions even when he is not the owner of the post. For a further restriction, I added **{% if user == recipe.author %}**, this is to allow only the post author access to these actions. I added text and links to take users back home on both instance.This was put in place to protect against malicious users.
+
+
+## First Project Error and Restart
+
+While building my first project, I decided to remove the approved field from the **Country Model**, this was after migrating and using it in my buildup. In order to finally remove its history, I removed the migration file associated to it and this resulted in django requesting for a part of the table as it cannot be found. I read different contributions on **Stackoverflow** but I just did not find a way out. A senior colleague **Adam Boyle** helped me with debugging it but he advised I start a new one.
+
+While putting up the new project, I decided to add only the name field to the model Country and to make it only an admin duties since there are specific number of African countries which can be added at once and users can select from the option.
+ 
+
 ## Update Recipe Image Input
 
 * When testing, I realised that the default word next to 'No file chosen' on the image field was overflowing its box.
     * Inspecting with devtool and adding font size 10px to it fix this. I also decided to make the lettering bold for clear visibility.
+
+## Missing Navbar Toggler
+* On viewing the site live browser, I realised that the bootstrap toggler was not present. On further look, I discovered that it is still active but just not showing.
+    * Since it is navbar there must have been a deletion by mistake. Although frustrating because the search for what is wrong took days, I finally realised that the class responsible for the toggler display has been deleted.
+
+    Adding the missing bootstrap class fixed this issue.
+
+## Image Size Bug
+* I noted that uploaded images on posts have varying heights.
+    * Adding height and margin to the post image solved this
 
 
 ## Flash Messages
@@ -660,6 +695,27 @@ Allow users access to a list of his unapproved posts.
 
 ## Heroku Deployment Bug
 
-* while deploying with contents as I did not deploy the empty project as advised by a senior colleague, I got this deployment error ***"KeyError: 'etag'
+* While deploying with contents as I did not deploy the empty project as advised by a senior colleague, I got this deployment error ***"KeyError: 'etag'
  !     Error while running '$ python manage.py collectstatic --noinput'."***. 
-     *
+     * As advised by Oisin(one of the tutors), I had to create a new cloudinary account to serve the static files as he said that etag errors are difficult to resolve. After deleting and connecting another cloudinary account, I added another static files with all its content.only to discover that all images were no longer available. This brought about lots of confusion but I decided to try add a new post to see if it will work and it did perfectly. This helped me to know that the images were associated with the former cloudinary account.
+     I thought about deleting all the post and adding them again, then I felt there should be a way to synchronize contents in the two accounts. The search for a way to do that began.
+
+
+# Development Choices
+
+* The design choices made in the project are to project the true African nature.
+
+## Font
+* [Great Vibes](https://fonts.google.com/specimen/Great+Vibes?preview.text=oswald&preview.text_type=custom&query=great) font from google fonts to write the site logo. It has a fallback of **Cursive**.
+
+* [Playfair Display](https://fonts.google.com/specimen/Playfair+Display?preview.text=oswald&preview.text_type=custom&query=playfair) was used for links. It has a fall back of **Serif**.
+
+* [Roboto](https://fonts.google.com/specimen/Roboto?preview.text=oswald&preview.text_type=custom&query=roboto) was used for the body of the project as it is clean, bold, and has a nice presentation. It has a fallback of **Sans-serif**.
+
+Combining Roboto with Playfair Display presents a nice contrast which I think helps differentiate different sections of my content and adds visual interest to the site.
+
+
+
+## Favicon
+
+I decided to use the same image used as the placeholder image for the favicon as it reflects the african theme of the project. I used [favicon](https://favicon.io/) to generate it using the image I already have.
