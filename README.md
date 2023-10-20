@@ -68,7 +68,10 @@
      * [First Project Error and Restart](#first-project-error-and-restart)
      * [Tab Duplication Bug](#tab-duplication-bug)
      * [Heroku Deployment Bug](#heroku-deployment-bug)
-* [Development Choices](#development-choices)
+* [Design Choices](#design-choices)
+    * [Font](#font)
+    * [Color Scheme](#color-scheme)
+    * [Favicon](#favicon)
 
 
 ---
@@ -701,7 +704,7 @@ While putting up the new project, I decided to add only the name field to the mo
      I thought about deleting all the post and adding them again, then I felt there should be a way to synchronize contents in the two accounts. The search for a way to do that began.
 
 
-# Development Choices
+# Design Choices
 
 * The design choices made in the project are to project the true African nature.
 
@@ -713,6 +716,23 @@ While putting up the new project, I decided to add only the name field to the mo
 * [Roboto](https://fonts.google.com/specimen/Roboto?preview.text=oswald&preview.text_type=custom&query=roboto) was used for the body of the project as it is clean, bold, and has a nice presentation. It has a fallback of **Sans-serif**.
 
 Combining Roboto with Playfair Display presents a nice contrast which I think helps differentiate different sections of my content and adds visual interest to the site.
+
+## Colour Scheme
+
+In line with the theme of the website, I have chosen to use representative African colors illustrated as follws;
+
+**Body Background Color:** A shade of white (#e5e7ea) representing Purity and Peace a treasured characteristics of africa.
+
+**Homepage Headers, Links Hover, active link background color, dropdown list focus, active page indicators**. All have a shade of red (#F54E4E) symbolizing the african struggles. In order to boldly project the like and dislike, I used the red color shade #E84610 which is brighter than the former.
+
+**Homepage Header and Footer**: A shade of green (#aaf3aa) was used symbolizing growth.
+
+**Buttons** were made a shade of grey (bootstrap btn-secondary) symbolizing cleansing and healing rituals.
+
+**Header and Footer content**: Made with color black, symbolizing the maturity of the african culture.
+
+
+
 
 
 
