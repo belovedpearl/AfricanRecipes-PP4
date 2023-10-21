@@ -752,40 +752,21 @@ Landing Page
 This serve as the main gateway for users to explore and engage with the platform. It contains the following section;
 
 Header Section which consist;
+
 Logo and Site Name : The website's logo and name are prominently displayed to providing instant brand recognition.
-Navigation Menu: Navigation menus allow users to explore different sections of the website, including recipes, categories, user profiles, and more.
-Search Bar: A search bar enables users to quickly find specific recipes or ingredients they are interested in.
-User Authentication: Options for user login and registration are provided, allowing users to create accounts and log in for personalized experiences.
+
+Navigation Menu: Navigation menus allow users to explore different sections of the website, including recipes, social media link, registration, sign out link and more.
+
+User Authentication: Options for user login and registration are provided, allowing users to create accounts and log in to their own account.
+
+Country Categories: Different country can be accessed and recipes of each country can be viewed together by clicking on the country dropdown option.
+
 Main Content Section:
 
-Featured Recipes: Eye-catching images and titles of selected recipes are showcased to entice visitors. These could include seasonal or popular recipes.
-Recipe Categories: Different recipe categories (e.g., desserts, main dishes, vegetarian) are displayed, allowing users to explore recipes based on their preferences.
-User-Generated Content: Recent or popular recipes submitted by users are highlighted, encouraging community engagement.
-Call to Action: Buttons or prompts encourage users to share their own recipes, join the community, or explore specific categories.
+Featured Recipes: Eye-catching images and titles of selected recipes are presented for users to view.
+
+Share Button: User can use this button to share recipe of choice on dufferent social media platform like twitter, telegram and whatsapp.
+
 Footer Section:
 
-About Us: Information about the website, its mission, and the team behind it is often found here.
-Contact Information: Contact details, including email addresses or social media links, allowing users to get in touch with the website administrators.
-Useful Links: Links to important pages like terms of service, privacy policy, and frequently asked questions.
 Social Media Integration: Links to the website's social media profiles for users to follow and engage with the community.
-Newsletter Signup: An option for visitors to subscribe to the website's newsletter for updates on new recipes, cooking tips, and community news.
-Interactive Elements:
-
-Interactive Buttons: Buttons for actions like liking, saving, and sharing recipes on social media platforms.
-Rating and Reviews: Users can rate recipes and leave reviews, fostering a sense of community and trust among users.
-User Profiles: Registered users can create profiles, upload their own recipes, and interact with other community members.
-Remember, the design and features can vary, but a recipe sharing website's homepage aims to be visually appealing, user-friendly, and inviting, encouraging visitors to explore recipes, engage with the community, and contribute their culinary creations.
-
-
-
-
-
-
-
-Blog Section
-
-This section provides users with gardening updates. I have designed all links to open in a new tab.
-
-Contact Us
-
-This is included to provide easy contact to the providers.
