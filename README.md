@@ -124,7 +124,7 @@ While conceiving the project the following were the wireframes were used to repr
 
 All wireframes are made with Balsamiq
 
-Link for the wireframe pictures can be found ![here](static/images/wireframes/)
+Link for the wireframe pictures can be found ![here](wireframes/)
 
 ---
 
@@ -132,23 +132,23 @@ Link for the wireframe pictures can be found ![here](static/images/wireframes/)
 
 ### Desktop and Laptop
 
-![Desktop and Laptop](static/images/wireframes/mama's_kitchen_homepage_desktop&Laptop.webp)
+![Desktop and Laptop](wireframes/mama's_kitchen_homepage_desktop&Laptop.webp)
 
 ### Mobile
 
-![Mobile](static/images/wireframes/mama's_kitchen_homepage_mobile.webp)
+![Mobile](wireframes/mama's_kitchen_homepage_mobile.webp)
 
 ---
 
 ## Wireframe 2: The Recipe Detail page
 
 ### Desktop and Laptop
-![Desktop and Laptop](static/images/wireframes/mama's_kitchen_details_desktop&laptop.webp)
+![Desktop and Laptop](wireframes/mama's_kitchen_details_desktop&laptop.webp)
 
 
 ### Mobile
 
-![Mobile](static/images/wireframes/mama's_kitchen_detail_mobile.webp)
+![Mobile](wireframes/mama's_kitchen_detail_mobile.webp)
 
 ---
 
