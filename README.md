@@ -73,6 +73,10 @@
     * [Color Scheme](#color-scheme)
     * [Favicon](#favicon)
 * [Accessibility](#accessibility)
+* [Technology Used](#technology-used)
+    * [Languages](#languages)
+    * [Python Modules and Packages Used](#python-modules-packages-used)
+* [Framework and Tools](#frameworks-and-tools)
 
 
 ---
@@ -733,10 +737,6 @@ In line with the theme of the website, I have chosen to use representative Afric
 **Header and Footer content**: Made with color black, symbolizing the maturity of the african culture.
 
 
-
-
-
-
 ## Favicon
 
 I decided to use the same image used as the placeholder image for the favicon as it reflects the african theme of the project. I used [favicon](https://favicon.io/) to generate it using the image I already have.
@@ -770,3 +770,69 @@ Share Button: User can use this button to share recipe of choice on dufferent so
 Footer Section:
 
 Social Media Integration: Links to the website's social media profiles for users to follow and engage with the community.
+
+---
+
+# Technology Used
+
+## Languages
+
+The project been a full stack development used the following languages;
+
+* Python - Used to set up the main functionaluty of the website.
+
+* HTML - Used to build up the different template files contained in the website.
+
+* CSS - Used to customize styles for the website.
+
+* Javascript - Used to manipulate the DOM on different pages.
+
+## Python Modules/ Packages Used
+
+Some of the several python packages used to execute the project are illustrated below;
+
+* django _ This is the main framework used to design this application.
+
+* psycopg2 - PostgreSQL database adapter used for puthon programming language.
+
+* dj3-cloudinary- cloudinary-storage - This facilitates integration with cloudinary by implementing Django storage API.
+
+* django-allauth - This is an integrated set of django applications that handles registration, authentication, registration, account management e.t.c
+
+* django-crispy-forms - This provides crispy filter that allows rendering django forms in an 
+alegant and DRY form.
+
+* django-social-share - This simplifies the process of adding social media sharing functionality to the websites. Details on its implementation can he read [here](https://pypi.org/project/django-social-share/).
+
+* django-summernote - This helps in the integration of a feature-rich, responsive, and customizable WYSIWYG editor into the website.
+
+* crispy-bootstrap4 - This is the bootstrap template package for django-crispy-forms.
+
+* coverage - This allows the creation of coverage report for automated testing.
+
+---
+
+# Frameworks and Tools
+
+* Django - This was used to set up different user logic and model used.
+
+* Balsamiq - This was used to draw up the wireframes used to build up the project.
+
+* Github - This was used to store written code, it also contained the Agile development plan set up to build the project.
+
+* Gitpod - This was used to write code, correct code, commiting and pushing code up to github.
+
+* Heroku - Used for the live deployment of the site.
+
+* Clodinary - This is the cloud storage used for website media and other static files.
+
+* Bootstrap - This was used to add styles to the website. It was used for the nav section, cards and different sections of the website.
+
+* Lucid Chart - This was used for creating the website ERD, a demonstration of the database structure.
+
+* Google Fonts - This was used to add fonts to the website.
+
+* Font Awesome - This was used for icon features on the website.
+
+
+
