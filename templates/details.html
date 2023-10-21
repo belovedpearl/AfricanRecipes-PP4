@@ -16,7 +16,7 @@
                 {% if "placeholder" in recipe.recipe_image.url %}
                     <img src="{% static 'images/foodtheme.webp' %}" class="details-img" alt="Placeholder Image">
                 {% else %}
-                    <img src="{{ recipe.recipe_image.url }}" class="details-img" alt="Placeholder Image">
+                    <img src="{{ recipe.recipe_image.url }}" class="details-img" alt="Recipe Image">
                 {% endif %}
                 <p class="lead text-center">{{ recipe.description }}</p>
                 <div class="text-center mt-3">
@@ -46,12 +46,12 @@
                                 {% endif %}
                             </form>
                         {% else %}
-                            <span class="text-secondary">
+                            <span class="text-dark">
                                 <i class="far fa-thumbs-up"></i>
                             </span>
                         {% endif %}
                     <!-- The number of likes goes before the closing strong tag -->
-                        <span class="text-secondary">
+                        <span class="text-dark">
                             {{ recipe.number_of_likes }}
                         </span>
 
@@ -69,12 +69,12 @@
                                 {% endif %}
                             </form>
                         {% else %}
-                            <span class="text-secondary">
+                            <span class="text-dark">
                                 <i class="far fa-thumbs-down"></i>
                             </span>
                         {% endif %}
                     <!-- The number of likes goes before the closing strong tag -->
-                        <span class="text-secondary">
+                        <span class="text-dark">
                             {{ recipe.number_of_dislikes }}
                         </span>
                     </div>
@@ -84,7 +84,7 @@
 
             <div class="col-md-6 ">
                 <div class="detail_info">
-                    <h3>Ingredients </h3>
+                    <h2>Ingredients </h2>
                     <div>
                         {{ recipe.ingredients |safe }}
                     </div>
