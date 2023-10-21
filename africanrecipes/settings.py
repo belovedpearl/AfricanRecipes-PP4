@@ -37,7 +37,10 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'https://belovedpear-africanreci-fnq32729nx7.ws-eu105.gitpod.io/',
+    'https://africanrecipes-95e71e30ded1.herokuapp.com/'
+    ]
 
 
 # Application definition
