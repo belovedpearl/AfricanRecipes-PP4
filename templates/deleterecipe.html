@@ -4,7 +4,7 @@
 {% block content %}
 
     {% load crispy_forms_tags %}
-    <h1 class="mt-3">Delete: {{recipe.title }} </h1>
+    <h2 class="mt-3">Delete: {{recipe.title }} </h2>
     <div class="text-center">
     <!-- Restrict page access to authorized users -->
         {% if user.is_authenticated %}
