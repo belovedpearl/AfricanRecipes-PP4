@@ -35,7 +35,8 @@ class TestViews(TestCase):
     def test_get_view_details_page(self):
         """
         Test if details page renders correctly
-        Test for the content of the response, assumes user has not liked or disliked the page
+        Test for the content of the response,
+        Assumes user has not liked or disliked the page
         """
         client = Client()
 

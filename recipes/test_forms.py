@@ -68,8 +68,7 @@ class TestEditProfileForm(TestCase):
             "email": "",
             "first_name": "Ade",
             "last_name": "Ola",
-            
-        }
+            }
         form = EditProfileForm(data=form_data, instance=user)
         self.assertTrue(form.is_valid())
 
