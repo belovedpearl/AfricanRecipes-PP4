@@ -65,7 +65,8 @@ def CountryView(request, choice):
     """
 
     # Get the query using q for case insensitive search
-    # (source: https://docs.djangoproject.com/en/dev/ref/models/querysets/#iexact)
+    # (source:
+    # https://docs.djangoproject.com/en/dev/ref/models/querysets/#iexact)
     query = Q(name__iexact=choice.capitalize()) | Q(
         name__iexact=choice.replace("-", " ")
     )
@@ -105,7 +106,8 @@ class DeleteRecipe(SuccessMessageMixin, generic.DeleteView):
         context['country_list'] = Country.objects.all()
         return context
 
-    # Source: https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item
+    # Source: https://stackoverflow.com/questions/47636968/django-
+    # messages-for-a-successfully-delete-add-or-edit-item
     def delete(self, request, *args, **kwargs):
         """
         Confirms to user the deletion of a recipe
@@ -146,7 +148,8 @@ class AddRecipe(generic.CreateView):
     template_name = "addrecipe.html"
     success_url = reverse_lazy("home")
 
-    # Source: https://stackoverflow.com/questions/28723266/django-display-message-after-post-form-submit
+    # Source: https://stackoverflow.com/questions/28723266/django-
+    # display-message-after-post-form-submit
     def form_valid(self, form):
         """
         Display message confirming recipe submission to users

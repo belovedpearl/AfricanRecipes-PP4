@@ -10,7 +10,7 @@ class RecipeAdmin(SummernoteModelAdmin):
     Allows the use of summernote editor for selected field
     """
     list_display = ('id', 'title', 'post_approved', 'date_created')
-    search_fields = ['title', 'cook_time', 'country'] 
+    search_fields = ['title', 'cook_time', 'country']
     list_filter = ('date_created', 'post_approved', 'country')
     summernote_fields = ('ingredients', 'instructions')
 
