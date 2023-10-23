@@ -80,6 +80,7 @@
 * [Development and Deployment](#development-and-deployment)
 * [How to Fork](#how-to-fork)
 * [How to Clone](#how-to-clone)
+* [Testing](#testing)
 * [Tools](#tools)
 * [Credits](#credits)
 * [Acknowledgement](#acknowledgement)
@@ -1044,6 +1045,21 @@ NOTE- You will need to install all of the packages listed in the requirements fi
      pip install -r requirements.txt 
 
 to install required packages.
+
+---
+
+## Testing
+
+
+### Automatic Testing
+
+
+### Validator Testing
+
+#### PEP8
+
+I have validated the code (form, views, admin, url and all automatic test files) with [CI Pep8](https://pep8ci.herokuapp.com/), details of the  validation can be found ![here](screenshots/validator_test/pep_linter/). 
+Recommendations of whitespace error and comments too long were given and was corrected to get the above results.
 
 ---
 
