@@ -709,10 +709,14 @@ While putting up the new project, I decided to add only the name field to the mo
 
 ## Heroku Deployment Bug
 
-* While deploying with contents as I did not deploy the empty project as advised by a senior colleague, I got this deployment error ***"KeyError: 'etag'
- !     Error while running '$ python manage.py collectstatic --noinput'."***. 
-     * As advised by Oisin(one of the tutors), I had to create a new cloudinary account to serve the static files as he said that etag errors are difficult to resolve. After deleting and connecting another cloudinary account, I added another static files with all its content.only to discover that all images were no longer available. This brought about lots of confusion but I decided to try add a new post to see if it will work and it did perfectly. This helped me to know that the images were associated with the former cloudinary account.
-     I thought about deleting all the post and adding them again, then I felt there should be a way to synchronize contents in the two accounts. The search for a way to do that began.
+* While deploying with contents as I did not deploy the empty project as advised by a senior colleague, I got this deployment error :
+
+      "KeyError: 'etag' !   Error while running '$ python manage.py collectstatic --noinput'."
+
+   *  As advised by Oisin(one of the tutors), I had to create a new cloudinary account to serve the static files as he said that etag errors are difficult to resolve. After deleting and connecting another cloudinary account, I added another static files with all its content.only to discover that all images were no longer available. This brought about lots of confusion but I decided to try add a new post to see if it will work and it did perfectly. This helped me to know that the images were associated with the former cloudinary account.
+          I thought about deleting all the post and adding them again, then I felt there should be a way to synchronize contents in the two accounts. The search for a way to do that began. Fortunately, I found [this material](https://cloudinary.com/documentation/migration) and [this material](https://support.cloudinary.com/hc/en-us/articles/202521122-How-can-I-copy-images-between-accounts) illustrating how to migrate and copy images between accounts respectively but I did not implement the contents of the materials as I was scared of disrupting anything already set. I needed an experienced person to lead me through it. In the end, I decided to manually delete all post and add them again to fill the new database content. After doing all these and still the error persisted this time all static folder content were reflected in the deployed site but no style on the style sheet was applied. The confusion was now real as all efforts and contributions from colleadues and tutors feels abortive.
+     Finally, I just decided to move my wireframe folder out of the static folder, commit and push. After few minutes, I observed my email notification from heroku has not come through. I decide to check the build log and suprisingly saw that the deployment was successful.
+     This error took a lot of commits and push as I was trying looking around for possible areas of error.I had to downgrade cloudinary as advised by a tutor, modify my cloudinary settings, create a new account, among others but I was glad it was solved finally.
 
 
 # Design Choices
@@ -830,7 +834,7 @@ alegant and DRY form.
 
 * Heroku - Used for the live deployment of the site.
 
-* Clodinary - This is the cloud storage used for website media and other static files.
+* Cloudinary - This is the cloud storage used for website media and other static files.
 
 * Bootstrap - This was used to add styles to the website. It was used for the nav section, cards and different sections of the website.
 
