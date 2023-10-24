@@ -719,6 +719,14 @@ While putting up the new project, I decided to add only the name field to the mo
      Finally, I just decided to move my wireframe folder out of the static folder, commit and push. After few minutes, I observed my email notification from heroku has not come through. I decide to check the build log and suprisingly saw that the deployment was successful.
      This error took a lot of commits and push as I was trying looking around for possible areas of error.I had to downgrade cloudinary as advised by a tutor, modify my cloudinary settings, create a new account, among others but I was glad it was solved finally.
 
+## Summernote Widget Bug and Admin Section Bug
+
+Just after resolving the bug above, a few hours later when I tried to continue work on the project, I realised the summernote widget on the user side (on the update page, add_recipe page) and the whole admin section have become [this](screenshots/bug_pic/admin_pagebug.webp), [this](screenshots/bug_pic/instruc_pagebug.webp) and [this](screenshots/bug_pic/ingre_pagebug.webp).
+
+I thought it could be because I have turned the DEBUG to False or added the X_FRAME_OPTIONS, I decided to comment the X_FRAME_OPTIONS but it did not change. I also changed the DEBUG settings back to True and everything was fixed.
+
+
+---
 
 # Design Choices
 
