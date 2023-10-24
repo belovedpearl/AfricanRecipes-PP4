@@ -1053,13 +1053,36 @@ to install required packages.
 
 ### Automatic Testing
 
+At the start of the project, I decided to write in some test to get a good grasp of the concept and my mentor also advised me to especially for a career changer like me as this will show my capacity in another level, while faced some challenges writing the tests, I was happy that I could write some in the end. I have been able to write 17 tests for this project, using [this](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) material helped.
+
+Automatic test for this project can be found ![here](recipes/). The files are named ![test_forms](recipes/test_forms.py),![test_models](recipes/test_models.py) and ![test_views](recipes/test_views.py).
+
+
 
 ### Validator Testing
 
 #### PEP8
 
-I have validated the code (form, views, admin, url and all automatic test files) with [CI Pep8](https://pep8ci.herokuapp.com/), details of the  validation can be found ![here](screenshots/validator_test/pep_linter/). 
+I have validated the code (form, views, admin, url and all automatic test files) with [CI Pep8](https://pep8ci.herokuapp.com/), details of the  validation can be found ![here](screenshots/validator_test/pep_linter/).
+
 Recommendations of whitespace error and comments too long were given and was corrected to get the above results.
+
+
+###
+
+All codes written have been passed through the [w3 validation](https://validator.w3.org/) using the direct input method. Results can be viewed ![here](screenshots/validator_test/w3_check/).
+
+Some pages returned with errors and warnings like;
+![Details page](screenshots/validator_test/w3_check/details_page.webp)
+
+On assessing and checking the cause of the errors and warnings, I realise they are due to the copied styles from the Summernote used in the frontend. As I could not find a way to fix this, I decided to show it and possibly continue my learing from there.
+
+![Details page](screenshots/validator_test/w3_check/post_country_page.webp)
+
+
+The error was due to the injected template. I inspected the code and also tried using [this tool](https://www.aliciaramirez.com/closing-tags-checker/) to find the unclosed tags but it came back with nothing shown [here](screenshots/validator_test/w3_check/tag_confirmation.webp).
+
+
 
 ---
 
@@ -1077,6 +1100,8 @@ Recommendations of whitespace error and comments too long were given and was cor
   *  [Font Awesome](https://fontawesome.com/)
   *  [Fonts](https://fonts.google.com/)
   *  [Font pair](https://fontpair.com/) 
+  *  [Squoosh](https://squoosh.app/)
+  *  [Unclosed Tag Checker](https://www.aliciaramirez.com/closing-tags-checker/)
 
 
 ---
@@ -1093,7 +1118,9 @@ All images added to this project are gotten from the following sources:
 
 My special thank you goes to the following:
 
-My mentor Sandeep Aggarwal for his feedback, advice, guidance, and support on this and the previous projects. And for all of his encouragements when I had some challenges.
+My mentor Sandeep Aggarwal for his feedback, advice, guidance, and support on this and the previous projects. And for all of his encouragements when I had some challenges. He was always quick to answer to all my questions.
+
+[Adam Boley](https://github.com/AdamBoley/); for giving me your time, support and advice in setting up the project after the first project crash. I am very grateful to you.
 
 The tutors especially Oisin, Roman for taking your time out to help me debug the issue I had during the deployment of the project.
 
