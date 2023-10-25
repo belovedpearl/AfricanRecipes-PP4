@@ -30,8 +30,7 @@
                         </a>
                     {% endif %}
 
-                <!-- Adapted from 'I think therefore I blog'    -->
-                    <div class="likeanddislike">
+                     <!-- Adapted from 'I think therefore I blog'    -->
                         {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_like' recipe.pk %}" method="POST">
                                 {% csrf_token %}
@@ -50,7 +49,7 @@
                                 <i class="far fa-thumbs-up"></i>
                             </span>
                         {% endif %}
-                    <!-- The number of likes goes before the closing strong tag -->
+                        <!-- The number of likes goes before the closing strong tag -->
                         <span class="text-dark">
                             {{ recipe.number_of_likes }}
                         </span>
@@ -73,12 +72,10 @@
                                 <i class="far fa-thumbs-down"></i>
                             </span>
                         {% endif %}
-                    <!-- The number of likes goes before the closing strong tag -->
+                        <!-- The number of likes goes before the closing strong tag -->
                         <span class="text-dark">
                             {{ recipe.number_of_dislikes }}
                         </span>
-                    </div>
-
                 </div>
             </div>
 

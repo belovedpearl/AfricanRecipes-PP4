@@ -14,7 +14,6 @@ label {
     font-weight: bold;
 }
 
-
 p{
     margin-bottom: 0;
 }
@@ -23,8 +22,7 @@ a{
     font-family: 'Playfair Display', serif;
     font-size: 16px;
     text-decoration: none;
-    color: black;
-    
+    color: black;   
 }
 a:hover{
     color: #F54E4E !important;
@@ -39,9 +37,6 @@ button{
     background-color: #F54E4E;
     color: black;
 } 
-.home:hover{
-    background-color: #FFD700;
-}
 
 hr{
     border: 1px solid #5c875c;
@@ -99,8 +94,7 @@ nav{
 /*____________ Post Card _____________*/
 .post{
     border: 2px solid #5c875c;
-    height: 29rem;
-   
+    height: 29rem;  
 }
 .recipe_title{
     font-size: 1.7rem;
@@ -139,10 +133,6 @@ nav{
     width:100%;
     height: 250px;
 }
-
-a:hover{
-    color: #0698a8;
-}
 .postdatelikes{
     font-size: 12px;
 }
@@ -163,9 +153,6 @@ a:hover{
     margin-right: 5px;
 }
 
-
-
-
 /*__________ form ____________*/
 form{
     width: 100%;
@@ -181,8 +168,6 @@ form{
     width: 60%;
 } 
  
-
-
 /*________________  Footer __________________ */
 .dark-bg {
     background-color: #5a6570;
@@ -191,28 +176,22 @@ form{
 .social-link{
     color: black;
     text-decoration: none;
-    font-size: 1.2rem;
-   
+    font-size: 1.2rem;   
 }   
 
-.social-link:hover{
-   color: #F54E4E; 
+footer{
+    background-color: #aaf3aa;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;       
 }
 
-footer{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: black;
-    background-color: #aaf3aa;
-    
-}
-/* like Buttn */
+/* like Button */
 
 .btn-like {
     color: #E84610;
     border: none;
-    background: transparent;
-    
+    background: transparent;   
 }
 
 .btn-like:hover,
@@ -222,6 +201,9 @@ footer{
     border: none;
 }
 
+.likeanddislike{
+    display: inline-block;
+}
 
 .page-link{
     padding: 0.375rem 0.5rem;
@@ -229,11 +211,18 @@ footer{
 }
 .page-item.active .page-link {
     background-color: #F54E4E;
-    border-color:#F54E4E;
 }
 
+.summernote-div iframe {
+    width: 100% !important;
+    max-width: 720px;
+    min-width: 57%;
+}
 
-
+.changerecipeform, .changerecipe form {
+    max-width: 720px;
+    min-width: 57%;
+}
 
 @media (max-width: 768px) {
     .active{
@@ -254,25 +243,15 @@ footer{
     }
     .date_created {
         margin-right: 10px;
-    } */
+    }
+
     /* Update Page */
+
     #id_recipe_image{
         font-size: 10px;
         font-weight: bold;
     }
 } 
-
-
-.summernote-div iframe {
-    width: 100% !important;
-    max-width: 720px;
-    min-width: 57%;
-}
-
-.changerecipeform, .changerecipe form {
-    max-width: 720px;
-    min-width: 57%;
-}
 
 @media screen and (max-width: 1000px) {
     .summernote-div iframe,.changerecipeform, .changerecipe form {
