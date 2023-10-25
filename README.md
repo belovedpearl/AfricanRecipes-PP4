@@ -1,4 +1,16 @@
+# Mama'sKitchen - *African food recipes*
+
+[View code here](https://github.com/belovedpearl/AfricanRecipes-PP4)
+
+![Responsiveness]()
+
+[View site responsiveness here](https://ui.dev/amiresponsive?url=https://africanrecipes-95e71e30ded1.herokuapp.com/)
+
+---
+
+
 **Table of Contents:**
+
 ---
 ---
  * [Scope](#scope)  
@@ -87,7 +99,9 @@
 
 
 ---
+
 # SCOPE
+
 ---
 
 
@@ -106,29 +120,36 @@ Key features will include:
 
 **Country-Based Navigation:** The website will offer a user-friendly way for visitors to search recipes from specific African countries. Users can either click on a country's name or utilize the dropdown menu featuring a list of african countries.
 
-By implementing these features, 'Mama's Kitchen' aims to foster an engaging community for African food enthusiasts, where users can share, discover, and appreciate the rich heritage of African kitchen.
+By implementing these features, 'Mama'sKitchen' aims to foster an engaging community for African food enthusiasts, where users can share, discover, and appreciate the rich heritage of African kitchen.
 
 ---
+
 # Background
+
 ---
 
-This project is inspired by the Code Institute 'I think there for I Blog' walkthrough project. As an African, I have always had a concern for African heritage which is not well preserved and  adequately transferred to the next generation.
+This project is inspired by the Code Institute's 'I think there for I Blog' walkthrough project. As an African, I have always had a concern for African heritage which is not well preserved and  adequately transferred to the next generation.
 
 I have taught of a way to preserve and promote the African culture especially providing a means whereby users of this platform can have access to different African traditional food from across the globe.
 
-As it is well known that one of the factors for decline in active transfer ia the modernization and also immigration which has made different people forget or have little or no knowledge about their root.
+As it is well known that one of the factors responsible for decline in active transfer of heritage is the modernization and also immigration which has made different people forget or have little or no knowledge about their root.
 
 This project seeks to be a store house for African Trditional meals where individuals can access different foods thereby promoting and preserving the heritage to generations.
 
 
 ---
+
 # Target Audience
----
-
-This project is tailored for a vibrant community of Africans, both at home and abroad, eager to delve deeper into the richness of African cuisine. The platform offers a delightful exploration of diverse African recipes. Whether an aspiring home chef or simply curious about the flavors of the continent.
 
 ---
+
+This project is tailored for a vibrant community of Africans, both at home and abroad, eager to delve deeper into the richness of African cuisine. The platform offers a delightful exploration of diverse African food recipes, whether an aspiring home chef or simply curious about the flavors of the continent.
+
+
+---
+
 # Wireframes
+
 ---
 
 While conceiving the project the following were the wireframes were used to represent the home and details page.
@@ -165,7 +186,7 @@ Link for the wireframe pictures can be found ![here](wireframes/)
 
 # User Stories
 
-Below are the User Stories used to guide the development of Mama's Kitchen.
+Below are the User Stories used to guide the development of Mama'sKitchen.
 
 ## Admin User Story
 
@@ -173,21 +194,21 @@ The Admin user User Stories were used as a guide to determine what Admin Superus
 
 As an Admin user I can..
 
-Navigate to the admin sign-in page, so that I can sign in to the admin panel.
+* Navigate to the admin sign-in page, so that I can sign in to the admin panel.
 
-View all recipe posts submitted by users, so that I can view and edit posts if needed.
+* View all recipe posts submitted by users, so that I can view and edit posts if needed.
 
-Filter and sort recipe posts easily, so that I can see all of the posts that needs to be approved.
+* Filter and sort recipe posts easily, so that I can see all of the posts that needs to be approved.
 
-Approve any number of selected recipes post so that they can be be visible on the site.
+* Approve any number of selected recipes post so that they can be be visible on the site.
 
-Delete any number of selected recipe, so that they no longer take up memory in the database especially the ones that are not on line with the platform ideas.
+* Delete any number of selected recipe, so that they no longer take up memory in the database especially the ones that are not on line with the platform ideas.
 
-Make posts with rich text and images, so that I can improve the quality of posts.
+* Make posts with rich text and images, so that I can improve the quality of posts.
 
-Add a recipe post, so that I do not have to use the add post page on the front-end
+* Add a recipe post, so that I do not have to use the add post page on the front-end
 
-Filter and sort all comments easily, so that I can see all recipes posts that fulfil certain criteria
+* Filter and sort all comments easily, so that I can see all recipes posts that fulfil certain criteria
 
 ---
 
@@ -196,23 +217,25 @@ Filter and sort all comments easily, so that I can see all recipes posts that fu
 
 Generally, as a user I can ..
 
-Immediately determine the purpose of the application on first visit, so that I can quickly decide whether its of interest or not.
+* Immediately determine the purpose of the application on first visit, so that I can quickly decide whether its of interest or not.
 
-Have a positive user experience irrespective of the means of access, so that I can access the application from enjoy the platform from any device
+* Have a positive user experience irrespective of the means of access, so that I can access the application from enjoy the platform from any device
 
-View all recipe posts so that I can choose one to read in detail.
+* View all recipe posts so that I can choose one to read in detail.
 
-Sort recipe posts by country name so that I can see only the recipe post of intrested countries.
+* Sort recipe posts by country name so that I can see only the recipe post of intrested countries.
 
-If my search  by country returned no results, have a message displayed informing me of no posts related to my country search.
+* If my search  by country returned no results, have a message displayed informing me of no posts related to my country search.
 
 ---
+
 ## Unregistered-user-User-Story
 
 These user stories were outlined to determine specifically, what unregistered user should be able to do.
 
-Sign-up and create an account, so that I can access the detailed functionality of the application.
-Sign-in to that created account, so that I can access the detailed functionality of the application.
+* Sign-up and create an account, so that I can access the detailed functionality of the application.
+
+* Sign-in to that created account, so that I can access the detailed functionality of the application.
 
 ---
 
@@ -224,6 +247,8 @@ As a registered user I can ...
 
 * Sign in to an already existing account, so that I can access the full functionality of the application.
 
+* Add a recipe post easily so that I can share food recipe on the website.
+
 * Edit recipe posts I created so that I can improve or modify the content.
 
 * Delete recipe posts I created so that I know that I have the control of the content I created.
@@ -234,7 +259,6 @@ As a registered user I can ...
 
 * Have my sign-in status reflected back to me, so that I can be sure that I have signed-in.
 
-* Add a recipe post easily so that I can share food recipe on the website.
 
 * Apply rich text formatting to the content of my recipe, so that I can better express myself and provide additional structure to my recipe.
 
@@ -257,16 +281,18 @@ As a registered user I can ...
 * When viewing a recipe detail, dislike the page , so that I can express my thoughts of the recipe.
 
 ---
+
 # Features
 
 ---
-This section discusses the features and pages of the project 'Mama's Kitchen', the design choices made, discussion of the HTML and CSS codes. Where appropriate, the views and forms used to render those pages are also discussed.
+This section discusses the features and pages of the project 'Mama'sKitchen', the design choices made, discussion of the HTML and CSS codes. Where appropriate, the views and forms used to render those pages are also discussed.
 
 ---
 
 ## Base Template
 
-Mama's Kitchen uses a single base template file extended to every other page, this is to provide a consistent user experience and promote uniformity across the website. Codes from the other templates are injected in=between the center element ({insert block content} & {end block content}) to relay the specificity of each page.
+Mama's Kitchen uses a single base template file extended to every other page, this is to provide a consistent user experience and promote uniformity across the website. Codes from the other templates are injected inbetween the center element ({insert block content} & {end block content}) to relay the specificity of each page.
+
 The base template is made up of the following;
 
 ### Header and Navbar
@@ -281,23 +307,41 @@ If the user is signed out or has not yet created an account, navigation options 
 
 If the user is signed-in, navigation options are to either Sign-out or Add a new Recipe. The user may click on the Add Recipe link to be directed to a page where they may create and upload a recipe of choice.
 
-On the right end of the navbar, unregistered users are presented with the statement 'Tasty African Recipe' while registered signed in users are presented with the caption 'Signed in as <username>'. This section  has two functions; first, it identifies the specific logged in user by displaying their name. The username also acts as a link where users can edit their profile information.
+On the right end of the navbar, unregistered users are presented with the statement 'Tasty African Recipe' while registered signed in users are presented with the caption **'Signed in as <username>'**. This section  has two functions; first, it identifies the specific logged in user by displaying their name. The username also acts as a link where users can edit their profile information.
+
+![Header and Navbar Pic for Registered Users]()
+
+![Header and Navbar Pic for Non-Registered Users]()
+
 
 
 ### A section for the messages
 Messages if available are relayed to the users here. This message can be as a result of actions like login, logout, updating a profile, submitting a recipe. They all assure the user of the completion of their actions.
 
+![Post Created]()
+
+![Post Deleted]()
+
+![Post Updated]()
+
+![Profile Changed]()
+
+![Password Changed]()
+
+
+
 ### Footer 
 Links to various social media platforms are featured here with a copyright caption.
+
+![Footer Picture]()
 
 
 ---
 
 ## Admin Section 
 
-The project Mama'sKitchen has an admin section accessible only to its superusers. The admin section is displayed in a list for easy view by the admin, in the search field, recipes can be searches by recipe title, cook time and country. Also, the list can be filtered by date created, post approved and country, all this were included to ease the admin duties. There is also a section where the admin is set to manage the country list. The admin can view the list of countries from here.
+The project Mama'sKitchen has an admin section accessible only to its superusers. The admin section is displayed in a list for easy view by the admin, in the search field, recipes can be searched by recipe title, cook time and country. Also, the list can be filtered by date created, post approved and country, all this were included to ease the admin duties. There is also a section where the admin is set to manage the country list. The admin can view the list of countries from here.
 Once the section is accessed, superusers may:
-
 
 + Create recipes to add to the page.
 + View the list of all submitted recipes.
@@ -310,47 +354,53 @@ Once the section is accessed, superusers may:
 + Update any user information.
 + Change status of users to staff or superusers.
 
+
+![Main Admin Section]()
+
+
+![Recipe Admin Section]()
+
+
+![Country Admin Section]()
+
 ---
 
 ## Landing Page
 ---
 
 This is the template rendered to the users when visiting the deployed site (Mama'sKitchen). The landing page is rendered from templates/index.html using the RecipeView view.
-This view inherits from the Django [ListView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/) class. It uses the model Recipe and queries the database for approved posts. It paginates by 6 recipes per page allowing users navugatre to other page to view more recipes.
+This view inherits from the Django [ListView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/) class. It uses the model Recipe and queries the database for approved posts. It paginates by 6 recipes per page allowing users navigate to other page to view more recipes.
 In order to provide additional context-data a function was defined to return the url_name and the country list as part of the rendered template. 
 
-Landing page screenshot:
-
+![Landing page screenshot]()
 
 
 ### Recipes
 
-Each recipe card presents a brief overview of a particular recipe. Allowing thw user to view the image, local name, post author, country, likes and dislikes, date posted. A user click on the local name directs the user to a page containing more details (cook-time, instructions, ingredients) about the recipe.
+Each recipe card presents a brief overview of a particular recipe. Allowing the user to view the image, local name, post author, country, likes and dislikes, date posted. A user click on the local name directs the user to a page containing more details (cook-time, instructions, ingredients) about the recipe.
 
 The details page with its view is discussed below.
 
-Recipe Screenshot:
-
+![Recipe Card Screenshot]()
 
 ### Pagination
 
 The landing page is set to display recipes in batches of 6. Other recipes are paginated. The pagination allows users  to move in a variety of ways that intrest the user. Users can choose to move to the first page to view the first 6 recipes, move to the previous page from where they are currently on, move to the next page from where they are currently on, move to the last page of available recipes. By clicking on the button **First**, **Previous**, **Next**, **Last** respectively.
 
-Users can access any particular pagination page by clicking on the appropriate numbered square. If any of the first, last, previous or last options are not available, then the button still displays, but is greyed-out and has no active href attribute. This was implemented to provide a consistent style as the user navigates the recipes paginated pages.
-
-Including the pagination will help users to have a smooth scroll through to different pages of the site.
+Users can access any particular pagination page by clicking on the appropriate numbered square Including the pagination will help users to have a smooth scroll through to different pages of the site thereby improving user experience.
 
 Pagination bar:
-
+![Pagination Bar Picture]()
 
 
 ### Recipe by Country
 
 Due to the nature of the project and its targets, I initially considered allowing users to filter the recipes available by country name. Users can access this function by either clicking on their desired country name on each post or by using the country dropdown in the navbar to select their choiced country.
 
-If there are no recipe posted for such country, users are given a feedback informing them of no recipe posted for their country of choice. Users are then ebcouraged to add recipe for such country.
+If there are no recipe posted for such country, users are given a feedback informing them of no recipe posted for their country of choice. Users are then encouraged to add recipe for such country.
 
-**Dropdown picture of Afrcican Countries:**
+**Dropdown picture of African Countries:**
+![Dropdown Picture of African Countries]()
 
 
 ---
@@ -360,11 +410,13 @@ If there are no recipe posted for such country, users are given a feedback infor
 To promote the use of the site among users, all users are allowed access to the details page.The details page is used to display all about a single recipe that is clicked. It is rendered using the details template and the **RecipeDetails** view. The details page is styled mostly with bootstrap and some vanilla css. It features the recipe picture, title(recipe localname), number of likes and dislikes, instructions, ingredients, cook time.
 The details page restricts some of its features, it displays the edit and delete button for recipe author and prevent non-authors access to it, it also allows authenticated users access to like and dislike function for each recipe.
 A signed-in user and author of a recipe can edit or delete his recipe post from here.
-The page also contains a placeholder image for posts made without an image this is to allow recipe in which its author maight not have the picture as at when posting.
+The page also contains a placeholder image for posts made without an image this is to allow recipe in which its author might not have the picture as at when making the post.
 
 Additionally, at the end of the recipe description is the back button that directs the user back to the default landing page providing an alternative to the user's browser back button.
 
 **Screenshot of recipe details page:**
+
+![Screenshot of recipe details page]()
 
 ---
 
@@ -373,11 +425,15 @@ Additionally, at the end of the recipe description is the back button that direc
 The add recipe page is rendered using the addrecipe template and the AddRecipe view. The AddRecipe class inherits from the class CreateView. It allows users to submit new recipe to be posted to the platform. 
 
 The addrecipe page allows a user to write and submit a recipe of choice specifying the country it belongs. Submitting the recipe is done with a form and submitted. The user must enter all of the necessary information about the recipe like the title, ingredients required, instructions,  cook time. The user has to choose from the dropdown provided the country, a placeholder image is used if the user fails to provide a recipe image as I considered some users might not have the recipe picture but have the recipe description.
-Recipe posts submitted needs to be approved by an administrator before it can be updated on the page. On successfull submission of recipe, the user is assured of the successful submission of the recipe and an assurance that its awaiting approval from an administrator.
+
+Recipe posts submitted needs to be approved by an administrator before it can be updated on the page. On successfull submission of recipe, the user is notified of the successful submission of the recipe and an assurance that its awaiting approval from an administrator.
+
 Success message is relayed to the users using the imported class based view[SuccessMessageMixin](https://tech.serhatteker.com/post/2020-11/show-success-message-in-cbv-django/). 
+
 Recipe posts needs to be approved to prevent unwanted posts from the platform.
 
 **Screenshot of add recipe page:**
+![Screenshot of addrecipe page]()
 
 ---
 
@@ -385,11 +441,16 @@ Recipe posts needs to be approved to prevent unwanted posts from the platform.
 
 The update recipe page is rendered using the updaterecipe template and the UpdateRecipe view. 
 Only authenticated users have access to the update recipe page, I added a link to direct unauthenticated users to the signup page in case they try to access this page.
+
 To render the page, it inherits from the class based view [UpdateView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/). It uses the model Recipe and the form RecipeForm class. Users get a feedback of successful recipe post edit using the SuccessMessageMixin to generate the message contained in the success_message variable as contained in the class definition.
+
 To update a recipe post, the form field are pre-filled once the user click the specific recipe to update, this is done via the specific primary key of each post. The users can then update the needed field.
+
 Only recipe post authors can update their recipe to prevent abuse of the update function since updating does not require permission from the administrator.
 
 Screenshots of update recipe page:
+
+![Update recipe page screenshot]()
 
 ---
 
@@ -405,23 +466,38 @@ To delete a recipe post, only the author is allowed to access the delete functio
 
 **Screenshot of delete page**
 
+![Delete page screenshot for authors]()
+
+![Non-authors delete page screenshot]()
+
+![Non-users delete page screenshot]()
+
+
 ---
+
 ## Share Post 
 
-While building this project, I thought about adding a feature to allow users share recipe post. This can further promote the awareness for this site and also help to reach more audience with the african recipes. Using the [social share](https://pypi.org/project/django-social-share/) documentation on django and a bootstrap dropdown, I was able to include a share post feature on twitter telegram and whatsapp. I would have loved to include facebook but it was said in the documentation that facebook no longer supports this feature.
+While building this project, I thought about adding a feature to allow users share recipe post. All users can share posts from this platform, this is to further promote the awareness for this site and also help to reach more audience with the african recipes.
+
+Using the [social share](https://pypi.org/project/django-social-share/) documentation on django and a bootstrap dropdown, I was able to include a share post feature on twitter, telegram and whatsapp. I would have loved to include facebook but it was said in the documentation that facebook no longer supports this feature.
 
 **Share post feature**
+
+![Share post dropdown picture]()
 
 ---
 
 ## Countries Page
 This page presents to users a list of recipes available for their country of choice. Users can choose countries either by using the country dropdown as shown in the **"recipes by countries"** section or by clicking on the country name in each post.
+
 The page is rendered using the countries template and the CountryView view. The view retrieves country object from the country model and gets all recipe that matches the query from the the recipe model. It renders the countries template with the requested recipes.
 
 Each post is quite similar in display to the landing page but it does not have the country names specified on each post anymore as the recipe displayed belong to the same country referred to in the subject header.
 
 
 **Screenshot of the Country Page**
+
+![Country page screenshot]()
 
 ---
 
@@ -434,6 +510,8 @@ Once updated, users are redirected back home and a message is popped onto the sc
 
 **Screenshot of Profile Update Page**
 
+![Edit Profile page screenshot]()
+
 ---
 
 ## Sign In, Sign Out, Sign Up Pages
@@ -442,9 +520,15 @@ These are modified versions of the standard AllAuth templates that can be copied
 
 **Screenshot of Sign In Page**
 
+![Sign in page screenshot]()
+
 **Screenshot of Sign Out Page**
 
+![Sign out page screenshot]()
+
 **Screenshot of Sign Up Page**
+
+![Sign up page screenshot]()
 
 ---
 
@@ -455,8 +539,11 @@ This was included to give the user a form of feedback for their actions. Users g
 
 **Samples of Messages to Users**
 
+![Messages Sample screenshot]()
+
 
 ---
+
 # Database Model
 
 ![Representation of the user structure and the model used.](static/images/site_description/recipe_db_model.png)
@@ -517,24 +604,30 @@ Country class contains the following methods;
 ---
 
 # Recipe Views
-This section explains different view used to render pages to users.
+This section explains different views used to render pages to users.
 
 ## Landing Page View
 
-RecipeView class renders the index.html page. It inherits from the django class ListView. It defines a set of query to filter objects by their approval status and orders them by descending date created. It paginates post by 6  and adds url data and country list to the returned context allowing me access to the url name and list of countries.
+RecipeView class renders the index.html page. It inherits from the django class [ListView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/). It defines a set of query to filter objects by their approval status and orders them by descending date created. It paginates post by 6  and adds url data and country list to the returned context allowing me access to the url name and list of countries.
 
 ## Details Page View
+
 RecipeDetails is used to display more details on a specific post to the users. Defined using a function based class. It gets the specific object query from the model and returns the content containing the full recipe and the liked and also filters if like or dislike value exists. It renders the page using the 'details.html'.
 
-## Likes and Dislike Views
-This views handles the like and dislike feature of the app. Very similar but a little different. They both handle post request from the user and toggles the buttons to either add or remove the user. It uses an HttpResponseRedirect to redirect the user back to the details page.
+## Likes and Dislike View
+
+This views handles the like and dislike feature of the app. Very similar but a little different. They both handle post request from the user and toggles the buttons to either add or remove the user. If there was an existing like/dislike on a recipe by a user and he decides to change to the other, the like is automatically removed. 
+
+It uses an HttpResponseRedirect to redirect the user back to the details page.
 
 ## Add Recipe View
+
 This view handles adding recipe post to the site. It uses the Recipe model and inherits from the django [CreateView class](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/). It displays a form using the form class RecipeForm for creating a new recipe and allows users to submit a new recipe for approval by the admin. It renders the template 'addrecipe.html' and returns the url back home once successfully submitted.
 
-It contains a method that displays message to user confirming successful submission of recipe to users.Also, it returns the url data as part of the context for access to the url name.
+It contains a method that displays message to user confirming successful submission of recipe to users. Also, it returns the url data as part of the context for access to the url name.
 
 ## Update Recipe View
+
 This view handles recipe recipe post update, it inherits from django [class UpdateView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/) and displays a form using the Recipe model and the RecipeForm to update a selected recipe post. It uses [SuccessMessageMixin](https://stackoverflow.com/questions/29521871/why-success-message-messagemixin-is-called-after-form-valid-shouldnt-it-be) to alert users successful recipe post update.
 
 ## Delete Recipe View
@@ -545,8 +638,9 @@ It uses [SuccessMessageMixin](https://stackoverflow.com/questions/47636968/djang
 
 ## Country View
 
-A function based view that accepts user's request and choice. It retrieves the request object from the country model and renders the countries template with the requested countries.
+A function based view that accepts user's request and choice. It retrieves the requested object from the country model and renders the countries template with the requested countries.
 Due to issues of case and space, I have used Q search for the country's name because to allows for a broader search in country's name in cases of case or space in country name.
+
 The view is set to return a 404 page if the query is not available.
 
 ## Edit User View
@@ -560,7 +654,8 @@ It has a method that returns the current logged in user's details.
 
 This view allows users to change password details inheriting from django PasswordChangeView, it uses the ChangePasswordForm to change the user's details.
 
-    
+---
+
 # Recipe Forms
 The recipe forms file contains three form classes - RecipeForm, EditProfileForm and ChangePasswordForm. The forms are defined to specifically control which fields to be displayed. Also to apply the Bootstrap form-control class to makes the forms nicer to use. Widgets variable was used to apply the form-control class, widgets was also used to get the django-summernote Rich Text Editor working by way of the SummernoteWidget for some of the fields. 
 
@@ -578,17 +673,19 @@ This form uses the model User and inherits from django class [UserChangeForm](ht
 ## Change Password Form
 This form uses the model User and inherits django's class [PasswordChangeForm](https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/forms/). It allows users change their password by entering their old password and confirming a new one. For each field, it uses a Charfield and sets the maximum length of password to 100 including widget to add attributes for styling.
 
+---
 
 # Mama'sKitchen Url
 
-The urls file holds the urlpatterns for Mama'skitchen app. The paths renders different pages discussed above. The first been the landing page, recipe details page, add recipe page, update recipe page, delete recipe page, countries page, editprofile, change password. Also the likes and dislike view . 
+The url file holds the urlpatterns for Mama'skitchen app. The paths renders different pages discussed above. The first been the landing page, recipe details page, add recipe page, update recipe page, delete recipe page, countries page, editprofile, change password. Also the likes and dislike view . 
 
 As previously mentioned, recipes are listed by their primary key, hence for paths that deal with a specific item; <int:pk> is used instead of <slug:slug> as in the walkthrough project.
 
+---
 
 # Mama'sKitchen Admin
 
-The admin file controls the layout of, and actions available in, the Django admin panel. There are two classes - RecipeAdmin and CountryAdmin. RecipeAdmin classe extend the SummernoteModelAdmin class in its ingredients and instructions field.
+The admin file controls the layout of, and actions available in, the Django admin panel. There are two classes - RecipeAdmin and CountryAdmin. RecipeAdmin class extend the SummernoteModelAdmin class in its ingredients and instructions field.
 
 RecipeAdmin class has list_filter, search_fields, list_display, and summernote_fields. 
 
@@ -609,7 +706,7 @@ This section lists all features I will like implement to improve the project and
 
 Add an homepage banner display for non-authenticated user.
 
-Add comments section to promote communication on the platform.
+Add comments section to promote communication and interactions on the platform.
 
 Display number of approved comments attached to each review on the index and details pages.
 
@@ -632,27 +729,32 @@ Allow users access to a list of his unapproved posts.
 ## Requirements file bug
 
 * When trying to deploy the first Mama'skitchen blank site, the deployment failed as heroku could not complete the buildup, but after lots of investigation I noticed that I omitted the 's' after the requirement hence the reason for a failed deployment.
-    * Adding 's' to the file name and trying redeploying fixed this.
+
+      * Adding 's' to the file name and trying redeploying fixed this.
 
 ## Active Link Bug
+
 * When I was trying to feature the active link on the homepage, even after writing the link in the django way, there was no feature of the active link on the live site.
-    * Adding **url name** to the context passed fixed this.
+
+      * Adding **url name** to the context passed fixed this.
 
 
 ## Add Recipe Page Bug
 
-
 * When adding a new recipe from the user's side, I always try to make some adjustment on the admin section before approving. The homepage display always display html and css code.
-    * Gemma of tutor support enlightened me on this and encouraged me to add summernote editor to the user's section.
+
+      * Gemma of tutor support enlightened me on this and encouraged me to add summernote editor to the user's section.
 
 
 ## Country Page Bug
 
-* While trying tomake each country a link to access different recipes, I got error with countries with space and casing.
-    * Importing Q to use for advance search fixed this.
+* While trying to make each country a link to access different recipes, I got error with countries with space and casing. 
+
+      * Importing Q to use for advance search fixed this.
 
 * Border around country page stoped on the first column.
-    * Replacing the border with 'hr' below the country header fixed this.
+
+      * Replacing the border with 'hr' below the country header fixed this.
 
 
 ## Tab Duplication Bug
@@ -664,7 +766,7 @@ I found out that a user that already knows the link of a particular can still pe
 
 ## First Project Error and Restart
 
-While building my first project, I decided to remove the approved field from the **Country Model**, this was after migrating and using it in my buildup. In order to finally remove its history, I removed the migration file associated to it and this resulted in django requesting for a part of the table as it cannot be found. I read different contributions on **Stackoverflow** but I just did not find a way out. A senior colleague **Adam Boyle** helped me with debugging it but he advised I start a new one.
+While building my first project, I decided to remove the approved field from the **Country Model**, this was after migrating and using it in my buildup. In order to finally remove its history, I removed the migration file associated with it and this resulted in django requesting for a part of the table as it cannot be found. I read different contributions on **Stackoverflow** but I just did not find a way out. A senior colleague **Adam Boley** helped me with debugging it but he advised I start a new one.
 
 While putting up the new project, I decided to add only the name field to the model Country and to make it only an admin duties since there are specific number of African countries which can be added at once and users can select from the option.
  
@@ -672,40 +774,48 @@ While putting up the new project, I decided to add only the name field to the mo
 ## Update Recipe Image Input
 
 * When testing, I realised that the default word next to 'No file chosen' on the image field was overflowing its box.
-    * Inspecting with devtool and adding font size 10px to it fix this. I also decided to make the lettering bold for clear visibility.
+
+      * Inspecting with devtool and adding font size 10px to it fix this. I also decided to make the lettering bold for clear visibility.
 
 ## Missing Navbar Toggler
-* On viewing the site live browser, I realised that the bootstrap toggler was not present. On further look, I discovered that it is still active but just not showing.
-    * Since it is navbar there must have been a deletion by mistake. Although frustrating because the search for what is wrong took days, I finally realised that the class responsible for the toggler display has been deleted.
 
-    Adding the missing bootstrap class fixed this issue.
+* On viewing the site live browser, I realised that the bootstrap toggler was not present. On further look, I discovered that it is still active but just not showing.
+
+     * Since it is navbar there must have been a deletion by mistake. Although frustrating because the search for what is wrong took days, I finally realised that the class responsible for the toggler display has been deleted.
+
+      Adding the missing bootstrap class **navlight** fixed this issue.
 
 ## Image Size Bug
 * I noted that uploaded images on posts have varying heights.
-    * Adding height and margin to the post image solved this
+
+      * Adding height and margin to the post image solved this
 
 
 ## Flash Messages
 
 * My mentor noted that the initial time of 2000ms delay on the flash message before disapppearance seem too small.
-   * Adding 500ms more delay fixed this. 
+
+     * Adding 500ms more delay fixed this. 
 
 
 ## Likes and Dislike Message Bug
 
 * I noticed that after setting up the like and dislike feature, a user can add like to a recipe and at the same time add dislike to it.
-    * Adding an if statement to check and remove one if the other is already present fixed this.
+
+      * Adding an if statement to check and remove one if the other is already present fixed this.
 
     
 ## Country Dropdown List
 * I noticed the country list was too long (as I have many afrrican countries to add), which to me reduces good user experience and it will be covering too much of the page content.
-   * Adding max-height and overflow property to the dropdown menu style fixed this, so I am ablt to add in more countries without fear of covering up the landing page.
+
+     * Adding max-height and overflow property to the dropdown menu style fixed this, so I was able to add in more countries without fear of covering up the landing page.
 
 
 ## Home Page Validation Bug
 
 * While validating the homepage, I got the error of "Multiple use of id values" on the template.
-    * The thought of adding a unique number at the end of the id values with the recipe primary keys fixed this. 
+
+      * The thought of adding a unique number at the end of the id values with the recipe primary keys fixed this. 
 
 
 ## Heroku Deployment Bug
@@ -716,14 +826,14 @@ While putting up the new project, I decided to add only the name field to the mo
 
    *  As advised by Oisin(one of the tutors), I had to create a new cloudinary account to serve the static files as he said that etag errors are difficult to resolve. After deleting and connecting another cloudinary account, I added another static files with all its content.only to discover that all images were no longer available. This brought about lots of confusion but I decided to try add a new post to see if it will work and it did perfectly. This helped me to know that the images were associated with the former cloudinary account.
           I thought about deleting all the post and adding them again, then I felt there should be a way to synchronize contents in the two accounts. The search for a way to do that began. Fortunately, I found [this material](https://cloudinary.com/documentation/migration) and [this material](https://support.cloudinary.com/hc/en-us/articles/202521122-How-can-I-copy-images-between-accounts) illustrating how to migrate and copy images between accounts respectively but I did not implement the contents of the materials as I was scared of disrupting anything already set. I needed an experienced person to lead me through it. In the end, I decided to manually delete all post and add them again to fill the new database content. After doing all these and still the error persisted this time all static folder content were reflected in the deployed site but no style on the style sheet was applied. The confusion was now real as all efforts and contributions from colleadues and tutors feels abortive.
-     Finally, I just decided to move my wireframe folder out of the static folder, commit and push. After few minutes, I observed my email notification from heroku has not come through. I decide to check the build log and suprisingly saw that the deployment was successful.
-     This error took a lot of commits and push as I was trying looking around for possible areas of error.I had to downgrade cloudinary as advised by a tutor, modify my cloudinary settings, create a new account, among others but I was glad it was solved finally.
+    Finally, I just decided to move my wireframe folder out of the static folder, commit and push. After few minutes, I observed my email notification from heroku has not come through. I decide to check the build log and suprisingly saw that the deployment was successful.
+    This error took a lot of commits and push as I was trying looking around for possible areas of error.I had to downgrade cloudinary as advised by a tutor, modify my cloudinary settings, create a new account, among others but I was glad it was solved finally.
 
 ## Summernote Widget Bug and Admin Section Bug
 
-Just after resolving the bug above, a few hours later when I tried to continue work on the project, I realised the summernote widget on the user side (on the update page, add_recipe page) and the whole admin section have become [this](screenshots/bug_pic/admin_pagebug.webp), [this](screenshots/bug_pic/instruc_pagebug.webp) and [this](screenshots/bug_pic/ingre_pagebug.webp).
+* Just after resolving the bug above, a few hours later when I tried to continue work on the project, I realised the summernote widget on the user side (on the update page, add_recipe page) and the whole admin section have become [this](screenshots/bug_pic/admin_pagebug.webp), [this](screenshots/bug_pic/instruc_pagebug.webp) and [this](screenshots/bug_pic/ingre_pagebug.webp).
 
-I thought it could be because I have turned the DEBUG to False or added the X_FRAME_OPTIONS, I decided to comment the X_FRAME_OPTIONS but it did not change. I also changed the DEBUG settings back to True and everything was fixed.
+      * I thought it could be because I have turned the DEBUG to False or added the X_FRAME_OPTIONS, I decided to comment the X_FRAME_OPTIONS but it did not change. I also changed the DEBUG settings back to True and everything was fixed.
 
 
 ---
@@ -743,13 +853,15 @@ Combining Roboto with Playfair Display presents a nice contrast which I think he
 
 ## Colour Scheme
 
-In line with the theme of the website, I have chosen to use representative African colors illustrated as follws;
+In line with the theme of the website, I have chosen to use representative African colors illustrated as follows;
 
-**Body Background Color:** A shade of white (#e5e7ea) representing Purity and Peace a treasured characteristics of africa.
+**Body Background Color:** White color representing Purity and Peace a treasured characteristics of africa.
 
 **Homepage Headers, Links Hover, active link background color, dropdown list focus, active page indicators**. All have a shade of red (#F54E4E) symbolizing the african struggles. In order to boldly project the like and dislike, I used the red color shade #E84610 which is brighter than the former.
 
 **Homepage Header and Footer**: A shade of green (#aaf3aa) was used symbolizing growth.
+
+**Post Card** made with a border of a shade of green (#5c875c) to highlight and contain each post.
 
 **Buttons** were made a shade of grey (bootstrap btn-secondary) symbolizing cleansing and healing rituals.
 
@@ -764,7 +876,7 @@ I decided to use the same image used as the placeholder image for the favicon as
 
 # Accessibility
 
-I have designed the site to be easily accessible with links thats connect different pages together in order to enhance effective use og the site and to allow for easy access to information required by its users.
+I have designed the site to be easily accessible with links that connects different pages together in order to enhance effective use of the site and to allow for easy access to information required by its users.
 
 Landing Page
 
@@ -784,7 +896,7 @@ Main Content Section:
 
 Featured Recipes: Eye-catching images and titles of selected recipes are presented for users to view.
 
-Share Button: User can use this button to share recipe of choice on dufferent social media platform like twitter, telegram and whatsapp.
+Share Button: User can use this button to share recipe of choice on different social media platform like twitter, telegram and whatsapp.
 
 Footer Section:
 
@@ -1065,6 +1177,8 @@ At the start of the project, I decided to write in some test to get a good grasp
 
 Automatic test for this project can be found ![here](recipes/). The files are named ![test_forms](recipes/test_forms.py),![test_models](recipes/test_models.py) and ![test_views](recipes/test_views.py).
 
+As advised by my mentor, I used the **db.sqlite** to run the tests.
+
 
 
 ### Validator Testing
@@ -1081,6 +1195,7 @@ Recommendations of whitespace error and comments too long were given and was cor
 All codes written have been passed through the [w3 validation](https://validator.w3.org/) using the direct input method. Results can be viewed ![here](screenshots/validator_test/w3_check/).
 
 Some pages returned with errors and warnings like;
+
 ![Details page](screenshots/validator_test/w3_check/details_page.webp)
 
 On assessing and checking the cause of the errors and warnings, I realise they are due to the copied styles from the Summernote used in the frontend. As I could not find a way to fix this, I decided to show it and possibly continue my learing from there.
@@ -1110,6 +1225,7 @@ The error was due to the injected template. I inspected the code and also tried 
   *  [Font pair](https://fontpair.com/) 
   *  [Squoosh](https://squoosh.app/)
   *  [Unclosed Tag Checker](https://www.aliciaramirez.com/closing-tags-checker/)
+  *  [Lucid Chart](https://lucid.app/)
 
 
 ---
@@ -1117,8 +1233,29 @@ The error was due to the injected template. I inspected the code and also tried 
 # Credits
 
 ## Media
-All images added to this project are gotten from the following sources:
 
+Images used to populate different posts are from the following sources.
+
+ * [Beer-braised lamb shanks](https://www.delicious.com.au/recipes/beer-braised-lamb-shanks-mieliepap/b63ba9d0-7a77-4257-8f16-e6ef5d2f71bb)
+ * [Efo](https://hintng.com/how-to-prepare-efo-riro/)
+ * [Amala](https://molabatkitchen.com/menu/amala/)
+ * [Okra](https://blog.allnigerianrecipes.com/okra-soup-overload/)
+ * [Matoke](http://www.food-of-africa.com/zimbabwean-food/sadza/)
+ 
+
+## Images
+
+Template image and favicon images added to the project is from [here](africa-facts.org)
+
+## Code
+
+To put up this project, the main inspiration was from the Code Institute's 'I Think Therefore I Blog' Django walkthrough project'. With a desire to express my website differently to further my knowledge of django, I learned from [John Elder](https://www.youtube.com/@Codemycom) in his [series](https://www.youtube.com/watch?v=B40bteAMM_M). This really helped in my understanding of django usage.
+
+Throughout the project, the following were helpful websites often used for troubleshooting:
+* [W3 Schools](https://www.w3schools.com/django/index.php)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Mdn web docs](https://developer.mozilla.org/en-US/)
+* [Django documentation](https://docs.djangoproject.com/en/4.2/)
 
 ---
 
