@@ -1,41 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Add new recipe {% endblock%}
+{% block title %}Add new recipe{% endblock %}
 {% block content %}
 <!-- Prevent external access from someone familiar with the link -->
-    {% if user.is_authenticated %}
-
-        {% load crispy_forms_tags %}
-        <div class="changerecipe">
-            <div class="form-group changerecipeform">
+{% if user.is_authenticated %}
+{% load crispy_forms_tags %}
+<div class="changerecipe">
+    <div class="form-group changerecipeform">
         <!-- Insert form data   -->
-                {% csrf_token %}
-                {% crispy form %}
-
-            </div>
-        </div>
-
- <!-- Generate hidden value post author (Idea from John Elder)
+        {% csrf_token %}
+        {% crispy form %}
+    </div>
+</div>
+<!-- Generate hidden value post author (Idea from John Elder)
 <script>
     let author = "{{ user.username }}"
     document.getElementById('post_author').value = author
 </script> -->
-
-    {% else %}
-        <div class="text-center ">
-            You do not have access to this page.
-            <br>
-            <strong>
-                <a href="{% url 'account_signup' %}" aria-label="Click to Register">
-                    Sign Up
-                </a>
-            </strong>
-            to add African Recipes
-        </div>
-
-
-    {% endif %}
-
-
-
+{% else %}
+<div class="text-center ">
+    You do not have access to this page.
+    <br>
+    <strong>
+        <a href="{% url 'account_signup' %}" aria-label="Click to Register">Sign Up</a>
+    </strong>
+    to add African Recipes
+</div>
+{% endif %}
 {% endblock %}

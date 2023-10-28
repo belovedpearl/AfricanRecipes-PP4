@@ -157,7 +157,12 @@ class AddRecipe(generic.CreateView):
         messages.success(
             self.request, "Recipe added successfully! Awaiting Approval."
         )
-        return super().form_valid(form)
+
+        self.object = form.save(commit=False)
+        self.object.author = self.request.user
+        self.object.save()
+
+        return HttpResponseRedirect(self.get_success_url())
 
     def get_context_data(self, **kwargs):
         """

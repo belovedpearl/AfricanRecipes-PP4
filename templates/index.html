@@ -1,138 +1,133 @@
 {% extends "base.html" %}
 {% load static %}
 {% load social_share %}
-{% block title %} African Food Recipes {% endblock%}
-{% block content %}
-
-
-    <div class="container-fluid">
-        <div class="row">
-        <!-- Recipe Entries Column -->
-            <div class="col-12 mt-3">
-                <div class="row">
-
-                    {% for recipe in recipe_list %}
-                        <div class="col-md-4">
-                            <div class="card mb-4 post">
-                                <div class="card-body">
-                                    <div class="image-container">
-                                        <a href="{% url 'recipe-detail' recipe.pk %}" class="recipe-link" aria-label="Link to the Recipe detail page">
-                                            <h2 class="card-title recipe_title">{{ recipe.title }}</h2>
-                                        </a>
-
-                                <!-- check if there is an image on the post -->
-                                        {% if "placeholder" in recipe.recipe_image.url %}
-                                            <img class="card-img-top post-image"
-                                                 src="{% static 'images/foodtheme.webp' %}" alt="Recipe Placeholder Image">
-                                        {% else %}
-                                            <img class="card-img-top post-image"
-                                                 src=" {{ recipe.recipe_image.url }}" alt="Recipe Image">
-                                        {% endif %}
-
-                                        <div>
-                                            <div class="d-inline">
-                                                <span class="author">Posted By: {{ recipe.author }}</span>
-
-                                                <span class="user_spec">
-                                                    {% if user.is_authenticated and request.user == recipe.author %}
-                                                        <a href="{% url 'updaterecipe' recipe.pk %}">
-                                                            <i class="fas fa-edit me-2"></i>
-                                                        </a>
-                                                        <a href="{% url 'deleterecipe' recipe.pk %}">
-                                                            <i class="fas fa-trash me-2"></i>
-                                                        </a>
-                                                    {% endif %}
-                                                </span>
-
-                                                <div class="dropdown d-inline">
-                                                    <button class="btn btn-secondary dropdown-toggle share" type="button" id="dropdownMenuButton{{ recipe.pk }}" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Share
-                                                        <i class="fas fa-share"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ recipe.pk }}">
-                                                        <li class="dropdown-item">{% post_to_twitter "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url "Post to Twitter" %}</li>
-                                                        <li class="dropdown-item">{% post_to_telegram "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url %}</li>
-                                                        <li class="dropdown-item">{% post_to_whatsapp "New Recipe Alert: {{object.title}}. Yummy meal!" object_or_url "Post to WhatsApp" %}</li>
-
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-
-                                            <a href="{% url 'countries' recipe.country %}" aria-label="Link to the Recipe detail page">
-                                                <p class="text-center">{{ recipe.country }}</p>
+{% block title %}African Food Recipes{% endblock %}
+    {% block content %}
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Recipe Entries Column -->
+                <div class="col-12 mt-3">
+                    <div class="row">
+                        {% for recipe in recipe_list %}
+                            <div class="col-md-4">
+                                <div class="card mb-4 post">
+                                    <div class="card-body">
+                                        <div class="image-container">
+                                            <a href="{% url 'recipe-detail' recipe.pk %}"
+                                               class="recipe-link"
+                                               aria-label="Link to the Recipe detail page">
+                                                <h2 class="card-title recipe_title">{{ recipe.title }}</h2>
                                             </a>
-
+                                            <!-- check if there is an image on the post -->
+                                            {% if "placeholder" in recipe.recipe_image.url %}
+                                                <img class="card-img-top post-image"
+                                                     src="{% static 'images/foodtheme.webp' %}"
+                                                     alt="Recipe Placeholder Image">
+                                            {% else %}
+                                                <img class="card-img-top post-image"
+                                                     src=" {{ recipe.recipe_image.url }}"
+                                                     alt="Recipe Image">
+                                            {% endif %}
+                                            <div>
+                                                <div class="d-inline">
+                                                    <span class="author">Posted By: {{ recipe.author }}</span>
+                                                    <span class="user_spec">
+                                                        {% if user.is_authenticated and request.user == recipe.author %}
+                                                            <a href="{% url 'updaterecipe' recipe.pk %}">
+                                                                <i class="fas fa-edit me-2"></i>
+                                                            </a>
+                                                            <a href="{% url 'deleterecipe' recipe.pk %}">
+                                                                <i class="fas fa-trash me-2"></i>
+                                                            </a>
+                                                        {% endif %}
+                                                    </span>
+                                                    <div class="dropdown d-inline">
+                                                        <button class="btn btn-secondary dropdown-toggle share"
+                                                                type="button"
+                                                                id="dropdownMenuButton{{ recipe.pk }}"
+                                                                data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                            Share
+                                                            <i class="fas fa-share"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu"
+                                                            aria-labelledby="dropdownMenuButton{{ recipe.pk }}">
+                                                            <li class="dropdown-item">
+                                                                {% post_to_twitter "New Recipe Alert: {{ object.title }}. Yummy meal!" object_or_url "Post to Twitter" %}
+                                                            </li>
+                                                            <li class="dropdown-item">{% post_to_telegram "New Recipe Alert: {{ object.title }}. Yummy meal!" object_or_url %}</li>
+                                                            <li class="dropdown-item">
+                                                                {% post_to_whatsapp "New Recipe Alert: {{ object.title }}. Yummy meal!" object_or_url "Post to WhatsApp" %}
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="{% url 'countries' recipe.country %}"
+                                                   aria-label="Link to the Recipe detail page">
+                                                    <p class="text-center">{{ recipe.country }}</p>
+                                                </a>
+                                            </div>
                                         </div>
-
+                                        <hr>
+                                        <p class="card-text text-muted h6 postdatelikes">
+                                            <span class="date_created">{{ recipe.date_created }}</span>
+                                            <span class="react"><i class="fas fa-thumbs-up"></i> {{ recipe.number_of_likes }}</span>
+                                            <span class="react"><i class="fas fa-thumbs-down "></i> {{ recipe.number_of_dislikes }}</span>
+                                        </p>
                                     </div>
-                                    <hr>
-                                    <p class="card-text text-muted h6 postdatelikes">
-                                        <span class="date_created">{{ recipe.date_created }}</span>
-                                        <span class="react"><i class="fas fa-thumbs-up"></i> {{ recipe.number_of_likes }}</span>
-                                        <span class="react"><i class="fas fa-thumbs-down "></i> {{ recipe.number_of_dislikes }}</span>
-                                    </p>
-
                                 </div>
                             </div>
-                        </div>
-                        {% if forloop.counter|divisibleby:3 %}
+                            {% if forloop.counter|divisibleby:3 %}
                             </div>
                             <div class="row">
-                        {% endif %}
-                    {% endfor %}
-
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
-
-<!-- Pagination  -->
-    <ul class="pagination justify-content-center mt-3">
-        {% if page_obj.has_previous %}
-            <li class="page-item">
-                <a href="?page=1" class="page-link">&laquo; first</a>
-            </li>
-            <li class="page-item">
-                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">previous</a>
-            </li>
-        {% else %}
-            <li class="page-item">
-                <a href="#" class="page-link disabled">&laquo; first</a>
-            </li>
-            <li class="page-item">
-                <a href="#" class="page-link disabled">previous</a>
-            </li>
-
-        {% endif %}
-
-        {% for i in page_obj.paginator.page_range %}
-            {% if page_obj.number == i %}
-                <li class="page-item active"><a href="#" class="page-link">{{ i }}<span class="sr-only">(current)</span></a></li>
+        <!-- Pagination  -->
+        <ul class="pagination justify-content-center mt-3">
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a href="?page=1" class="page-link">&laquo; first</a>
+                </li>
+                <li class="page-item">
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link">previous</a>
+                </li>
             {% else %}
-                <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                <li class="page-item">
+                    <a href="#" class="page-link disabled">&laquo; first</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link disabled">previous</a>
+                </li>
             {% endif %}
-        {% endfor %}
-
-        {% if page_obj.has_next %}
-            <li class="page-item">
-                <a href="?page={{ page_obj.next_page_number }}" class="page-link">next</a>
-            </li>
-            <li class="page-item">
-                <a href="?page={{ page_obj.paginator.num_pages }}" class="page-link">last &raquo;</a>
-            </li>
-
-        {% else %}
-            <li class="page-item">
-                <a href="#" class="page-link disabled">next</a>
-            </li>
-            <li class="page-item">
-                <a href="#" class="page-link disabled">last &raquo;</a>
-            </li>
-
-        {% endif %}
-    </ul>
-    
-
-{% endblock%}
+            {% for i in page_obj.paginator.page_range %}
+                {% if page_obj.number == i %}
+                    <li class="page-item active">
+                        <a href="#" class="page-link">{{ i }}<span class="sr-only">(current)</span></a>
+                    </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a href="?page={{ page_obj.next_page_number }}" class="page-link">next</a>
+                </li>
+                <li class="page-item">
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="page-link">last &raquo;</a>
+                </li>
+            {% else %}
+                <li class="page-item">
+                    <a href="#" class="page-link disabled">next</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link disabled">last &raquo;</a>
+                </li>
+            {% endif %}
+        </ul>
+    {% endblock %}
