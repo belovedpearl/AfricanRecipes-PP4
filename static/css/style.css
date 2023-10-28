@@ -85,6 +85,9 @@ nav{
     max-height: 200px;
     overflow-y: auto;
 } 
+.dropdown-item:focus{
+    background-color: #ffffff;
+}
 
 /*____________ Post Card _____________*/
 .post{

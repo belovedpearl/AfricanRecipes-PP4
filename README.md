@@ -309,31 +309,24 @@ If the user is signed-in, navigation options are to either Sign-out or Add a new
 
 On the right end of the navbar, unregistered users are presented with the statement 'Tasty African Recipe' while registered signed in users are presented with the caption **'Signed in as <username>'**. This section  has two functions; first, it identifies the specific logged in user by displaying their name. The username also acts as a link where users can edit their profile information.
 
-![Header and Navbar Pic for Registered Users]()
+<details>
+<summary>Header and Navbar Picture for Registered Users</summary>
+<img src="screenshots/live_site/navbar-reg.webp" width="80%">
+</details>
 
-![Header and Navbar Pic for Non-Registered Users]()
-
+<details>
+<summary>Header and Navbar Picture for Non-Registered Users</summary>
+<img src="screenshots/live_site/navbar-nonreg.webp" width="80%">
+</details>
 
 
 ### A section for the messages
 Messages if available are relayed to the users here. This message can be as a result of actions like login, logout, updating a profile, submitting a recipe. They all assure the user of the completion of their actions.
 
-![Post Created]()
-
-![Post Deleted]()
-
-![Post Updated]()
-
-![Profile Changed]()
-
-![Password Changed]()
-
-
-
 ### Footer 
 Links to various social media platforms are featured here with a copyright caption.
 
-![Footer Picture]()
+![Footer Picture](screenshots/live_site/footer.webp)
 
 
 ---
@@ -354,14 +347,6 @@ Once the section is accessed, superusers may:
 + Update any user information.
 + Change status of users to staff or superusers.
 
-
-![Main Admin Section]()
-
-
-![Recipe Admin Section]()
-
-
-![Country Admin Section]()
 
 ---
 
@@ -390,7 +375,7 @@ The landing page is set to display recipes in batches of 6. Other recipes are pa
 Users can access any particular pagination page by clicking on the appropriate numbered square Including the pagination will help users to have a smooth scroll through to different pages of the site thereby improving user experience.
 
 Pagination bar:
-![Pagination Bar Picture]()
+![Pagination Bar Picture](screenshots/live_site/pagination.webp)
 
 
 ### Recipe by Country
@@ -399,8 +384,7 @@ Due to the nature of the project and its targets, I initially considered allowin
 
 If there are no recipe posted for such country, users are given a feedback informing them of no recipe posted for their country of choice. Users are then encouraged to add recipe for such country.
 
-**Dropdown picture of African Countries:**
-![Dropdown Picture of African Countries]()
+![Dropdown Picture of African Countries](screenshots/live_site/country-list.webp)
 
 
 ---
@@ -414,9 +398,10 @@ The page also contains a placeholder image for posts made without an image this 
 
 Additionally, at the end of the recipe description is the back button that directs the user back to the default landing page providing an alternative to the user's browser back button.
 
-**Screenshot of recipe details page:**
-
-![Screenshot of recipe details page]()
+<details>
+<summary>Screenshot of recipe details page</summary>
+<img src="screenshots/live_site/details-page.webp" width="80%">
+</details>
 
 ---
 
@@ -428,12 +413,16 @@ The addrecipe page allows a user to write and submit a recipe of choice specifyi
 
 Recipe posts submitted needs to be approved by an administrator before it can be updated on the page. On successfull submission of recipe, the user is notified of the successful submission of the recipe and an assurance that its awaiting approval from an administrator.
 
-Success message is relayed to the users using the imported class based view[SuccessMessageMixin](https://tech.serhatteker.com/post/2020-11/show-success-message-in-cbv-django/). 
+Success message is relayed to the users using the imported class based view [SuccessMessageMixin](https://tech.serhatteker.com/post/2020-11/show-success-message-in-cbv-django/). 
 
 Recipe posts needs to be approved to prevent unwanted posts from the platform.
 
-**Screenshot of add recipe page:**
-![Screenshot of addrecipe page]()
+<details>
+<summary>Screenshot of add recipe page</summary>
+    <img src="screenshots/live_site/addrecipe-page.webp" width="80%">
+    <img src="screenshots/live_site/addrecipe-page2.webp" width="80%">
+    <img src="screenshots/live_site/addrecipe-page3.webp" width="80%">
+</details>
 
 ---
 
@@ -448,9 +437,20 @@ To update a recipe post, the form field are pre-filled once the user click the s
 
 Only recipe post authors can update their recipe to prevent abuse of the update function since updating does not require permission from the administrator.
 
-Screenshots of update recipe page:
+<details>
+<summary>Screenshot of update recipe page</summary>
+    <img src="screenshots/live_site/update-page.webp" width="80%">
+    <img src="screenshots/live_site/update-page2.webp" width="80%">
+    <img src="screenshots/live_site/update-page3.webp" width="80%">
+</details>
 
-![Update recipe page screenshot]()
+
+I have included the measure below to prevent unregistered users with links to any of the recipes from updating any recipe.
+
+<details>
+<summary>Screenshot page displayed to Non-registered users on attempt to update recipe</summary>
+    <img src="screenshots/live_site/update-page-nonuser.webp" width="80%">
+</details>
 
 ---
 
@@ -483,7 +483,7 @@ Using the [social share](https://pypi.org/project/django-social-share/) document
 
 **Share post feature**
 
-![Share post dropdown picture]()
+![Share post dropdown picture](screenshots/live_site/share-recipe.webp)
 
 ---
 
@@ -508,9 +508,10 @@ The page is rendered using the edit_profile template and the EditUserView. Once 
 Once updated, users are redirected back home and a message is popped onto the screen confirming successful update of the user's profile.
 
 
-**Screenshot of Profile Update Page**
-
-![Edit Profile page screenshot]()
+<details>
+<summary>Edit Profile page screenshot</summary>
+    <img src="screenshots/live_site/edit-profile.webp" width="80%">
+</details>
 
 ---
 
@@ -518,17 +519,20 @@ Once updated, users are redirected back home and a message is popped onto the sc
 
 These are modified versions of the standard AllAuth templates that can be copied over from the site-packages directory with the cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates command. Its modification include extending mama's kitchen base template and adding some bootstrap classes.
 
-**Screenshot of Sign In Page**
+<details>
+<summary>Sign In page screenshot</summary>
+    <img src="screenshots/live_site/sign-in.webp" width="80%">
+</details>
 
-![Sign in page screenshot]()
+<details>
+<summary>Sign Out page screenshot</summary>
+    <img src="screenshots/live_site/sign-out.webp" width="80%">
+</details>
 
-**Screenshot of Sign Out Page**
-
-![Sign out page screenshot]()
-
-**Screenshot of Sign Up Page**
-
-![Sign up page screenshot]()
+<details>
+<summary>Sign Up page screenshot</summary>
+    <img src="screenshots/live_site/sign-up.webp" width="80%">
+</details>
 
 ---
 
@@ -536,10 +540,14 @@ These are modified versions of the standard AllAuth templates that can be copied
 
 This was included to give the user a form of feedback for their actions. Users get a message when they successfully sign-in, sign-out, add a recipe post, delete a recipe post, change password, update their profile information.
 
-
-**Samples of Messages to Users**
-
-![Messages Sample screenshot]()
+<details>
+<summary>Message Sample screenshots</summary>
+    <img src="screenshots/live_site/password-changed.webp" width="80%">
+    <img src="screenshots/live_site/post-update.webp" width="80%">
+    <img src="screenshots/live_site/profile-update.webp" width="80%">
+    <img src="screenshots/live_site/signin-feedback.webp" width="80%">
+    <img src="screenshots/live_site/signout-feedback.webp" width="80%">
+</details>
 
 
 ---
@@ -857,7 +865,7 @@ In line with the theme of the website, I have chosen to use representative Afric
 
 **Body Background Color:** White color representing Purity and Peace a treasured characteristics of africa.
 
-**Homepage Headers, Links Hover, active link background color, dropdown list focus, active page indicators**. All have a shade of red (#F54E4E) symbolizing the african struggles. In order to boldly project the like and dislike, I used the red color shade #E84610 which is brighter than the former.
+**Homepage Headers, Links Hover, active link background color, dropdown list focus, active page indicators**. All have a shade of red (#840404) symbolizing the african struggles. In order to boldly project the like and dislike, I used the red color shade #E84610 which is brighter than the former.
 
 **Homepage Header and Footer**: A shade of green (#aaf3aa) was used symbolizing growth.
 
@@ -866,6 +874,15 @@ In line with the theme of the website, I have chosen to use representative Afric
 **Buttons** were made a shade of grey (bootstrap btn-secondary) symbolizing cleansing and healing rituals.
 
 **Header and Footer content**: Made with color black, symbolizing the maturity of the african culture.
+
+Different color combination and their contrast is summarised as follows:
+
+   |Foreground | Background | Contrast Ratio | Comment on Large and Small Text |
+   |-----------|------------|----------------|---------|
+   | Black     | #aaf3aa    | 16.11           | Super
+   | #aaf3aa   |  #840404   |8.05       |  Very Good   |
+   |  #840404    |  #ffffff   | 8.05      |  Very Good   |
+   | #ffffff    | #840404   |  10.50      | Very Good
 
 
 ## Favicon
