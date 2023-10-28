@@ -25,8 +25,7 @@ a{
     color: black;   
 }
 a:hover{
-    color: #F54E4E !important;
-   
+    color: #840404 !important;
 }
 
 button{
@@ -34,7 +33,7 @@ button{
 }
 .home{
     margin-top: 5px;
-    background-color: #F54E4E;
+    background-color: #840404;
     color: black;
 } 
 
@@ -68,19 +67,15 @@ nav{
     border-color: black;
 }
 .nav-link:hover{
-    color: #F54E4E;
+    color: #840404;
 }
 .active{
-    background-color: #F54E4E;
-    color: black;
+    background-color: #840404;
+    color: #ffffff !important;
     font-weight: 900;
     border-radius: 10px;
 }
-.active:hover,
-.dropdown-item:focus{
-    background-color: #F54E4E;;
-    color: white !important;
-}
+
 .dropdown-menu{
     background-color: #aaf3aa;
     border: 1px solid black;
@@ -101,11 +96,11 @@ nav{
 }
 .recipe-link{
     font-size: 52px; 
-    color: #F54E4E;
+    color: #840404;
     text-decoration: none;
 }
 .recipe-link:hover{
-    color: black;
+    text-decoration: underline;
 }
 .date_created{
     margin-right: 50px;
@@ -210,7 +205,9 @@ footer{
     color: black;
 }
 .page-item.active .page-link {
-    background-color: #F54E4E;
+    background-color: #840404;
+    border-color: #5a6570;
+    
 }
 
 .summernote-div iframe {

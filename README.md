@@ -1170,7 +1170,6 @@ to install required packages.
 
 ## Testing
 
-
 ### Automatic Testing
 
 At the start of the project, I decided to write in some test to get a good grasp of the concept and my mentor also advised me to especially for a career changer like me as this will show my capacity in another level, while faced some challenges writing the tests, I was happy that I could write some in the end. I have been able to write 17 tests for this project, using [this](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) material helped.
