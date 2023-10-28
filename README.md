@@ -200,7 +200,7 @@ As an Admin user I can..
 
 * Filter and sort recipe posts easily, so that I can see all of the posts that needs to be approved.
 
-* Approve any number of selected recipes post so that they can be be visible on the site.
+* Approve recipes post so that they can be be visible on the site.
 
 * Delete any number of selected recipe, so that they no longer take up memory in the database especially the ones that are not on line with the platform ideas.
 
@@ -1205,7 +1205,111 @@ Automatic test for this project can be found ![here](recipes/). The files are na
 
 As advised by my mentor, I used the **db.sqlite** to run the tests.
 
+Test results are shown below;
 
+<details>
+<summary>Automatic Test Result</summary>
+    <img src="screenshots/test_pic/test-forms.webp" width="80%">
+    <img src="screenshots/test_pic/test-models.webp" width="80%">
+    <img src="screenshots/test_pic/test-views.webp" width="80%">
+</details>
+
+### Manual Testing
+
+All manual tests was done on the deployed site.
+
+#### Admin User Test
+
+Mama'sKitchen has an admin section which is the standard django admin that can be accessed by the superuser. It is built with different functions to improve admin experience.
+
+![Mama'sKitchen Admin](screenshots/test_pic/admin-access.webp)
+
+The admin section can be accessed by adding '/admin' at the end of the home page url as illustrated below.
+ 
+        https://africanrecipes-95e71e30ded1.herokuapp.com/admin/
+
+* The admin user can sign-in to the admin section with the superuser details. For this project, a superuser 'Oluwaseun' has been created, password supplied separately.
+
+
+<details>
+<summary>Admin Sign in</summary>
+    <img src="screenshots/test_pic/admin-pass.webp" width="80%">
+</details>
+
+     Admin is able to sign-in with the username and password.
+
+* The admin can access the project admin-board.
+
+<details>
+<summary>Admin Board</summary>
+    <img src="screenshots/test_pic/admin-board.webp" width="80%">
+</details>
+
+* The admin can view all recipe posts submitted by users, so that I can view and edit posts if needed
+
+<details>
+<summary>Admin Recipe Board</summary>
+    <img src="screenshots/test_pic/recipe-board.webp" width="80%">
+</details>
+
+     The admin is able to view all recipes submitted by users.
+
+* The admin can filter and sort recipe posts easily, so that I can see all of the posts that needs to be approved.
+
+<details>
+<summary>Admin Filter Result</summary>
+    <img src="screenshots/test_pic/filter-section.webp" width="80%">
+    <img src="screenshots/test_pic/filter-result.webp" width="80%">
+    <img src="screenshots/test_pic/filter-result2.webp" width="80%">
+</details>
+
+       The admin is able to filter recipes as stated in the list_filter in the admin.py file.
+
+* The admin can approve recipes post so that they can be be visible on the site.
+     Admin click on approve post field makes, saving it makes it shows up on the main site.
+
+* The admin can delete any number of selected recipe, so that they no longer take up memory in the database especially the ones that are not on line with the platform values.
+
+<details>
+<summary>Admin Delete Action</summary>
+    <img src="screenshots/test_pic/admin-delete.webp" width="80%">
+    <img src="screenshots/test_pic/admin-deletesuccess.webp" width="80%">
+</details>
+
+      Admin delete successful
+
+* The admin can make posts with rich text and images, so that I can improve the quality of posts.
+* The admin can add a recipe post, so that I do not have to use the add post page on the front-end
+
+<details>
+<summary>Admin Add Recipe Action</summary>
+    <img src="screenshots/test_pic/admin-addrecipe.webp" width="80%">
+    <img src="screenshots/test_pic/admin-addrecipe2.webp" width="80%">
+    <img src="screenshots/test_pic/admin-addrecipe3.webp" width="80%">
+</details>
+
+       Admin can successfully add recipe from the admin section.
+
+* The admin can use the search field to search for required recipes, so that I can see all recipes posts that fulfil certain criteria
+
+<details>
+<summary>Admin Search Action</summary>
+    <img src="screenshots/test_pic/searchfield-admin.webp" width="80%">
+    <img src="screenshots/test_pic/searchfield-admin2.webp" width="80%">
+    <img src="screenshots/test_pic/searchfield-admin3.webp" width="80%">
+</details>
+
+       Admin is able to use the search field successfully as specfied in the search_fields list in the admin.py file
+
+* The admin has access to the country board, he is able  view all countries, add more African countries, update and delete.
+
+<details>
+<summary>Admin Country Board</summary>
+    <img src="screenshots/test_pic/country-board.webp" width="80%">
+    <img src="screenshots/test_pic/country-delete.webp" width="80%">
+    <img src="screenshots/test_pic/country-delete2.webp" width="80%">
+    <img src="screenshots/test_pic/country-delete3.webp" width="80%">
+</details>
 
 ### Validator Testing
 
