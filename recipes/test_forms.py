@@ -22,7 +22,6 @@ class TestItemForm(TestCase):
         form = RecipeForm()
         formfields = [
             "title",
-            "author",
             "country",
             "ingredients",
             "instructions",
