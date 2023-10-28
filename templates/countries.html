@@ -88,8 +88,12 @@
 <p class="text-center">
     There are no related posts.
     <br>
-    <a href="{% url 'account_signup' %}" aria-label="Registration page">Sign Up</a> or <a
-        href="{% url 'account_login' %}" aria-label="Login Page">Login</a> to Add recipe post for {{ choice }}
+    <a href="{% url 'account_signup' %}" aria-label="Registration page">
+        Sign Up
+    </a> or <a
+        href="{% url 'account_login' %}" aria-label="Login Page">
+        Login
+    </a> to Add recipe post for {{ choice }}
 </p>
 {% endif %}
 {% endblock %}

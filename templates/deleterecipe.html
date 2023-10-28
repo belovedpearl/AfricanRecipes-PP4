@@ -11,14 +11,20 @@
     <!-- Restrict recipe delete to authors only -->
     {% if user == recipe.author %}
     <div class="form-group">
-        <form method="POST" action="{% url 'deleterecipe' pk=recipe.pk %}">
+        <form method="post" action="{% url 'deleterecipe' pk=recipe.pk %}">
             {% csrf_token %}
-            <strong>Are you sure you want to delete this recipe?</strong>
+            <strong>
+                Are you sure you want to delete this recipe?
+            </strong>
             <br>
             <br>
             <div>
-                <button class="btn-secondary">Yes</button>
-                <a href="{% url 'home' %}" class="btn btn-secondary">No</a>
+                <button class="btn-secondary">
+                    Yes
+                </button>
+                <a href="{% url 'home' %}" class="btn btn-secondary">
+                    No
+                </a>
             </div>
         </form>
     </div>
@@ -34,7 +40,11 @@
     <div class="text-center">
         You cannot delete a post here.
         <br>
-        <strong><a href="{% url 'account_signup' %}" aria-label="Click to Register">Sign Up</a></strong> to become a
+        <strong>
+            <a href="{% url 'account_signup' %}" aria-label="Click to Register">
+                Sign Up
+            </a>
+        </strong> to become a
         member of the community.
     </div>
     {% endif %}

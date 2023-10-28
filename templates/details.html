@@ -35,7 +35,7 @@
                     {% if user.is_authenticated %}
                         <form class="d-inline"
                               action="{% url 'recipe_like' recipe.pk %}"
-                              method="POST">
+                              method="post">
                             {% csrf_token %}
                             {% if liked %}
                                 <button type="submit"
@@ -63,7 +63,7 @@
                     {% if user.is_authenticated %}
                         <form class="d-inline"
                               action="{% url 'recipe_dislike' recipe.pk %}"
-                              method="POST">
+                              method="post">
                             {% csrf_token %}
                             {% if disliked %}
                                 <button type="submit"
