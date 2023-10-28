@@ -843,6 +843,16 @@ While putting up the new project, I decided to add only the name field to the mo
 
       * I thought it could be because I have turned the DEBUG to False or added the X_FRAME_OPTIONS, I decided to comment the X_FRAME_OPTIONS but it did not change. I also changed the DEBUG settings back to True and everything was fixed.
 
+## Admin Search Fields Bug
+
+While testing, I discovered that the admin search field was not working as it should. I got this error.
+       
+       Related field got invalid lookup: icontains
+
+On searching for the possible solution. I found [this material](https://www.infinetsoft.com/Post/SOLVED-Related-Field-got-invalid-lookup-icontains-error-in-Django/3153#:~:text=This%20error%20is%20happening%20due%20to%20adding%20foreign,and%20grab%20name%20field%20from%20the%20category%20model.) with details that helped me solve it.
+
+     Adding '__name' to the country index fixed this error.
+
 
 ---
 
