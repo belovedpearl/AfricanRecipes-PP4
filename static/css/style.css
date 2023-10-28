@@ -88,6 +88,9 @@ nav{
 .dropdown-item:focus{
     background-color: #ffffff;
 }
+.dropdown-item:active{
+    background-color: #ffffff;
+}
 
 /*____________ Post Card _____________*/
 .post{

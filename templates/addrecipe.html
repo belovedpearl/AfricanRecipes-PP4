@@ -7,16 +7,20 @@
 {% load crispy_forms_tags %}
 <div class="changerecipe">
     <div class="form-group changerecipeform">
-        <!-- Insert form data   -->
-        {% csrf_token %}
-        {% crispy form %}
+        <form method="post" action="{% url 'add_recipe' %}">
+            <!-- Insert form data   -->
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <div>
+                <p>
+                    <button class="btn btn-secondary m-3" type="submit">Add Recipe</button>
+                </p>
+            </div>
+        </form>
+    
     </div>
 </div>
-<!-- Generate hidden value post author (Idea from John Elder)
-<script>
-    let author = "{{ user.username }}"
-    document.getElementById('post_author').value = author
-</script> -->
 {% else %}
 <div class="text-center ">
     You do not have access to this page.

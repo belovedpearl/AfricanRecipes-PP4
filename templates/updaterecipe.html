@@ -11,8 +11,19 @@
             {% if user == recipe.author %}
                 <div class="changerecipe">
                     <div class="form-group changerecipeform">
-                        {% csrf_token %}
-                        {% crispy form %}
+                        <form method="post" action="{% url 'updaterecipe' pk=recipe.pk %}">
+                            <!-- Insert form data   -->
+                            {% csrf_token %}
+                            {{ form.as_p }}                                          
+                
+                            <div>
+                                <p>
+                                    <button class="btn btn-secondary m-3" type="submit">
+                                        Update Recipe
+                                    </button>
+                                </p>
+                            </div>
+                        </form>
                     </div>
                 </div>
             {% else %}
@@ -27,7 +38,11 @@
             <div class="text-center">
                 You cannot update a post here!.
                 <br>
-                <strong><a href="{% url 'account_signup' %}" aria-label="Click to Register">Sign Up</a></strong> to become a member of the community.
+                <strong>
+                    <a href="{% url 'account_signup' %}" aria-label="Click to Register">
+                        Sign Up
+                    </a>
+                </strong> to become a member of the community.
             </div>
         {% endif %}
     {% endblock %}
