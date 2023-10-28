@@ -1311,6 +1311,28 @@ The admin section can be accessed by adding '/admin' at the end of the home page
     <img src="screenshots/test_pic/country-delete3.webp" width="80%">
 </details>
 
+#### General User User Story Test
+
+|User Story | Action / Expected result | COMMENT |
+|-----------|------------|----------------|
+|Immediately determine the purpose of the application on first visit, so that I can quickly decide whether its of interest or not     | The user should see a variety of food displayed giving him an idea of the site's overview    | PASS           | 
+|Have a positive user experience irrespective of the means of access, so that I can access the application from enjoy the platform from any device  | Responsiveness on all screens, Pagination for desktop users on home page   |PASS       | 
+|View all recipe posts so that I can choose one to read in detail   |Recipes display to users in group of 6, User click on any recipe title to access the recipe detail   | PASS     |
+| Sort recipe posts by country name so that I can see only the recipe post of intrested countries    | Click on a country in the country dropdown or click on the country name under each post   |  PASS     |
+|If my search by country returned no results, have a message displayed informing me of no posts related to my country search.   |  User sees a message informing him 'no recipe for the selected country'.   |  PASS   |
+
+
+#### Unregistered user User Story Test
+
+|User Story | Action / Expected result | COMMENT |
+|-----------|------------|----------------|
+|Sign-up and create an account, so that I can access the detailed functionality of the application     | Interested users should be able to register with a sign up page   | PASS           | 
+|Sign-in to that created account, so that I can access the detailed functionality of the application  | After successfully registering, users should be able to access their personal accounts   |PASS       | 
+
+#### Registered user User Story Test
+
+
+
 ### Validator Testing
 
 #### PEP8
@@ -1319,8 +1341,13 @@ I have validated the code (form, views, admin, url and all automatic test files)
 
 Recommendations of whitespace error and comments too long were given and was corrected to get the above results.
 
+### Javascript
 
-###
+Javascript was used in the DOM manipulation to fade away messages from screen, written towards the end of the base file. I have passed the code through [JSHINT](https://jshint.com/).
+
+![Javascript Validation](screenshots/validator_test/js_and_css/jshint.webp)
+
+### W3 Validation
 
 All codes written have been passed through the [w3 validation](https://validator.w3.org/) using the direct input method. Results can be viewed ![here](screenshots/validator_test/w3_check/).
 
@@ -1335,7 +1362,9 @@ On assessing and checking the cause of the errors and warnings, I realise they a
 
 The error was due to the injected template. I inspected the code and also tried using [this tool](https://www.aliciaramirez.com/closing-tags-checker/) to find the unclosed tags but it came back with nothing shown [here](screenshots/validator_test/w3_check/tag_confirmation.webp).
 
+### CSS
 
+No errors were found when the passed through 
 
 ---
 
@@ -1372,6 +1401,7 @@ Images used to populate different posts are from the following sources.
  * [Okra](https://blog.allnigerianrecipes.com/okra-soup-overload/)
  * [Matoke](http://www.food-of-africa.com/zimbabwean-food/sadza/)
  
+  
 
 ## Images
 
@@ -1380,6 +1410,8 @@ Template image and favicon images added to the project is from [here](africa-fac
 ## Code
 
 To put up this project, the main inspiration was from the Code Institute's 'I Think Therefore I Blog' Django walkthrough project'. With a desire to express my website differently to further my knowledge of django, I learned from [John Elder](https://www.youtube.com/@Codemycom) in his [series](https://www.youtube.com/watch?v=B40bteAMM_M). This really helped in my understanding of django usage.
+
+Adam Boley for giving his approval to his page pagination code.
 
 Throughout the project, the following were helpful websites often used for troubleshooting:
 * [W3 Schools](https://www.w3schools.com/django/index.php)
