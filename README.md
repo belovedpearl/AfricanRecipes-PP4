@@ -1440,6 +1440,10 @@ After adjustments were made, the live site was passed again through W3C validati
 
 [Edit profile page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fedit_profile%2F)
 
+[Change password Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fpassword%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+[Update recipe page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fupdaterecipe%2Fedit%2F41)
+
 [Delete Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fdetails%2F41%2Fdelete)
 
 [404 page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fgh)
