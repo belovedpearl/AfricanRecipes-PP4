@@ -34,10 +34,10 @@
                                         <span class="author">Posted By: {{ recipe.author }}</span>
                                         <span class="user_spec">
                                             {% if user.is_authenticated and request.user == recipe.author %}
-                                            <a href="{% url 'updaterecipe' recipe.pk %}">
+                                            <a class="link" href="{% url 'updaterecipe' recipe.pk %}">
                                                 <i class="fas fa-edit me-2"></i>
                                             </a>
-                                            <a href="{% url 'deleterecipe' recipe.pk %}">
+                                            <a class="link" href="{% url 'deleterecipe' recipe.pk %}">
                                                 <i class="fas fa-trash me-2"></i>
                                             </a>
                                             {% endif %}
@@ -88,9 +88,9 @@
 <p class="text-center">
     There are no related posts.
     <br>
-    <a href="{% url 'account_signup' %}" aria-label="Registration page">
+    <a  class="link" href="{% url 'account_signup' %}" aria-label="Registration page">
         Sign Up
-    </a> or <a
+    </a> or <a class="link"
         href="{% url 'account_login' %}" aria-label="Login Page">
         Login
     </a> to Add recipe post for {{ choice }}

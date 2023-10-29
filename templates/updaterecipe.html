@@ -31,7 +31,9 @@
                     <p>
                         You can only <strong>Update</strong> the posts you created.
                     </p>
-                    <a href="{% url 'home' %}" class="btn btn-secondary mt-4">Home</a>
+                    <a href="{% url 'home' %}" class="btn btn-secondary mt-4 link">
+                        Home
+                    </a>
                 </div>
             {% endif %}
         {% else %}
@@ -39,7 +41,9 @@
                 You cannot update a post here!.
                 <br>
                 <strong>
-                    <a href="{% url 'account_signup' %}" aria-label="Click to Register">
+                    <a class="link" 
+                       href="{% url 'account_signup' %}" 
+                       aria-label="Click to Register">
                         Sign Up
                     </a>
                 </strong> to become a member of the community.

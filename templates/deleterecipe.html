@@ -33,7 +33,7 @@
         <p>
             You can only <strong>delete</strong> the posts you created.
         </p>
-        <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+        <a href="{% url 'home' %}" class="btn btn-secondary link">Home</a>
     </div>
     {% endif %}
     {% else %}
@@ -41,7 +41,7 @@
         You cannot delete a post here.
         <br>
         <strong>
-            <a href="{% url 'account_signup' %}" aria-label="Click to Register">
+            <a class="link" href="{% url 'account_signup' %}" aria-label="Click to Register">
                 Sign Up
             </a>
         </strong> to become a
