@@ -7,7 +7,9 @@
 {% load crispy_forms_tags %}
 <div class="changerecipe">
     <div class="form-group changerecipeform">
-        <form method="post" action="{% url 'add_recipe' %}">
+        <form method="post" 
+           action="{% url 'add_recipe' %}" 
+           enctype="multipart/form-data">
             <!-- Insert form data   -->
             {% csrf_token %}
             {{ form.as_p }}
