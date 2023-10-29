@@ -854,6 +854,12 @@ On searching for the possible solution. I found [this material](https://www.infi
      Adding '__name' to the country index fixed this error.
 
 
+## Link Color Bug
+I had used important to feature links hover but I decided to fix it because it was causing difficulty with styling other aspects of the website.
+
+    Using specificity and inheritance to select the different element I wanted helped fix this.
+
+
 ---
 
 # Design Choices
