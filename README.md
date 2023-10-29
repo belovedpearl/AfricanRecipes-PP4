@@ -2,7 +2,7 @@
 
 [View code here](https://github.com/belovedpearl/AfricanRecipes-PP4)
 
-![Responsiveness]()
+![Responsiveness](screenshots/live_site/responsive.webp)
 
 [View site responsiveness here](https://ui.dev/amiresponsive?url=https://africanrecipes-95e71e30ded1.herokuapp.com/)
 
@@ -358,7 +358,7 @@ This is the template rendered to the users when visiting the deployed site (Mama
 This view inherits from the Django [ListView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/) class. It uses the model Recipe and queries the database for approved posts. It paginates by 6 recipes per page allowing users navigate to other page to view more recipes.
 In order to provide additional context-data a function was defined to return the url_name and the country list as part of the rendered template. 
 
-![Landing page screenshot]()
+![Landing page screenshot](screenshots/live_site/landing-page.webp)
 
 
 ### Recipes
@@ -471,11 +471,11 @@ To delete a recipe post, only the author is allowed to access the delete functio
 
 **Screenshot of delete page**
 
-![Delete page screenshot for authors]()
-
-![Non-authors delete page screenshot]()
-
-![Non-users delete page screenshot]()
+<details>
+<summary>Screenshot of delete recipe page</summary>
+    <img src="screenshots/live_site/author-delete.webp" width="80%">
+    <img src="screenshots/live_site/non-user.webp" width="80%">
+</details>
 
 
 ---
@@ -1421,10 +1421,28 @@ Some pages returned with errors and warnings like;
 
 On assessing and checking the cause of the errors and warnings, I realise they are due to the copied styles from the Summernote used in the frontend. As I could not find a way to fix this, I decided to show it and possibly continue my learing from there.
 
-![Details page](screenshots/validator_test/w3_check/post_country_page.webp)
+![country page](screenshots/validator_test/w3_check/post_country_page.webp)
 
 
 The error was due to the injected template. I inspected the code and also tried using [this tool](https://www.aliciaramirez.com/closing-tags-checker/) to find the unclosed tags but it came back with nothing shown [here](screenshots/validator_test/w3_check/tag_confirmation.webp).
+
+After adjustments were made, the live site was passed again through W3C validation. The results are presented below.
+
+[Home Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2F)
+
+[Details page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fdetails%2F39)
+
+[Country Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fcountries%2FEthiopia%2F)
+
+[Add recipe page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Faddrecipe%2F)
+
+[Sign out Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2F)
+
+[Edit profile page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fedit_profile%2F)
+
+[Delete Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fdetails%2F41%2Fdelete)
+
+[404 page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2Fgh)
 
 ### CSS
 
