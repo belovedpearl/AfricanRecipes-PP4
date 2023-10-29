@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 SITE_ID = 1
 
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -88,17 +88,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'africanrecipes.wsgi.application'
 
 
-# if DEBUG:
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-# else:
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-}
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
