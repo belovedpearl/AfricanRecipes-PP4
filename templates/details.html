@@ -21,12 +21,13 @@
                 <p class="lead text-center">{{ recipe.description }}</p>
                 <div class="text-center mt-3">
                     {% if user.is_authenticated and request.user == recipe.author %}
-                        <a class="btn"
+                        <a class="btn link"
                            href="{% url 'updaterecipe' recipe.pk %}"
                            aria-label="Click to update {{ recipe.title }}">
                             <i class="fas fa-edit me-2"></i>
                         </a>
-                        <a href="{% url 'deleterecipe' recipe.pk %}"
+                        <a class="link"
+                           href="{% url 'deleterecipe' recipe.pk %}"
                            aria-label="Click to delete {{ recipe.title }}">
                             <i class="fas fa-trash me-2"></i>
                         </a>
@@ -108,7 +109,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a class="btn btn-secondary btn-lg mt-4 mb-4"
+            <a class="btn btn-secondary btn-lg mt-4 mb-4 link"
                href="{% url 'home' %}"
                role="button"
                aria-label="Back home">

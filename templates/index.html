@@ -33,11 +33,13 @@
                                                     <span class="author">Posted By: {{ recipe.author }}</span>
                                                     <span class="user_spec">
                                                         {% if user.is_authenticated and request.user == recipe.author %}
-                                                            <a href="{% url 'updaterecipe' recipe.pk %}">
+                                                            <a class="link"
+                                                                href="{% url 'updaterecipe' recipe.pk %}">
                                                                 <i class="fas fa-edit me-2"></i>
                                                             </a>
-                                                            <a href="{% url 'deleterecipe' recipe.pk %}">
-                                                                <i class="fas fa-trash me-2"></i>
+                                                            <a class="link"
+                                                                href="{% url 'deleterecipe' recipe.pk %}">
+                                                                <i class="fas fa-trash me-2 link"></i>
                                                             </a>
                                                         {% endif %}
                                                     </span>
@@ -64,7 +66,9 @@
                                                 </div>
                                                 <a href="{% url 'countries' recipe.country %}"
                                                    aria-label="Link to the Recipe detail page">
-                                                    <p class="text-center">{{ recipe.country }}</p>
+                                                    <p class="text-center link">
+                                                        {{ recipe.country }}
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>

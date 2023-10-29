@@ -24,13 +24,11 @@ a{
     text-decoration: none;
     color: black;   
 }
-a:hover{
-    color: #840404 !important;
-}
 
 button{
     margin: 10px;
 }
+
 .home{
     margin-top: 5px;
     background-color: #840404;
@@ -39,6 +37,14 @@ button{
 
 hr{
     border: 1px solid #5c875c;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.link:hover,
+.page-link:hover{
+    color: #840404;
+}
+.navbar-light .navbar-text a:hover{
+    color: #840404;
 }
 
 /*_______________ Logo _________________ */
@@ -50,7 +56,9 @@ hr{
     margin-right: 30px;
     
 }
-
+#life:hover{
+    color: #840404;
+}
 /*_______________  Nav Element ____________ */
 nav{
     background-color: #aaf3aa;
@@ -87,11 +95,16 @@ nav{
 } 
 .dropdown-item:focus{
     background-color: #ffffff;
+    color: #840404;
 }
 .dropdown-item:active{
     background-color: #ffffff;
+    color: #840404;
 }
-
+.dropdown-item:hover,
+.dropdown-item a:hover{
+    color: #840404;
+}
 /*____________ Post Card _____________*/
 .post{
     border: 2px solid #5c875c;
@@ -100,6 +113,9 @@ nav{
 .recipe_title{
     font-size: 1.7rem;
 }
+.recipe_title:hover{
+    color: #840404;
+}
 .recipe-link{
     font-size: 52px; 
     color: #840404;
@@ -107,6 +123,7 @@ nav{
 }
 .recipe-link:hover{
     text-decoration: underline;
+    color: #840404;
 }
 .date_created{
     margin-right: 50px;
