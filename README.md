@@ -266,7 +266,7 @@ As a registered user I can ...
 
 * If there is no recipe when searching by countrry, have that reflected back to me so that I know that there is no recipe for the selected country.
 
-* Allow for confirmation of delete recipe befor deletion, so that I cannot accidentally delete any recipe post.
+* Allow for confirmation of delete recipe before deletion, so that I cannot accidentally delete any recipe post.
 
 * Be alerted when I have posted a recipe, so that I can be assured that I have submitted the recipe.
 
@@ -1214,6 +1214,10 @@ Test results are shown below;
     <img src="screenshots/test_pic/test-views.webp" width="80%">
 </details>
 
+**Coverage Report of test is illustrated below**
+![Coverage Report](screenshots/test_pic/coverage-report.webp)
+
+
 ### Manual Testing
 
 All manual tests was done on the deployed site.
@@ -1330,7 +1334,25 @@ The admin section can be accessed by adding '/admin' at the end of the home page
 |Sign-in to that created account, so that I can access the detailed functionality of the application  | After successfully registering, users should be able to access their personal accounts   |PASS       | 
 
 #### Registered user User Story Test
-
+|User Story | Action / Expected result | COMMENT |
+|-----------|------------|----------------|
+|Sign in to an already existing account, so that I can access the full functionality of the application.     | The user should be able to sign in to his account using the sign in page in order to access the full website functionality    | PASS           | 
+|Add a recipe post easily so that I can share food recipe on the website  | Clicking on the add recipe button should bring up the add recipe page for user to add his recipe   |PASS       | 
+|Edit recipe posts I created so that I can improve or modify the content  |Clicking on the update icon below his recipe should bring up the recipe in their different field allowing the user to update it.   | PASS     |
+| Delete recipe posts I created so that I know that I have the control of the content I created.    | User should be able to delete his own recipe by using the delete icon under the recipe picture.   |  PASS     |
+|Change the password for that account, so that it becomes more memorable. |  From the profilr page, user is able to change his password   |  PASS   |
+|Sign-out easily, when already signed-in, so that I can be sure that my session was closed securely | User should be able to sign-out of his session to keep his account secured. | PASS |
+| Have my sign-in status reflected back to me, so that I can be sure that I have signed-in | User signed in status is reflected at the top right corner of the home page. | PASS |
+| Apply rich text formatting to the content of my recipe, so that I can better express myself and provide additional structure to my recipe.  | User should have access to use the summernotewidget on the frontend  | PASS |
+| Upload an image to my recipe, so that I can show other users what the recipe looks like. | User shold be able to add recipe image | PASS |
+| If there is no recipe when searching by countrry, have that reflected back to me so that I know that there is no recipe for the selected country | User can add recipe without its image, a placeholder image is used to represent recipes without image added by the author | PASS |
+| Allow for confirmation of delete recipe befor deletion, so that I cannot accidentally delete any recipe post.  | User should be presented a warning for delete actions and is allwed to use the 'NO' button to stop the process  | PASS |
+|  Be alerted when I have posted a recipe, so that I can be assured that I have submitted the recipe. | On successful submission of recipe, user should be shown a message confirming successful submission | PASS |
+| Be informed when I have successfully signed in, so that I can be assured that I have submitted the right details.  | Users should be alerted when signed in | PASS |
+|  Be informed when I have updated a recipe, so that I can be assured that I have updated the recipe. | User should be alerted with a message on successful update of recipe |  PASS |
+| Be informed when I have deleted a recipe, so that I can be assured that I have deleted the recipe. | User should be informed on successful dletion of recipe posts | PASS |
+| When viewing a recipe detail, like the page , so that I can express my thoughts of the recipe | User should be able to like a food recipe | PASS |
+| When viewing a recipe detail, dislike the page , so that I can express my thoughts of the recipe. | User should be able to like a food recipe | PASS |
 
 
 ### Validator Testing
