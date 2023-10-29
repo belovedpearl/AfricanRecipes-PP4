@@ -43,6 +43,7 @@
     * [Edit User Page](#edit-user-page)
     * [Sign-In, Sign-Out, Sign-Up Pages](#sign-in-sign-out-sign-up-pages)
     * [Messages](#messages)
+    * [Error Pages](#error-pages)
 * [Database Model](#database-model)
      * [Recipe Class](#recipe-class)
          * [Recipe Class Method](#recipe-class-methods)
@@ -366,7 +367,11 @@ Each recipe card presents a brief overview of a particular recipe. Allowing the 
 
 The details page with its view is discussed below.
 
-![Recipe Card Screenshot]()
+<details>
+<summary>Screenshot of recipe card with image and template image respectively</summary>
+    <img src="screenshots/live_site/recipe-card.webp" width="80%">
+    <img src="screenshots/live_site/recipe-card2.webp" width="80%">
+</details>
 
 ### Pagination
 
@@ -497,7 +502,8 @@ Each post is quite similar in display to the landing page but it does not have t
 
 **Screenshot of the Country Page**
 
-![Country page screenshot]()
+![Country page screenshot](screenshots/live_site/country-page.webp)
+
 
 ---
 
@@ -511,6 +517,21 @@ Once updated, users are redirected back home and a message is popped onto the sc
 <details>
 <summary>Edit Profile page screenshot</summary>
     <img src="screenshots/live_site/edit-profile.webp" width="80%">
+</details>
+
+---
+
+## Change Password Page
+ As part of the user's profile, the website include functionality that allows users to change their password if needed. A click on 'this form' brings up the change password page.
+ 
+  To change password, user is required to provide their old password, the new one and a confirmation of the new one.
+
+**Password change access**
+ ![Click](screenshots/live_site/passchange-access.webp)
+
+<details>
+<summary>Password Change Page</summary>
+    <img src="screenshots/live_site/password-change.webp" width="80%">
 </details>
 
 ---
@@ -548,6 +569,21 @@ This was included to give the user a form of feedback for their actions. Users g
     <img src="screenshots/live_site/signin-feedback.webp" width="80%">
     <img src="screenshots/live_site/signout-feedback.webp" width="80%">
 </details>
+
+
+---
+
+## Error Pages
+
+I have added an error 400 and 500 pages to the website. They provide links back to the home page.
+
+**Error 400**
+
+![Error 400](screenshots/live_site/error-400.webp)
+
+**Error 500**
+
+![Error 500](screenshots/live_site/error-500.webp)
 
 
 ---
@@ -1392,7 +1428,18 @@ The error was due to the injected template. I inspected the code and also tried 
 
 ### CSS
 
-No errors were found when the passed through 
+No errors were found when the passed through [W3C Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fafricanrecipes-95e71e30ded1.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![CSS Validation](screenshots/validator_test/js_and_css/css-validation.webp)
+
+### WAVE Report
+
+[WAVE]() was used to test the live site and it gave the following [result](https://wave.webaim.org/report#/https://africanrecipes-95e71e30ded1.herokuapp.com/).
+
+<details>
+<summary>Wave Report</summary>
+    <img src="screenshots/validator_test/js_and_css/wave-report.webp" width="80%">
+</details>
 
 ---
 
