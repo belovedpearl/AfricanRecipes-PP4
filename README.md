@@ -209,7 +209,6 @@ As an Admin user I can..
 
 * Add a recipe post, so that I do not have to use the add post page on the front-end
 
-* Filter and sort all comments easily, so that I can see all recipes posts that fulfil certain criteria
 
 ---
 
