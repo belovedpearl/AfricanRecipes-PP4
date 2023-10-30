@@ -229,8 +229,12 @@ footer{
 }
 .page-item.active .page-link {
     background-color: #840404;
-    border-color: #5a6570;
-    
+    border-color: #5a6570;   
+}
+.page-link:focus{
+    color: #840404;
+    border-color: #840404;
+    box-shadow: none;
 }
 
 .summernote-div iframe {
